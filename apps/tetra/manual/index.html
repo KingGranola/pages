@@ -10,7 +10,7 @@
     />
     <meta name="theme-color" content="#ffffff" />
     <link rel="icon" href="../LP/assets/tetra_logo.png" />
-    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./styles.css?v=1.0" />
   </head>
   <body>
     <a class="skip-link" href="#main-content">本文へ移動</a>
@@ -21,14 +21,23 @@
       id="manual-nav-toggle"
       aria-hidden="true"
     />
-    <label
-      class="nav-toggle-button"
-      for="manual-nav-toggle"
-      aria-label="目次を開閉"
-    >
-      <span class="nav-toggle-icon" aria-hidden="true"></span>
-      <span>目次</span>
-    </label>
+    <header class="manual-topbar" aria-label="マニュアル操作">
+      <div class="manual-topbar-title">
+        <strong>TXT sampler</strong>
+        <span>取扱説明書</span>
+      </div>
+      <div class="manual-topbar-actions">
+        <a class="language-switch" href="./en/">English</a>
+        <label
+          class="nav-toggle-button"
+          for="manual-nav-toggle"
+          aria-label="目次を開閉"
+        >
+          <span class="nav-toggle-icon" aria-hidden="true"></span>
+          <span>目次</span>
+        </label>
+      </div>
+    </header>
     <label
       class="nav-backdrop"
       for="manual-nav-toggle"
@@ -45,7 +54,7 @@
       <nav class="side-nav" aria-label="マニュアル目次">
         <div class="nav-header">
           <p class="nav-title">目次</p>
-          <label class="nav-close" for="manual-nav-toggle">閉じる</label>
+          <button class="nav-close" type="button">閉じる</button>
         </div>
         <ol>
           <li><a href="#start">はじめに</a></li>
@@ -90,7 +99,6 @@
             <div class="hero-actions">
               <a class="button button-primary" href="#start">はじめから読む</a>
               <a class="button button-secondary" href="#faq">FAQを見る</a>
-              <a class="button button-secondary" href="./en/">English</a>
             </div>
           </div>
         </section>
@@ -725,7 +733,7 @@
               class="control-label"
               >BAR-</span
             >で末尾の小節を減らします。
-            無料プランは1Bar、プレミアムプランは最大4Barです。
+            無料プランは2Bar、プレミアムプランは最大8Barです。
           </p>
 
           <h3>SEQUENCEエフェクト</h3>
@@ -978,6 +986,7 @@
                 <li>低レイテンシモード</li>
                 <li>画面をスリープさせない</li>
                 <li>触覚フィードバック</li>
+                <li>SEQUENCEモードでパッドを鳴らさない</li>
                 <li>裏面の開き方</li>
               </ul>
             </article>
@@ -1029,8 +1038,8 @@
                 </tr>
                 <tr>
                   <th>シーケンス</th>
-                  <td>1Bar</td>
-                  <td>最大4Bar</td>
+                  <td>2Bar</td>
+                  <td>最大8Bar</td>
                 </tr>
                 <tr>
                   <th>ファイル読み込み</th>
@@ -1291,7 +1300,7 @@
               </thead>
               <tbody>
                 <tr><th>パッド数</th><td>1バンク16パッド / 最大4バンク・64パッド</td><td>無料プランで使えるのはバンクAの上部8パッドです。</td></tr>
-                <tr><th>シーケンス長</th><td>1Bar = 16ステップ<br />無料プラン: 1Bar<br />プレミアムプラン: 最大4Bar</td><td>最大64ステップまで使用できます。</td></tr>
+                <tr><th>シーケンス長</th><td>1Bar = 16ステップ<br />無料プラン: 2Bar<br />プレミアムプラン: 最大8Bar</td><td>最大128ステップまで使用できます。</td></tr>
                 <tr><th>BPM</th><td>40〜300</td><td>TAPまたはBPMコントロールで変更します。</td></tr>
                 <tr><th>Swing</th><td>0% / 25% / 50% / 75%</td><td><span class="control-label">SWING</span>を押すたびに25%刻みで切り替わります。</td></tr>
                 <tr><th>パッド名</th><td>最大32文字</td><td>長すぎる名前は保存時に制限されます。</td></tr>
@@ -1326,6 +1335,9 @@
             SAMPLEで音を用意し、SEQUENCEで並べ、PROJECTに残す。この3つがTXT
             samplerの基本です。
           </p>
+          <p>
+            デフォルトプロジェクトのサウンドには、<a href="https://freesound.org/">Freesound</a>で公開されているCC0ライセンスの素材を使用しています。
+          </p>
           <a class="button button-primary" href="#start">はじめに戻る</a>
         </section>
       </main>
@@ -1341,9 +1353,27 @@
         <a href="../LP/">製品ページ</a>
         <a href="../privacy.html">プライバシー</a>
         <a href="../terms.html">利用規約</a>
-        <a href="./en/">English</a>
       </nav>
       <p>&copy; 2026 TXT sampler</p>
     </footer>
+    <script>
+      /*
+        追従メニューの開閉補助:
+        #manual-nav-toggle はCSSドロワーの状態を持ちます。
+        「閉じる」、背景、目次リンクを押したときだけ false にして、PC/スマホ共通でドロワーを閉じます。
+      */
+      (() => {
+        const navToggle = document.getElementById("manual-nav-toggle");
+        const closeTargets = document.querySelectorAll(
+          ".nav-close, .nav-backdrop, .side-nav a"
+        );
+
+        closeTargets.forEach((target) => {
+          target.addEventListener("click", () => {
+            navToggle.checked = false;
+          });
+        });
+      })();
+    </script>
   </body>
 </html>

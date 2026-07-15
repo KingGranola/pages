@@ -10,7 +10,7 @@
     />
     <meta name="theme-color" content="#ffffff" />
     <link rel="icon" href="../../LP/assets/tetra_logo.png" />
-    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="../styles.css?v=1.0" />
   </head>
   <body>
     <a class="skip-link" href="#main-content">Skip to content</a>
@@ -21,14 +21,23 @@
       id="manual-nav-toggle"
       aria-hidden="true"
     />
-    <label
-      class="nav-toggle-button"
-      for="manual-nav-toggle"
-      aria-label="Open or close table of contents"
-    >
-      <span class="nav-toggle-icon" aria-hidden="true"></span>
-      <span>Menu</span>
-    </label>
+    <header class="manual-topbar" aria-label="Manual controls">
+      <div class="manual-topbar-title">
+        <strong>TXT sampler</strong>
+        <span>User Manual</span>
+      </div>
+      <div class="manual-topbar-actions">
+        <a class="language-switch" href="../index.html">日本語</a>
+        <label
+          class="nav-toggle-button"
+          for="manual-nav-toggle"
+          aria-label="Open or close table of contents"
+        >
+          <span class="nav-toggle-icon" aria-hidden="true"></span>
+          <span>Menu</span>
+        </label>
+      </div>
+    </header>
     <label
       class="nav-backdrop"
       for="manual-nav-toggle"
@@ -44,7 +53,7 @@
       <nav class="side-nav" aria-label="Manual table of contents">
         <div class="nav-header">
           <p class="nav-title">Contents</p>
-          <label class="nav-close" for="manual-nav-toggle">Close</label>
+          <button class="nav-close" type="button">Close</button>
         </div>
         <ol>
           <li><a href="#start">Getting started</a></li>
@@ -89,7 +98,6 @@
             <div class="hero-actions">
               <a class="button button-primary" href="#start">Start reading</a>
               <a class="button button-secondary" href="#faq">Open FAQ</a>
-              <a class="button button-secondary" href="../index.html">日本語版</a>
             </div>
           </div>
         </section>
@@ -360,7 +368,7 @@
           </div>
 
           <h3>Add bars</h3>
-          <p><span class="control-label">BAR+</span> adds a bar, and <span class="control-label">BAR-</span> removes the last bar. The free plan is limited to 1 Bar. The Premium plan supports up to 4 Bars.</p>
+          <p><span class="control-label">BAR+</span> adds a bar, and <span class="control-label">BAR-</span> removes the last bar. The free plan is limited to 2 Bars. The Premium plan supports up to 8 Bars.</p>
 
           <h3>SEQUENCE effects</h3>
           <p>In SEQUENCE mode, the four knobs work as <span class="control-label">DIST.</span>, <span class="control-label">DL. TIME</span>, <span class="control-label">DL. FBK.</span>, and <span class="control-label">DL. LV</span>.</p>
@@ -453,7 +461,7 @@
           <div class="settings-list">
             <article><h3>Display Settings</h3><ul><li>Status bar visibility</li><li>Light, Dark, or System appearance</li><li>iPhone display mode</li><li>Japanese or English settings and help</li></ul></article>
             <article><h3>Pad Settings</h3><ul><li>Waveform display on pads</li><li>Waveform opacity</li><li>Pad names and colors</li></ul></article>
-            <article><h3>Performance Settings</h3><ul><li>Low latency mode</li><li>Keep screen awake</li><li>Haptic feedback</li><li>Rear panel opening behavior</li></ul></article>
+            <article><h3>Performance Settings</h3><ul><li>Low latency mode</li><li>Keep screen awake</li><li>Haptic feedback</li><li>Silence pads in SEQUENCE mode</li><li>Rear panel opening behavior</li></ul></article>
             <article><h3>About</h3><ul><li>Premium plan and restore purchases</li><li>App version and build</li><li>Terms, EULA, and privacy policy</li></ul></article>
           </div>
         </section>
@@ -599,7 +607,7 @@
               <thead><tr><th>Item</th><th>Specification</th><th>Notes</th></tr></thead>
               <tbody>
                 <tr><th>Pads</th><td>16 pads per bank / up to 4 banks and 64 pads</td><td>The free plan can use the upper 8 pads in Bank A.</td></tr>
-                <tr><th>Sequence length</th><td>1 Bar = 16 steps<br />Free plan: 1 Bar<br />Premium plan: up to 4 Bars</td><td>Up to 64 steps are available.</td></tr>
+                <tr><th>Sequence length</th><td>1 Bar = 16 steps<br />Free plan: 2 Bars<br />Premium plan: up to 8 Bars</td><td>Up to 128 steps are available.</td></tr>
                 <tr><th>BPM</th><td>40 to 300</td><td>Change it with TAP or BPM controls.</td></tr>
                 <tr><th>Swing</th><td>0% / 25% / 50% / 75%</td><td><span class="control-label">SWING</span> cycles in 25% increments.</td></tr>
                 <tr><th>Pad name</th><td>Up to 32 characters</td><td>Long names are limited when saved.</td></tr>
@@ -628,6 +636,7 @@
           <p class="eyebrow">Make the next beat</p>
           <h2>Start with one sound.</h2>
           <p>SAMPLE prepares the sound, SEQUENCE places it in time, and PROJECT keeps the work. These are the basics of TXT sampler.</p>
+          <p>The default project sounds use CC0-licensed materials published on <a href="https://freesound.org/">Freesound</a>.</p>
           <a class="button button-primary" href="#start">Back to start</a>
         </section>
       </main>
@@ -642,9 +651,27 @@
         <a href="../../LP/">Product page</a>
         <a href="../../privacy.html">Privacy</a>
         <a href="../../terms.html">Terms</a>
-        <a href="../index.html">日本語版</a>
       </nav>
       <p>&copy; 2026 TXT sampler</p>
     </footer>
+    <script>
+      /*
+        Fixed menu behavior:
+        #manual-nav-toggle stores the CSS drawer state.
+        Close the drawer from the close control, backdrop, and contents links on both desktop and mobile.
+      */
+      (() => {
+        const navToggle = document.getElementById("manual-nav-toggle");
+        const closeTargets = document.querySelectorAll(
+          ".nav-close, .nav-backdrop, .side-nav a"
+        );
+
+        closeTargets.forEach((target) => {
+          target.addEventListener("click", () => {
+            navToggle.checked = false;
+          });
+        });
+      })();
+    </script>
   </body>
 </html>
