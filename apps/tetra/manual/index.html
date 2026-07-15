@@ -1,0 +1,1349 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>TXT sampler オンラインマニュアル</title>
+    <meta
+      name="description"
+      content="TXT samplerの画面構成、SAMPLE・SEQUENCE・PROJECTモード、設定、プラン比較、FAQを実画面とともに説明する公式オンラインマニュアルです。"
+    />
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="icon" href="../LP/assets/tetra_logo.png" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">本文へ移動</a>
+
+    <input
+      class="nav-toggle"
+      type="checkbox"
+      id="manual-nav-toggle"
+      aria-hidden="true"
+    />
+    <label
+      class="nav-toggle-button"
+      for="manual-nav-toggle"
+      aria-label="目次を開閉"
+    >
+      <span class="nav-toggle-icon" aria-hidden="true"></span>
+      <span>目次</span>
+    </label>
+    <label
+      class="nav-backdrop"
+      for="manual-nav-toggle"
+      aria-hidden="true"
+    ></label>
+
+    <div class="page-shell">
+      <!--
+        目次:
+        各 href は下の section id と対応しています。
+        章を追加・削除・並べ替えた場合は、この目次と各 section の section-number も合わせて更新してください。
+        スマホ版では上の「目次」ボタンから開くドロワーナビとして表示します。
+      -->
+      <nav class="side-nav" aria-label="マニュアル目次">
+        <div class="nav-header">
+          <p class="nav-title">目次</p>
+          <label class="nav-close" for="manual-nav-toggle">閉じる</label>
+        </div>
+        <ol>
+          <li><a href="#start">はじめに</a></li>
+          <li><a href="#parts">画面と各パーツの説明</a></li>
+          <li><a href="#sample">「SAMPLE」モード</a></li>
+          <li><a href="#sequence">「SEQUENCE」モード</a></li>
+          <li><a href="#project">「PROJECT」モード</a></li>
+          <li><a href="#settings">設定モード</a></li>
+          <li><a href="#plans">無料・プレミアム比較</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#legal">利用規約・プライバシー</a></li>
+          <li><a href="#specs">データ仕様一覧</a></li>
+        </ol>
+      </nav>
+
+      <main id="main-content" class="manual">
+
+        <section class="hero manual-cover" aria-labelledby="manual-title">
+          <div class="cover-heading">
+            <div>
+              <p class="eyebrow">公式取扱説明書</p>
+              <p class="cover-model">TXT sampler / TT-404</p>
+              <h1 id="manual-title">取扱説明書</h1>
+            </div>
+            <p class="cover-version">バージョン 1.0</p>
+          </div>
+
+          <figure class="cover-art">
+            <img
+              src="./assets/cover-device.png"
+              alt="TXT sampler の本体イメージ"
+              width="898"
+              height="1112"
+              decoding="async"
+            />
+          </figure>
+
+          <div class="cover-intro">
+            <p class="hero-lead">
+              画面の場所を実際のスクリーンショットで確認しながら、音を録るところからパターンの保存・書き出しまでを説明します。
+            </p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="#start">はじめから読む</a>
+              <a class="button button-secondary" href="#faq">FAQを見る</a>
+              <a class="button button-secondary" href="./en/">English</a>
+            </div>
+          </div>
+        </section>
+
+
+        <section id="start" class="manual-section">
+          <div class="section-heading">
+            <p class="section-number">01</p>
+            <div>
+              <p class="eyebrow">はじめに</p>
+              <h2>はじめに</h2>
+            </div>
+          </div>
+
+          <div class="note note-info">
+            <strong>このマニュアルの読み方</strong>
+            <p>
+              iPhone・iPad共通の操作を説明します。画像上の青い番号は、右側または直後にある説明番号と対応しています。ボタン名は
+              <span class="control-label">LOAD SAMPLE</span
+              >のように、アプリと同じ英語表記で示します。
+            </p>
+          </div>
+
+          <h3>TXT samplerでできること</h3>
+          <div class="card-grid card-grid-three">
+            <article class="feature-card">
+              <span class="card-kicker">SAMPLE</span>
+              <h4>サンプルを用意する</h4>
+              <p>
+                マイクで録音するか音声ファイルを読み込み、波形と音色を整えます。
+              </p>
+            </article>
+            <article class="feature-card">
+              <span class="card-kicker">SEQUENCE</span>
+              <h4>リズムを組み立てる</h4>
+              <p>16ステップのグリッドへ音を配置し、繰り返し再生します。</p>
+            </article>
+            <article class="feature-card">
+              <span class="card-kicker">PROJECT</span>
+              <h4>続きを残す</h4>
+              <p>
+                サンプル、パッド設定、シーケンスを保存し、完成したループをWAVにします。
+              </p>
+            </article>
+          </div>
+
+          <h3>最初の音を鳴らす</h3>
+          <ol class="step-list">
+            <li>
+              <span class="step-badge">1</span>
+              <div>
+                <h4>
+                  <span class="control-label">SAMPLE</span>を開いてパッドを選ぶ
+                </h4>
+                <p>
+                  音を入れたいパッドをタップします。選択中のパッド名が波形画面に表示されます。
+                </p>
+              </div>
+            </li>
+            <li>
+              <span class="step-badge">2</span>
+              <div>
+                <h4>
+                  <span class="control-label">LOAD SAMPLE</span>をタップする
+                </h4>
+                <p>
+                  音声ファイルを選ぶと、現在選択しているパッドへ読み込まれます。
+                </p>
+              </div>
+            </li>
+            <li>
+              <span class="step-badge">3</span>
+              <div>
+                <h4>パッドをタップして音を確認する</h4>
+                <p>
+                  読み込み後にパッドをタップします。音が出れば準備完了です。
+                </p>
+              </div>
+            </li>
+          </ol>
+        </section>
+
+        <section id="parts" class="manual-section">
+          <div class="section-heading">
+            <p class="section-number">02</p>
+            <div>
+              <p class="eyebrow">画面構成</p>
+              <h2>画面と各パーツの説明</h2>
+            </div>
+          </div>
+
+          <h3>iPad表示の全体構成</h3>
+          <h4>実際に存在するマシンのようなUIでサンプラーを操作できます</h4>
+          <div class="screenshot-guide screenshot-guide-wide">
+            <figure class="manual-shot manual-shot-ipad">
+              <div class="shot-frame">
+                <img
+                  src="./assets/ipad-sample.png"
+                  alt="TXT samplerのiPad版SAMPLE画面"
+                  width="1042"
+                  height="1500"
+                  loading="lazy"
+                />
+                <span
+                  class="shot-marker"
+                  style="--x: 74%; --y: 13%"
+                  aria-hidden="true"
+                  >1</span
+                >
+                <span
+                  class="shot-marker"
+                  style="--x: 51%; --y: 28%"
+                  aria-hidden="true"
+                  >2</span
+                >
+                <span
+                  class="shot-marker"
+                  style="--x: 43%; --y: 46%"
+                  aria-hidden="true"
+                  >3</span
+                >
+                <span
+                  class="shot-marker"
+                  style="--x: 35%; --y: 68%"
+                  aria-hidden="true"
+                  >4</span
+                >
+                <span
+                  class="shot-marker"
+                  style="--x: 81%; --y: 65%"
+                  aria-hidden="true"
+                  >5</span
+                >
+                <span
+                  class="shot-marker"
+                  style="--x: 81%; --y: 84%"
+                  aria-hidden="true"
+                  >6</span
+                >
+              </div>
+              <figcaption>
+                iPad版は、制作に必要な主要パーツを1画面にまとめています。
+              </figcaption>
+            </figure>
+            <ol class="callout-list">
+              <li>
+                <span>1</span>
+                <div>
+                  <strong>プロジェクト表示</strong>
+                  <p>現在のプロジェクト名、ヘルプ、設定を表示します。</p>
+                </div>
+              </li>
+              <li>
+                <span>2</span>
+                <div>
+                  <strong>LCD・波形エリア</strong>
+                  <p>
+                    波形、シーケンス、プロジェクト情報と、各モードの操作ボタンを表示します。
+                  </p>
+                </div>
+              </li>
+              <li>
+                <span>3</span>
+                <div>
+                  <strong>音色・再生方法</strong>
+                  <p>ノブとスイッチで、選択中のパッドの音を調整します。</p>
+                </div>
+              </li>
+              <li>
+                <span>4</span>
+                <div>
+                  <strong>16パッド</strong>
+                  <p>
+                    サンプルの選択と演奏に使用します。無料プランで使えるのは上部8パッドです。
+                  </p>
+                </div>
+              </li>
+              <li>
+                <span>5</span>
+                <div>
+                  <strong>モード切り替え</strong>
+                  <p>SAMPLE／SEQUENCE／PROJECTを切り替えます。</p>
+                </div>
+              </li>
+              <li>
+                <span>6</span>
+                <div>
+                  <strong>コントロール</strong>
+                  <p>BPM、TAP、再生・停止を操作します。</p>
+                </div>
+              </li>
+            </ol>
+          </div>
+
+          <h3>iPhone専用表示</h3>
+          <h4>iPhoneでの表示に最適化されたUIでサンプラーを操作できます</h4>
+
+          <div class="screenshot-guide">
+            <figure class="manual-shot manual-shot-phone">
+              <div class="shot-frame">
+                <img
+                  src="./assets/iphone-sample.png"
+                  alt="TXT samplerのiPhone専用SAMPLE画面"
+                  width="645"
+                  height="1400"
+                  loading="lazy"
+                />
+                <span
+                  class="shot-marker"
+                  style="--x: 50%; --y: 14%"
+                  aria-hidden="true"
+                  >1</span
+                >
+                <span
+                  class="shot-marker"
+                  style="--x: 50%; --y: 29%"
+                  aria-hidden="true"
+                  >2</span
+                >
+                <span
+                  class="shot-marker"
+                  style="--x: 50%; --y: 64%"
+                  aria-hidden="true"
+                  >3</span
+                >
+                <span
+                  class="shot-marker"
+                  style="--x: 7%; --y: 49%"
+                  aria-hidden="true"
+                  >4</span
+                >
+                <span
+                  class="shot-marker"
+                  style="--x: 92%; --y: 49%"
+                  aria-hidden="true"
+                  >5</span
+                >
+                <span
+                  class="shot-marker"
+                  style="--x: 50%; --y: 91%"
+                  aria-hidden="true"
+                  >6</span
+                >
+              </div>
+              <figcaption>
+                iPhone専用表示は、縦画面で操作しやすいよう各機能をタブへ整理しています。
+              </figcaption>
+            </figure>
+            <ol class="callout-list">
+              <li>
+                <span>1</span>
+                <div>
+                  <strong>上部モードボタン</strong>
+                  <p>3つの制作モードを切り替えます。</p>
+                </div>
+              </li>
+              <li>
+                <span>2</span>
+                <div>
+                  <strong>メインLCD</strong>
+                  <p>選択中モードの中心操作を表示します。</p>
+                </div>
+              </li>
+              <li>
+                <span>3</span>
+                <div>
+                  <strong>パッド</strong>
+                  <p>4列×4行のパッドでサンプルを選択・演奏します。</p>
+                </div>
+              </li>
+              <li>
+                <span>4</span>
+                <div>
+                  <strong>KNOBSタブ</strong>
+                  <p>
+                    サンプルのピッチやフィルタを操作。SEQUENCEモード時はエフェクトなどがコントロールできます。
+                  </p>
+                </div>
+              </li>
+              <li>
+                <span>5</span>
+                <div>
+                  <strong>PAD OPTIONSタブ</strong>
+                  <p>
+                    サンプルのロール（連打）やループ再生、逆再生などがコントロールできます。
+                  </p>
+                </div>
+              </li>
+              <li>
+                <span>6</span>
+                <div>
+                  <strong>TRANSPORTタブ</strong>
+                  <p>下部から再生・停止などの操作を開きます。</p>
+                </div>
+              </li>
+            </ol>
+          </div>
+
+          <h3>iPhoneの表示方式</h3>
+          <div
+            class="comparison-table"
+            role="region"
+            aria-label="iPhone表示方式の比較"
+            tabindex="0"
+          >
+            <table>
+              <thead>
+                <tr>
+                  <th>表示方式</th>
+                  <th>特徴</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>iPhone専用表示</th>
+                  <td>
+                    iPhoneでの操作性、演奏性を重視したレイアウトです。縦画面に最適化。左右・下部タブで補助操作を開きます。
+                  </td>
+                </tr>
+                <tr>
+                  <th>iPad縮小表示</th>
+                  <td>
+                    iPad版と同じレイアウトを、iPhone画面内へそのまま縮小して表示します。iPhoneでも実機風レイアウトを楽しみたい方に。
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="small-note">
+            表示方式は起動時に選択でき、後から「設定 ＞
+            表示設定」でも変更できます。
+          </p>
+        </section>
+
+        <section id="sample" class="manual-section">
+          <div class="section-heading">
+            <p class="section-number">03</p>
+            <div>
+              <p class="eyebrow">SAMPLEモード</p>
+              <h2>「SAMPLE」モード<br /> サンプルを録る・<wbr />整える</h2>
+            </div>
+          </div>
+
+          <div class="screenshot-guide">
+            <figure class="manual-shot manual-shot-phone">
+              <div class="shot-frame">
+
+                <img
+                  src="./assets/iphone-sample.png"
+                  alt="iPhone専用表示のSAMPLEモード"
+                  width="645"
+                  height="1400"
+                  loading="lazy"
+                />
+                <span
+                  class="shot-marker"
+                  style="--x: 50%; --y: 26%"
+                  aria-hidden="true"
+                  >1</span
+                >
+                <span
+                  class="shot-marker"
+                  style="--x: 50%; --y: 39%"
+                  aria-hidden="true"
+                  >2</span
+                >
+                <span
+                  class="shot-marker"
+                  style="--x: 50%; --y: 64%"
+                  aria-hidden="true"
+                  >3</span
+                >
+                <span
+                  class="shot-marker"
+                  style="--x: 7%; --y: 49%"
+                  aria-hidden="true"
+                  >4</span
+                >
+              </div>
+              <figcaption>
+                SAMPLEモードでは、選択中のパッドの波形と編集ボタンを表示します。
+              </figcaption>
+            </figure>
+            <ol class="callout-list">
+              <li>
+                <span>1</span>
+                <div>
+                  <strong>波形表示</strong>
+                  <p>
+                    サンプル名と波形を確認し、START／ENDで再生範囲を決めます。
+                  </p>
+                </div>
+              </li>
+              <li>
+                <span>2</span>
+                <div>
+                  <strong>サンプル操作</strong>
+                  <p>REC、ADSR、LOAD SAMPLE、DEL SAMPLE、RESETを使用します。</p>
+                </div>
+              </li>
+              <li>
+                <span>3</span>
+                <div>
+                  <strong>パッド選択</strong>
+                  <p>編集したいパッドを先に選びます。</p>
+                </div>
+              </li>
+              <li>
+                <span>4</span>
+                <div>
+                  <strong>CTRLタブ</strong>
+                  <p>ピッチ、フィルター、音量、再生方法を調整します。</p>
+                </div>
+              </li>
+            </ol>
+          </div>
+
+          <h3>音声ファイルを読み込む</h3>
+          <ol class="compact-steps">
+            <li>読み込み先のパッドを選びます。</li>
+            <li>
+              <span class="control-label">LOAD SAMPLE</span>をタップします。
+            </li>
+            <li>音声ファイルを選び、波形が表示されたことを確認します。</li>
+          </ol>
+          <div class="note note-warning">
+            <strong>読み込み時間の上限</strong>
+            <p>
+              無料プランは最大10秒、プレミアムプランは最大60秒の音声ファイルを読み込めます。
+            </p>
+          </div>
+
+          <h3>マイクで録音する</h3>
+          <ol class="compact-steps">
+            <li>
+              録音先のパッドを選び、<span class="control-label">REC</span
+              >をタップします。
+            </li>
+            <li>初回はマイク使用を許可します。</li>
+            <li>録音を止め、確認画面で「この録音を使う」を選びます。</li>
+          </ol>
+          <p class="small-note">
+            すでに音があるパッドを録音先にすると、確定時に既存サンプルが置き換わります。
+          </p>
+
+          <h3>波形をトリムする</h3>
+          <p>
+            波形の<span class="control-label">START</span>と<span
+              class="control-label"
+              >END</span
+            >を動かすと、
+            <span class="control-label">TRIM</span
+            >が表示されます。TRIMを実行すると、現在の範囲を新しいサンプルとして上書きします。
+          </p>
+          <div class="note note-warning">
+            <strong>TRIMは取り消せません</strong>
+            <p>
+              必要な場合は、先にプロジェクトを複製してください。ピッチやADSRなどのパッド設定は維持されます。
+            </p>
+          </div>
+
+          <h3>音を調整する</h3>
+          <div class="control-grid">
+            <div>
+              <strong>PITCH</strong><span>半音単位で音の高さを変更</span>
+            </div>
+            <div>
+              <strong>CUTOFF</strong><span>高域を削って音色を調整</span>
+            </div>
+            <div>
+              <strong>RESONANCE</strong><span>カットオフ周辺を強調</span>
+            </div>
+            <div><strong>AMP</strong><span>パッドごとの音量を調整</span></div>
+            <div>
+              <strong>ADSR</strong><span>音の立ち上がりと余韻を調整</span>
+            </div>
+            <div><strong>REVERSE</strong><span>サンプルを逆再生</span></div>
+            <div>
+              <strong>NORMALIZE</strong><span>サンプル音量を自動調整</span>
+            </div>
+            <div><strong>MUTE</strong><span>選択中のパッドを消音</span></div>
+          </div>
+
+          <h3>再生方法を変える</h3>
+          <dl class="definition-list">
+            <div>
+              <dt>GATE</dt>
+              <dd>パッドを押している間だけ音を鳴らします。</dd>
+            </div>
+            <div>
+              <dt>LOOP</dt>
+              <dd>サンプルの再生範囲を繰り返します。</dd>
+            </div>
+            <div>
+              <dt>ROLL</dt>
+              <dd>指定した細かさで音を連打します。</dd>
+            </div>
+            <div>
+              <dt>CHOKE</dt>
+              <dd>同じグループの音を、次に鳴った音で止めます。</dd>
+            </div>
+          </dl>
+        </section>
+
+        <!--
+          04 SEQUENCEモード:
+          パターン作成、Bar、Swing、リアルタイム録音、SEQUENCEエフェクトの説明です。
+          無料/プレミアムのBar上限は plans 章の比較表と整合させてください。
+        -->
+        <section id="sequence" class="manual-section">
+          <div class="section-heading">
+            <p class="section-number">04</p>
+            <div>
+              <p class="eyebrow">SEQUENCEモード</p>
+              <h2>「SEQUENCE」モード<br />パターンを作る</h2>
+            </div>
+          </div>
+
+          <div class="screenshot-guide">
+            <figure class="manual-shot manual-shot-phone">
+              <div class="shot-frame">
+                <!-- SEQUENCEモードのスクショ。番号1〜4は下の説明リストと対応します。 -->
+                <img
+                  src="./assets/iphone-sequence.png"
+                  alt="iPhone専用表示のSEQUENCEモード"
+                  width="645"
+                  height="1400"
+                  loading="lazy"
+                />
+                <span
+                  class="shot-marker"
+                  style="--x: 50%; --y: 30%"
+                  aria-hidden="true"
+                  >1</span
+                >
+                <span
+                  class="shot-marker"
+                  style="--x: 50%; --y: 41%"
+                  aria-hidden="true"
+                  >2</span
+                >
+                <span
+                  class="shot-marker"
+                  style="--x: 50%; --y: 64%"
+                  aria-hidden="true"
+                  >3</span
+                >
+                <span
+                  class="shot-marker"
+                  style="--x: 50%; --y: 91%"
+                  aria-hidden="true"
+                  >4</span
+                >
+              </div>
+              <figcaption>
+                明るいステップが、選択中のパッドを鳴らす位置です。
+              </figcaption>
+            </figure>
+            <ol class="callout-list">
+              <li>
+                <span>1</span>
+                <div>
+                  <strong>16ステップグリッド</strong>
+                  <p>タップして音を鳴らす位置をオン・オフします。</p>
+                </div>
+              </li>
+              <li>
+                <span>2</span>
+                <div>
+                  <strong>Bar／Swing操作</strong>
+                  <p>小節数、Swing、選択中パッドのパターンを調整します。</p>
+                </div>
+              </li>
+              <li>
+                <span>3</span>
+                <div>
+                  <strong>パッド選択</strong>
+                  <p>
+                    パッドを変えると、そのパッドのステップ表示へ切り替わります。
+                  </p>
+                </div>
+              </li>
+              <li>
+                <span>4</span>
+                <div>
+                  <strong>TRANSPORT</strong>
+                  <p>
+                    再生・停止、リアルタイム録音、クオンタイズを操作します。
+                  </p>
+                </div>
+              </li>
+            </ol>
+          </div>
+
+          <h3>ステップ入力</h3>
+          <ol class="compact-steps">
+            <li>編集するパッドを選びます。</li>
+            <li>16個のグリッドをタップして、鳴らす位置をオンにします。</li>
+            <li>再生ボタンを押してループを確認します。</li>
+            <li>
+              別の音を追加するときは、別のパッドを選んで同じ操作を繰り返します。
+            </li>
+          </ol>
+
+          <h3>タイミングを調整する</h3>
+          <div class="card-grid card-grid-two">
+            <article class="feature-card">
+              <span class="card-kicker">BPM</span>
+              <h4>テンポ</h4>
+              <p>曲全体の速さを変更します。</p>
+            </article>
+            <article class="feature-card">
+              <span class="card-kicker">SWING</span>
+              <h4>跳ね方</h4>
+              <p>偶数ステップを遅らせて、跳ねたリズムにします。</p>
+            </article>
+            <article class="feature-card">
+              <span class="card-kicker">REC</span>
+              <h4>リアルタイム録音</h4>
+              <p>再生中に叩いたパッドをシーケンスへ記録します。</p>
+            </article>
+            <article class="feature-card">
+              <span class="card-kicker">QTZ</span>
+              <h4>クオンタイズ</h4>
+              <p>リアルタイム録音したタイミングをステップへそろえます。</p>
+            </article>
+          </div>
+
+          <h3>Barを増やす</h3>
+          <p>
+            <span class="control-label">BAR+</span>で小節を追加し、<span
+              class="control-label"
+              >BAR-</span
+            >で末尾の小節を減らします。
+            無料プランは1Bar、プレミアムプランは最大4Barです。
+          </p>
+
+          <h3>SEQUENCEエフェクト</h3>
+          <p>
+            SEQUENCEモードでは4つのノブが<span class="control-label">DIST.</span
+            >、<span class="control-label">DL. TIME</span>、
+            <span class="control-label">DL. FBK.</span>、<span
+              class="control-label"
+              >DL. LV</span
+            >として動作します。
+          </p>
+          <p class="small-note">
+            <span class="control-label">CLEAR</span
+            >は選択中のパッドのシーケンスを消去します。
+          </p>
+        </section>
+
+
+        <section id="project" class="manual-section">
+          <div class="section-heading">
+            <p class="section-number">05</p>
+            <div>
+              <p class="eyebrow">PROJECTモード</p>
+              <h2>
+                「PROJECT」モード<br /> 保存する・<wbr />オーディオを<wbr />書き出す
+              </h2>
+            </div>
+          </div>
+
+          <div class="screenshot-guide">
+            <figure class="manual-shot manual-shot-phone">
+              <div class="shot-frame">
+
+                <img
+                  src="./assets/iphone-project.png"
+                  alt="iPhone専用表示のPROJECTモード"
+                  width="645"
+                  height="1400"
+                  loading="lazy"
+                />
+                <span
+                  class="shot-marker"
+                  style="--x: 50%; --y: 28%"
+                  aria-hidden="true"
+                  >1</span
+                >
+                <span
+                  class="shot-marker"
+                  style="--x: 50%; --y: 41%"
+                  aria-hidden="true"
+                  >2</span
+                >
+                <span
+                  class="shot-marker"
+                  style="--x: 50%; --y: 64%"
+                  aria-hidden="true"
+                  >3</span
+                >
+                <span
+                  class="shot-marker"
+                  style="--x: 50%; --y: 91%"
+                  aria-hidden="true"
+                  >4</span
+                >
+              </div>
+              <figcaption>
+                PROJECTモードでは、現在の保存状況と主要な管理ボタンを確認できます。
+              </figcaption>
+            </figure>
+            <ol class="callout-list">
+              <li>
+                <span>1</span>
+                <div>
+                  <strong>プロジェクト情報</strong>
+                  <p>サンプル数、欠落ファイル、データサイズを表示します。</p>
+                </div>
+              </li>
+              <li>
+                <span>2</span>
+                <div>
+                  <strong>管理ボタン</strong>
+                  <p>NEW、COPY、RENAME、DELETE、EXPORT WAVを使用します。</p>
+                </div>
+              </li>
+              <li>
+                <span>3</span>
+                <div>
+                  <strong>パッド</strong>
+                  <p>
+                    PROJECT中にパッドを押すと、SAMPLEへ移動してその音を鳴らします。
+                  </p>
+                </div>
+              </li>
+              <li>
+                <span>4</span>
+                <div>
+                  <strong>TRANSPORT</strong>
+                  <p>保存済みパターンを再生・停止します。</p>
+                </div>
+              </li>
+            </ol>
+          </div>
+
+          <h3>プロジェクトを管理する</h3>
+          <p>
+            プロジェクトには、サンプル、パッド設定、シーケンス、BPMなどの作業内容が保存されます。
+          </p>
+          <div class="action-list">
+            <div>
+              <span class="control-label">NEW</span>
+              <p>空のプロジェクトを作成します。</p>
+            </div>
+            <div>
+              <span class="control-label">COPY</span>
+              <p>現在のプロジェクトを複製します。編集前の控えにも使えます。</p>
+            </div>
+            <div>
+              <span class="control-label">RENAME</span>
+              <p>現在のプロジェクト名を変更します。</p>
+            </div>
+            <div>
+              <span class="control-label">DELETE</span>
+              <p>選択したプロジェクトを削除します。</p>
+            </div>
+            <div>
+              <span class="control-label">IMPORT</span>
+              <p>対応するプロジェクトファイルを読み込みます。</p>
+            </div>
+            <div>
+              <span class="control-label">REPAIR</span>
+              <p>復元可能なデータを戻し、欠落サンプルへの参照を整理します。</p>
+            </div>
+          </div>
+          <div class="note note-warning">
+            <strong>DELETEは取り消せません</strong>
+            <p>
+              一覧メニューやスワイプ操作から削除する場合も、対象プロジェクトをよく確認してください。
+            </p>
+          </div>
+
+          <h3>WAVを書き出す</h3>
+          <ol class="compact-steps">
+            <li>
+              <span class="control-label">EXPORT</span>または<span
+                class="control-label"
+                >EXPORT WAV</span
+              >をタップします。
+            </li>
+            <li>エフェクトを反映するか選びます。</li>
+            <li>書き出すループ回数を1〜32回から選びます。</li>
+            <li>「WAVを書き出す」をタップし、共有先または保存先を選びます。</li>
+          </ol>
+          <div class="note note-info">
+            <strong>エフェクトの余韻</strong>
+            <p>
+              エフェクトを反映する場合は、残響を残すため最後に2秒の余白が追加されます。反映しない場合はパターンの長さぴったりで書き出します。
+            </p>
+          </div>
+          <p class="small-note">WAV書き出しはプレミアム機能です。</p>
+        </section>
+
+
+        <section id="settings" class="manual-section">
+          <div class="section-heading">
+            <p class="section-number">06</p>
+            <div>
+              <p class="eyebrow">設定</p>
+              <h2>設定モード</h2>
+            </div>
+          </div>
+
+          <div class="screenshot-guide">
+            <figure class="manual-shot manual-shot-phone">
+              <div class="shot-frame">
+
+                <img
+                  src="./assets/iphone-settings.png"
+                  alt="設定画面の表示設定タブ"
+                  width="645"
+                  height="1400"
+                  loading="lazy"
+                />
+                <span
+                  class="shot-marker"
+                  style="--x: 50%; --y: 19%"
+                  aria-hidden="true"
+                  >1</span
+                >
+                <span
+                  class="shot-marker"
+                  style="--x: 50%; --y: 44%"
+                  aria-hidden="true"
+                  >2</span
+                >
+                <span
+                  class="shot-marker"
+                  style="--x: 50%; --y: 68%"
+                  aria-hidden="true"
+                  >3</span
+                >
+              </div>
+              <figcaption>設定は4つのタブに分かれています。</figcaption>
+            </figure>
+            <ol class="callout-list">
+              <li>
+                <span>1</span>
+                <div>
+                  <strong>設定タブ</strong>
+                  <p>表示設定／パッド設定／演奏時設定／Aboutを切り替えます。</p>
+                </div>
+              </li>
+              <li>
+                <span>2</span>
+                <div>
+                  <strong>表示モード</strong>
+                  <p>ライト、ダーク、システム設定に合わせる表示を選びます。</p>
+                </div>
+              </li>
+              <li>
+                <span>3</span>
+                <div>
+                  <strong>iPhoneレイアウト</strong>
+                  <p>iPad縮小表示とiPhone専用表示を切り替えます。</p>
+                </div>
+              </li>
+            </ol>
+          </div>
+
+          <div class="settings-list">
+            <article>
+              <h3>表示設定</h3>
+              <ul>
+                <li>ステータスバーの表示</li>
+                <li>ライト／ダーク／システム連動</li>
+                <li>iPhoneの表示方式</li>
+                <li>設定・ヘルプの日本語／英語</li>
+              </ul>
+            </article>
+            <article>
+              <h3>パッド設定</h3>
+              <ul>
+                <li>パッド上の波形表示</li>
+                <li>波形の透明度</li>
+                <li>パッド名とカラー</li>
+              </ul>
+            </article>
+            <article>
+              <h3>演奏時設定</h3>
+              <ul>
+                <li>低レイテンシモード</li>
+                <li>画面をスリープさせない</li>
+                <li>触覚フィードバック</li>
+                <li>裏面の開き方</li>
+              </ul>
+            </article>
+            <article>
+              <h3>About</h3>
+              <ul>
+                <li>プレミアムプランと購入の復元</li>
+                <li>アプリのバージョンとビルド</li>
+                <li>利用規約、EULA、プライバシーポリシー</li>
+              </ul>
+            </article>
+          </div>
+        </section>
+
+
+        <section id="plans" class="manual-section">
+          <div class="section-heading">
+            <p class="section-number">07</p>
+            <div>
+              <p class="eyebrow">プラン比較</p>
+              <h2>無料プランと<br />プレミアムプランの比較</h2>
+            </div>
+          </div>
+
+          <div
+            class="comparison-table"
+            role="region"
+            aria-label="無料プランとプレミアムプランの比較"
+            tabindex="0"
+          >
+            <table>
+              <thead>
+                <tr>
+                  <th>機能</th>
+                  <th>無料プラン</th>
+                  <th>プレミアムプラン</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>パッド</th>
+                  <td>バンクAの上部8パッド</td>
+                  <td>4バンク・全64パッド</td>
+                </tr>
+                <tr>
+                  <th>プロジェクト</th>
+                  <td>1個</td>
+                  <td>個数制限なし</td>
+                </tr>
+                <tr>
+                  <th>シーケンス</th>
+                  <td>1Bar</td>
+                  <td>最大4Bar</td>
+                </tr>
+                <tr>
+                  <th>ファイル読み込み</th>
+                  <td>最大10秒</td>
+                  <td>最大60秒</td>
+                </tr>
+                <tr>
+                  <th>マイク録音</th>
+                  <td>最大10秒</td>
+                  <td>最大30秒</td>
+                </tr>
+                <tr>
+                  <th>パッドカラー</th>
+                  <td>変更不可</td>
+                  <td>変更可能</td>
+                </tr>
+                <tr>
+                  <th>WAV書き出し</th>
+                  <td>利用不可</td>
+                  <td>利用可能</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p>
+            プレミアムプランは買い切りです。価格はApp
+            Storeの購入画面で確認できます。再インストールや機種変更後は 「設定
+            ＞ About ＞ 購入を復元」を使用してください。
+          </p>
+          <div class="note note-info">
+            <strong>購入状態を確認できないときもデータは削除されません</strong>
+            <p>
+              既存のプロジェクトやサンプルは保持されます。購入を復元すると、プレミアム機能を再び利用できます。
+            </p>
+          </div>
+        </section>
+
+        <!--
+          08 FAQ:
+          ユーザーが詰まりやすい操作の短い回答です。
+          details open が付いている項目は初期表示で開きます。質問を増やす場合は、重複内容を上の章にも反映するか確認してください。
+        -->
+        <section id="faq" class="manual-section">
+          <div class="section-heading">
+            <p class="section-number">08</p>
+            <div>
+              <p class="eyebrow">よくある質問</p>
+              <h2>FAQ</h2>
+            </div>
+          </div>
+
+          <div class="faq-list">
+            <details open>
+              <summary>音が出ません</summary>
+              <ol>
+                <li>パッドに波形が表示されているか確認します。</li>
+                <li>
+                  <span class="control-label">MUTE</span>がオフか確認します。
+                </li>
+                <li>
+                  <span class="control-label">AMP</span>と端末音量を上げます。
+                </li>
+                <li>Bluetoothや外部オーディオ機器の出力先を確認します。</li>
+              </ol>
+            </details>
+            <details>
+              <summary>サンプルを読み込めません</summary>
+              <p>
+                読み込み先パッドを先に選び、<span class="control-label"
+                  >LOAD SAMPLE</span
+                >をタップします。ファイルの長さがプランの上限以内か確認してください。
+              </p>
+            </details>
+            <details>
+              <summary>マイクで録音できません</summary>
+              <p>
+                iOSの「設定」からTXT
+                samplerのマイク使用を許可します。その後、録音先パッドを選んで<span
+                  class="control-label"
+                  >REC</span
+                >をタップしてください。
+              </p>
+            </details>
+            <details>
+              <summary>プロジェクトの波形が見つかりません</summary>
+              <p>
+                対象パッドを選び、<span class="control-label">LOAD SAMPLE</span
+                >から音声を読み込み直します。プロジェクト一覧の<span
+                  class="control-label"
+                  >REPAIR</span
+                >で修復できる場合もあります。
+              </p>
+            </details>
+            <details>
+              <summary>購入済み機能が使えません</summary>
+              <p>
+                通信できる状態で「設定 ＞ About ＞
+                購入を復元」を実行します。購入時と同じApple
+                Accountを使用しているか確認してください。
+              </p>
+            </details>
+            <details>
+              <summary>画面が自動ロックされます</summary>
+              <p>
+                「設定 ＞
+                演奏時設定」で「画面をスリープさせない」をオンにします。
+              </p>
+            </details>
+            <details>
+              <summary>アプリを初期状態へ戻したいです</summary>
+              <p>
+                裏面パネルの<span class="control-label">FACTORY RESET</span
+                >を使用します。すべてのプロジェクト、サンプル、シーケンス、アプリ設定が削除され、元に戻せません。
+              </p>
+            </details>
+          </div>
+        </section>
+
+        <!--
+          09 利用規約・プライバシーポリシー:
+          法務リンクとアプリ内About画面の説明です。
+          リンク先の ../terms.html と ../privacy.html を変える場合は、LPやアプリ内Aboutのリンクも確認してください。
+        -->
+        <section id="legal" class="manual-section">
+          <div class="section-heading">
+            <p class="section-number">09</p>
+            <div>
+              <p class="eyebrow">規約とプライバシー</p>
+              <h2>利用規約・<br />プライバシー<wbr />ポリシー</h2>
+            </div>
+          </div>
+
+          <div class="screenshot-guide">
+            <figure class="manual-shot manual-shot-phone">
+              <div class="shot-frame">
+                <!-- About画面のスクショ。番号1〜2は下の説明リストと対応します。 -->
+                <img
+                  src="./assets/iphone-about.png"
+                  alt="設定のAbout画面にある利用規約とプライバシーポリシー"
+                  width="645"
+                  height="1400"
+                  loading="lazy"
+                />
+                <span
+                  class="shot-marker"
+                  style="--x: 50%; --y: 25%"
+                  aria-hidden="true"
+                  >1</span
+                >
+                <span
+                  class="shot-marker"
+                  style="--x: 50%; --y: 69%"
+                  aria-hidden="true"
+                  >2</span
+                >
+              </div>
+              <figcaption>
+                アプリ内では「設定 ＞ About」から規約とポリシーを開けます。
+              </figcaption>
+            </figure>
+            <ol class="callout-list">
+              <li>
+                <span>1</span>
+                <div>
+                  <strong>プレミアムプラン</strong>
+                  <p>購入案内と「購入を復元」を表示します。</p>
+                </div>
+              </li>
+              <li>
+                <span>2</span>
+                <div>
+                  <strong>法的情報</strong>
+                  <p>利用規約、EULA、プライバシーポリシーを開きます。</p>
+                </div>
+              </li>
+            </ol>
+          </div>
+
+          <h3>利用規約</h3>
+          <p>
+            本アプリの利用条件、禁止事項、免責、プレミアムプランなどについて定めています。
+          </p>
+
+          <h3>プライバシーポリシー</h3>
+          <p>
+            録音音声、読み込みサンプル、プロジェクトデータは端末内のアプリ領域へ保存され、ユーザーの操作なしに外部へ送信されません。
+            共有・書き出し時の保存先はユーザーが選択します。
+          </p>
+
+          <div class="link-cards">
+            <a href="../terms.html"
+              ><span>利用規約</span><strong>全文を確認する →</strong></a
+            >
+            <a href="../privacy.html"
+              ><span>プライバシーポリシー</span
+              ><strong>全文を確認する →</strong></a
+            >
+          </div>
+        </section>
+
+        <!--
+          10 データ仕様一覧:
+          アプリ実装値に合わせた仕様表です。
+          取り込み形式、秒数、サイズ、Swing刻み、書き出し条件を変える場合はアプリ側の Constants / fileImporter / ExportSettingsSheet も確認してください。
+        -->
+        <section id="specs" class="manual-section">
+          <div class="section-heading">
+            <p class="section-number">10</p>
+            <div>
+              <p class="eyebrow">データ仕様</p>
+              <h2>データ仕様一覧</h2>
+            </div>
+          </div>
+
+          <div class="note note-info">
+            <strong>仕様値について</strong>
+            <p>
+              ここに記載している数値は、アプリ内の読み込み・録音・保存・書き出しの制限に合わせています。
+              端末やiOSの状態により、読み込める音声ファイルでも破損ファイル、空ファイル、保護されたファイルは使用できない場合があります。
+            </p>
+          </div>
+
+          <h3>サンプル取り込み</h3>
+          <div class="comparison-table" role="region" aria-label="サンプル取り込み仕様" tabindex="0">
+            <table>
+              <thead>
+                <tr><th>項目</th><th>仕様</th><th>補足</th></tr>
+              </thead>
+              <tbody>
+                <tr><th>対応形式</th><td>iOSで読み込める音声、WAV、AIFF、MP3、MPEG-4 Audio</td><td>ファイル選択画面では音声ファイルを1つ選択します。</td></tr>
+                <tr><th>ファイルサイズ</th><td>最大20MB</td><td>20MBを超える音声ファイルは読み込めません。</td></tr>
+                <tr><th>チャンネル数</th><td>最大2ch</td><td>モノラルまたはステレオの音声を使用できます。</td></tr>
+                <tr><th>読み込み時間</th><td>無料プラン: 最大10秒<br />プレミアムプラン: 最大60秒</td><td>上限を超えるファイルは、短く編集してから読み込んでください。</td></tr>
+                <tr><th>空ファイル</th><td>不可</td><td>長さが0の音声ファイルは読み込めません。</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3>マイク録音</h3>
+          <div class="comparison-table" role="region" aria-label="マイク録音仕様" tabindex="0">
+            <table>
+              <thead>
+                <tr><th>項目</th><th>仕様</th><th>補足</th></tr>
+              </thead>
+              <tbody>
+                <tr><th>録音時間</th><td>無料プラン: 最大10秒<br />プレミアムプラン: 最大30秒</td><td>録音後に「この録音を使う」を選ぶと、現在のパッドへ割り当てます。</td></tr>
+                <tr><th>録音一時形式</th><td>CAF</td><td>録音中の一時ファイル形式です。ユーザーが直接選ぶ項目ではありません。</td></tr>
+                <tr><th>サンプルレート</th><td>44.1kHz</td><td>マイク録音の保存時に使用します。</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3>パッド・シーケンス</h3>
+          <div class="comparison-table" role="region" aria-label="パッドとシーケンス仕様" tabindex="0">
+            <table>
+              <thead>
+                <tr><th>項目</th><th>仕様</th><th>補足</th></tr>
+              </thead>
+              <tbody>
+                <tr><th>パッド数</th><td>1バンク16パッド / 最大4バンク・64パッド</td><td>無料プランで使えるのはバンクAの上部8パッドです。</td></tr>
+                <tr><th>シーケンス長</th><td>1Bar = 16ステップ<br />無料プラン: 1Bar<br />プレミアムプラン: 最大4Bar</td><td>最大64ステップまで使用できます。</td></tr>
+                <tr><th>BPM</th><td>40〜300</td><td>TAPまたはBPMコントロールで変更します。</td></tr>
+                <tr><th>Swing</th><td>0% / 25% / 50% / 75%</td><td><span class="control-label">SWING</span>を押すたびに25%刻みで切り替わります。</td></tr>
+                <tr><th>パッド名</th><td>最大32文字</td><td>長すぎる名前は保存時に制限されます。</td></tr>
+                <tr><th>プロジェクト名</th><td>最大48文字</td><td>ファイル名として使いやすい文字へ整えられる場合があります。</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3>保存・書き出し</h3>
+          <div class="comparison-table" role="region" aria-label="保存と書き出し仕様" tabindex="0">
+            <table>
+              <thead>
+                <tr><th>項目</th><th>仕様</th><th>補足</th></tr>
+              </thead>
+              <tbody>
+                <tr><th>プロジェクトアーカイブ</th><td>最大512MB</td><td>インポートするプロジェクトファイルの上限です。</td></tr>
+                <tr><th>WAV書き出し</th><td>プレミアム機能</td><td>PROJECTモードの<span class="control-label">EXPORT WAV</span>から実行します。</td></tr>
+                <tr><th>書き出し回数</th><td>1〜32ループ</td><td>同じシーケンスを何回繰り返して書き出すかを選びます。</td></tr>
+                <tr><th>書き出し形式</th><td>WAV / 44.1kHz / 2ch</td><td>シーケンス全体をステレオWAVとして作成します。</td></tr>
+                <tr><th>エフェクトON</th><td>末尾に2秒のTailを追加</td><td>ディレイやリバーブなどの余韻を残します。</td></tr>
+                <tr><th>エフェクトOFF</th><td>シーケンス長ぴったり</td><td>余白なしで書き出します。</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- 末尾CTA: 戻り先 href="#start" は 01 はじめに の section id と対応しています。 -->
+        <section class="manual-end" aria-label="マニュアル末尾">
+          <p class="eyebrow">次のビートを作ろう</p>
+          <h2>まずは1つの音から。</h2>
+          <p>
+            SAMPLEで音を用意し、SEQUENCEで並べ、PROJECTに残す。この3つがTXT
+            samplerの基本です。
+          </p>
+          <a class="button button-primary" href="#start">はじめに戻る</a>
+        </section>
+      </main>
+    </div>
+
+    <!-- フッター: 関連リンクは DOCS/LP、privacy.html、terms.html の存在と合わせてください。 -->
+    <footer class="site-footer">
+      <div>
+        <strong>TXT sampler</strong>
+        <span>オンラインマニュアル</span>
+      </div>
+      <nav aria-label="関連リンク">
+        <a href="../LP/">製品ページ</a>
+        <a href="../privacy.html">プライバシー</a>
+        <a href="../terms.html">利用規約</a>
+        <a href="./en/">English</a>
+      </nav>
+      <p>&copy; 2026 TXT sampler</p>
+    </footer>
+  </body>
+</html>

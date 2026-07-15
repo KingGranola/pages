@@ -1,0 +1,650 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>TXT sampler Online Manual</title>
+    <meta
+      name="description"
+      content="The official TXT sampler online manual covering the screen layout, SAMPLE, SEQUENCE, PROJECT, settings, plan limits, FAQ, legal links, and data specifications."
+    />
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="icon" href="../../LP/assets/tetra_logo.png" />
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <input
+      class="nav-toggle"
+      type="checkbox"
+      id="manual-nav-toggle"
+      aria-hidden="true"
+    />
+    <label
+      class="nav-toggle-button"
+      for="manual-nav-toggle"
+      aria-label="Open or close table of contents"
+    >
+      <span class="nav-toggle-icon" aria-hidden="true"></span>
+      <span>Menu</span>
+    </label>
+    <label
+      class="nav-backdrop"
+      for="manual-nav-toggle"
+      aria-hidden="true"
+    ></label>
+
+    <div class="page-shell">
+      <!--
+        Table of contents:
+        Each href matches a section id below. If you add, remove, or reorder chapters,
+        update this list and the visible section numbers together.
+      -->
+      <nav class="side-nav" aria-label="Manual table of contents">
+        <div class="nav-header">
+          <p class="nav-title">Contents</p>
+          <label class="nav-close" for="manual-nav-toggle">Close</label>
+        </div>
+        <ol>
+          <li><a href="#start">Getting started</a></li>
+          <li><a href="#parts">Screen and controls</a></li>
+          <li><a href="#sample">SAMPLE mode</a></li>
+          <li><a href="#sequence">SEQUENCE mode</a></li>
+          <li><a href="#project">PROJECT mode</a></li>
+          <li><a href="#settings">Settings</a></li>
+          <li><a href="#plans">Free and Premium</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#legal">Terms and privacy</a></li>
+          <li><a href="#specs">Data specifications</a></li>
+        </ol>
+      </nav>
+
+      <main id="main-content" class="manual">
+        <!-- Cover: version text is intentionally fixed for the app 1.0 manual. -->
+        <section class="hero manual-cover" aria-labelledby="manual-title">
+          <div class="cover-heading">
+            <div>
+              <p class="eyebrow">Official Manual</p>
+              <p class="cover-model">TXT sampler / TT-404</p>
+              <h1 id="manual-title">User Manual</h1>
+            </div>
+            <p class="cover-version">Version 1.0</p>
+          </div>
+
+          <figure class="cover-art">
+            <img
+              src="../assets/cover-device.png"
+              alt="TXT sampler device illustration"
+              width="898"
+              height="1112"
+              decoding="async"
+            />
+          </figure>
+
+          <div class="cover-intro">
+            <p class="hero-lead">
+              This manual explains how to record sounds, shape samples, build patterns, save projects, and export audio while checking the actual app screens.
+            </p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="#start">Start reading</a>
+              <a class="button button-secondary" href="#faq">Open FAQ</a>
+              <a class="button button-secondary" href="../index.html">日本語版</a>
+            </div>
+          </div>
+        </section>
+
+        <section id="start" class="manual-section">
+          <div class="section-heading">
+            <p class="section-number">01</p>
+            <div>
+              <p class="eyebrow">Getting started</p>
+              <h2>Getting started</h2>
+            </div>
+          </div>
+
+          <div class="note note-info">
+            <strong>How to read this manual</strong>
+            <p>
+              The same basic workflow applies to iPhone and iPad. Blue numbers on screenshots match the numbered explanations beside or below each image. App control labels are shown in English, such as
+              <span class="control-label">LOAD SAMPLE</span>.
+            </p>
+          </div>
+
+          <h3>What TXT sampler does</h3>
+          <div class="card-grid card-grid-three">
+            <article class="feature-card">
+              <span class="card-kicker">SAMPLE</span>
+              <h4>Prepare sounds</h4>
+              <p>Record from the microphone or import an audio file, then shape the waveform and sound.</p>
+            </article>
+            <article class="feature-card">
+              <span class="card-kicker">SEQUENCE</span>
+              <h4>Build rhythms</h4>
+              <p>Place sounds on a 16-step grid and play them back as a loop.</p>
+            </article>
+            <article class="feature-card">
+              <span class="card-kicker">PROJECT</span>
+              <h4>Keep your work</h4>
+              <p>Save samples, pad settings, sequences, and BPM, then export finished loops as WAV audio.</p>
+            </article>
+          </div>
+
+          <h3>Play your first sound</h3>
+          <ol class="step-list">
+            <li>
+              <span class="step-badge">1</span>
+              <div>
+                <h4>Open <span class="control-label">SAMPLE</span> and choose a pad</h4>
+                <p>Tap the pad that should receive the sound. The selected pad name appears in the waveform area.</p>
+              </div>
+            </li>
+            <li>
+              <span class="step-badge">2</span>
+              <div>
+                <h4>Tap <span class="control-label">LOAD SAMPLE</span></h4>
+                <p>Choose an audio file. It will be loaded into the currently selected pad.</p>
+              </div>
+            </li>
+            <li>
+              <span class="step-badge">3</span>
+              <div>
+                <h4>Tap the pad to check the sound</h4>
+                <p>If the sound plays after loading, the pad is ready.</p>
+              </div>
+            </li>
+          </ol>
+        </section>
+
+        <section id="parts" class="manual-section">
+          <div class="section-heading">
+            <p class="section-number">02</p>
+            <div>
+              <p class="eyebrow">Screen layout</p>
+              <h2>Screen and controls</h2>
+            </div>
+          </div>
+
+          <h3>iPad layout overview</h3>
+          <h4>Use a sampler interface that feels like a real machine.</h4>
+          <div class="screenshot-guide screenshot-guide-wide">
+            <figure class="manual-shot manual-shot-ipad">
+              <div class="shot-frame">
+                <img
+                  src="../assets/ipad-sample.png"
+                  alt="TXT sampler SAMPLE screen on iPad"
+                  width="1042"
+                  height="1500"
+                  loading="lazy"
+                />
+                <span class="shot-marker" style="--x: 74%; --y: 13%" aria-hidden="true">1</span>
+                <span class="shot-marker" style="--x: 51%; --y: 28%" aria-hidden="true">2</span>
+                <span class="shot-marker" style="--x: 43%; --y: 46%" aria-hidden="true">3</span>
+                <span class="shot-marker" style="--x: 35%; --y: 68%" aria-hidden="true">4</span>
+                <span class="shot-marker" style="--x: 81%; --y: 65%" aria-hidden="true">5</span>
+                <span class="shot-marker" style="--x: 81%; --y: 84%" aria-hidden="true">6</span>
+              </div>
+              <figcaption>The iPad layout keeps the main production controls on one screen.</figcaption>
+            </figure>
+            <ol class="callout-list">
+              <li><span>1</span><div><strong>Project display</strong><p>Shows the current project name, help, and settings access.</p></div></li>
+              <li><span>2</span><div><strong>LCD and waveform area</strong><p>Shows waveform, sequence, project information, and mode-specific buttons.</p></div></li>
+              <li><span>3</span><div><strong>Tone and playback controls</strong><p>Use knobs and switches to shape the selected pad.</p></div></li>
+              <li><span>4</span><div><strong>16 pads</strong><p>Select and play samples. The free plan can use the upper 8 pads in Bank A.</p></div></li>
+              <li><span>5</span><div><strong>Mode buttons</strong><p>Switch between SAMPLE, SEQUENCE, and PROJECT.</p></div></li>
+              <li><span>6</span><div><strong>Transport controls</strong><p>Control BPM, TAP, playback, and stop.</p></div></li>
+            </ol>
+          </div>
+
+          <h3>iPhone dedicated layout</h3>
+          <h4>A portrait-first UI optimized for iPhone operation.</h4>
+          <div class="screenshot-guide">
+            <figure class="manual-shot manual-shot-phone">
+              <div class="shot-frame">
+                <img
+                  src="../assets/iphone-sample.png"
+                  alt="TXT sampler SAMPLE screen on iPhone"
+                  width="645"
+                  height="1400"
+                  loading="lazy"
+                />
+                <span class="shot-marker" style="--x: 50%; --y: 14%" aria-hidden="true">1</span>
+                <span class="shot-marker" style="--x: 50%; --y: 29%" aria-hidden="true">2</span>
+                <span class="shot-marker" style="--x: 50%; --y: 64%" aria-hidden="true">3</span>
+                <span class="shot-marker" style="--x: 7%; --y: 49%" aria-hidden="true">4</span>
+                <span class="shot-marker" style="--x: 92%; --y: 49%" aria-hidden="true">5</span>
+                <span class="shot-marker" style="--x: 50%; --y: 91%" aria-hidden="true">6</span>
+              </div>
+              <figcaption>The iPhone layout places supporting controls in side and bottom tabs.</figcaption>
+            </figure>
+            <ol class="callout-list">
+              <li><span>1</span><div><strong>Top mode buttons</strong><p>Switch between the three production modes.</p></div></li>
+              <li><span>2</span><div><strong>Main LCD</strong><p>Shows the primary controls for the selected mode.</p></div></li>
+              <li><span>3</span><div><strong>Pads</strong><p>Select and play samples on a 4 x 4 pad grid.</p></div></li>
+              <li><span>4</span><div><strong>KNOBS tab</strong><p>Adjust pitch and filters in SAMPLE mode. In SEQUENCE mode, it controls effects.</p></div></li>
+              <li><span>5</span><div><strong>PAD OPTIONS tab</strong><p>Control roll, loop playback, reverse playback, and related pad behavior.</p></div></li>
+              <li><span>6</span><div><strong>TRANSPORT tab</strong><p>Open playback and stop controls from the bottom of the screen.</p></div></li>
+            </ol>
+          </div>
+
+          <h3>iPhone display modes</h3>
+          <div class="comparison-table" role="region" aria-label="iPhone display mode comparison" tabindex="0">
+            <table>
+              <thead><tr><th>Display mode</th><th>Details</th></tr></thead>
+              <tbody>
+                <tr><th>iPhone dedicated layout</th><td>Optimized for iPhone usability and performance. It uses a portrait layout with side and bottom tabs.</td></tr>
+                <tr><th>Scaled iPad layout</th><td>Shows the same layout as the iPad version, scaled down to fit the iPhone screen.</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="small-note">You can choose the display mode on first launch and change it later in Settings &gt; Display Settings.</p>
+        </section>
+
+        <section id="sample" class="manual-section">
+          <div class="section-heading">
+            <p class="section-number">03</p>
+            <div>
+              <p class="eyebrow">SAMPLE mode</p>
+              <h2>SAMPLE mode<br />Record and shape samples</h2>
+            </div>
+          </div>
+
+          <div class="screenshot-guide">
+            <figure class="manual-shot manual-shot-phone">
+              <div class="shot-frame">
+                <img src="../assets/iphone-sample.png" alt="SAMPLE mode on iPhone" width="645" height="1400" loading="lazy" />
+                <span class="shot-marker" style="--x: 50%; --y: 26%" aria-hidden="true">1</span>
+                <span class="shot-marker" style="--x: 50%; --y: 39%" aria-hidden="true">2</span>
+                <span class="shot-marker" style="--x: 50%; --y: 64%" aria-hidden="true">3</span>
+                <span class="shot-marker" style="--x: 7%; --y: 49%" aria-hidden="true">4</span>
+              </div>
+              <figcaption>SAMPLE mode shows the waveform and edit buttons for the selected pad.</figcaption>
+            </figure>
+            <ol class="callout-list">
+              <li><span>1</span><div><strong>Waveform display</strong><p>Check the sample name and waveform, then set the playback range with START and END.</p></div></li>
+              <li><span>2</span><div><strong>Sample actions</strong><p>Use REC, ADSR, LOAD SAMPLE, DEL SAMPLE, and RESET.</p></div></li>
+              <li><span>3</span><div><strong>Pad selection</strong><p>Select the pad you want to edit first.</p></div></li>
+              <li><span>4</span><div><strong>CTRL tab</strong><p>Adjust pitch, filter, volume, and playback behavior.</p></div></li>
+            </ol>
+          </div>
+
+          <h3>Import an audio file</h3>
+          <ol class="compact-steps">
+            <li>Select the destination pad.</li>
+            <li>Tap <span class="control-label">LOAD SAMPLE</span>.</li>
+            <li>Choose an audio file and confirm that the waveform appears.</li>
+          </ol>
+          <div class="note note-warning">
+            <strong>Import duration limit</strong>
+            <p>The free plan can import audio up to 10 seconds. The Premium plan can import audio up to 60 seconds.</p>
+          </div>
+
+          <h3>Record with the microphone</h3>
+          <ol class="compact-steps">
+            <li>Select the destination pad and tap <span class="control-label">REC</span>.</li>
+            <li>Allow microphone access the first time you record.</li>
+            <li>Stop recording, then choose “Use this recording” on the confirmation screen.</li>
+          </ol>
+          <p class="small-note">If the destination pad already has a sound, confirming the recording replaces the existing sample.</p>
+
+          <h3>Trim the waveform</h3>
+          <p>Move <span class="control-label">START</span> and <span class="control-label">END</span> on the waveform to show <span class="control-label">TRIM</span>. Running TRIM overwrites the sample with the current range.</p>
+          <div class="note note-warning">
+            <strong>TRIM cannot be undone</strong>
+            <p>Duplicate the project first if you need a backup. Pad settings such as pitch and ADSR are kept.</p>
+          </div>
+
+          <h3>Shape the sound</h3>
+          <div class="control-grid">
+            <div><strong>PITCH</strong><span>Change pitch in semitone steps</span></div>
+            <div><strong>CUTOFF</strong><span>Reduce high frequencies</span></div>
+            <div><strong>RESONANCE</strong><span>Emphasize the cutoff area</span></div>
+            <div><strong>AMP</strong><span>Adjust volume per pad</span></div>
+            <div><strong>ADSR</strong><span>Adjust attack, decay, sustain, and release</span></div>
+            <div><strong>REVERSE</strong><span>Play the sample backward</span></div>
+            <div><strong>NORMALIZE</strong><span>Automatically adjust sample level</span></div>
+            <div><strong>MUTE</strong><span>Mute the selected pad</span></div>
+          </div>
+
+          <h3>Change playback behavior</h3>
+          <dl class="definition-list">
+            <div><dt>GATE</dt><dd>Plays only while the pad is held.</dd></div>
+            <div><dt>LOOP</dt><dd>Repeats the selected playback range.</dd></div>
+            <div><dt>ROLL</dt><dd>Repeats the sound at the selected roll rate.</dd></div>
+            <div><dt>CHOKE</dt><dd>Stops sounds in the same group when another sound in that group plays.</dd></div>
+          </dl>
+        </section>
+
+        <section id="sequence" class="manual-section">
+          <div class="section-heading">
+            <p class="section-number">04</p>
+            <div>
+              <p class="eyebrow">SEQUENCE mode</p>
+              <h2>SEQUENCE mode<br />Build patterns</h2>
+            </div>
+          </div>
+
+          <div class="screenshot-guide">
+            <figure class="manual-shot manual-shot-phone">
+              <div class="shot-frame">
+                <img src="../assets/iphone-sequence.png" alt="SEQUENCE mode on iPhone" width="645" height="1400" loading="lazy" />
+                <span class="shot-marker" style="--x: 50%; --y: 30%" aria-hidden="true">1</span>
+                <span class="shot-marker" style="--x: 50%; --y: 41%" aria-hidden="true">2</span>
+                <span class="shot-marker" style="--x: 50%; --y: 64%" aria-hidden="true">3</span>
+                <span class="shot-marker" style="--x: 50%; --y: 91%" aria-hidden="true">4</span>
+              </div>
+              <figcaption>Lit steps are positions where the selected pad will play.</figcaption>
+            </figure>
+            <ol class="callout-list">
+              <li><span>1</span><div><strong>16-step grid</strong><p>Tap cells to turn steps on or off.</p></div></li>
+              <li><span>2</span><div><strong>Bar and Swing controls</strong><p>Adjust bar count, Swing, and the selected pad pattern.</p></div></li>
+              <li><span>3</span><div><strong>Pad selection</strong><p>Changing pads switches the grid to that pad’s sequence.</p></div></li>
+              <li><span>4</span><div><strong>TRANSPORT</strong><p>Control playback, stop, realtime recording, and quantize.</p></div></li>
+            </ol>
+          </div>
+
+          <h3>Step input</h3>
+          <ol class="compact-steps">
+            <li>Select the pad you want to edit.</li>
+            <li>Tap the 16-step grid to turn on positions where the sound should play.</li>
+            <li>Press play to check the loop.</li>
+            <li>Select another pad and repeat the same process to add more sounds.</li>
+          </ol>
+
+          <h3>Adjust timing</h3>
+          <div class="card-grid card-grid-two">
+            <article class="feature-card"><span class="card-kicker">BPM</span><h4>Tempo</h4><p>Changes the overall speed.</p></article>
+            <article class="feature-card"><span class="card-kicker">SWING</span><h4>Groove</h4><p>Delays even-feel offbeat steps for a swung rhythm.</p></article>
+            <article class="feature-card"><span class="card-kicker">REC</span><h4>Realtime recording</h4><p>Records pads you hit while the sequence is playing.</p></article>
+            <article class="feature-card"><span class="card-kicker">QTZ</span><h4>Quantize</h4><p>Aligns realtime-recorded hits to the step grid.</p></article>
+          </div>
+
+          <h3>Add bars</h3>
+          <p><span class="control-label">BAR+</span> adds a bar, and <span class="control-label">BAR-</span> removes the last bar. The free plan is limited to 1 Bar. The Premium plan supports up to 4 Bars.</p>
+
+          <h3>SEQUENCE effects</h3>
+          <p>In SEQUENCE mode, the four knobs work as <span class="control-label">DIST.</span>, <span class="control-label">DL. TIME</span>, <span class="control-label">DL. FBK.</span>, and <span class="control-label">DL. LV</span>.</p>
+          <p class="small-note"><span class="control-label">CLEAR</span> clears the sequence for the selected pad.</p>
+        </section>
+
+        <section id="project" class="manual-section">
+          <div class="section-heading">
+            <p class="section-number">05</p>
+            <div>
+              <p class="eyebrow">PROJECT mode</p>
+              <h2>PROJECT mode<br />Save and export audio</h2>
+            </div>
+          </div>
+
+          <div class="screenshot-guide">
+            <figure class="manual-shot manual-shot-phone">
+              <div class="shot-frame">
+                <img src="../assets/iphone-project.png" alt="PROJECT mode on iPhone" width="645" height="1400" loading="lazy" />
+                <span class="shot-marker" style="--x: 50%; --y: 28%" aria-hidden="true">1</span>
+                <span class="shot-marker" style="--x: 50%; --y: 41%" aria-hidden="true">2</span>
+                <span class="shot-marker" style="--x: 50%; --y: 64%" aria-hidden="true">3</span>
+                <span class="shot-marker" style="--x: 50%; --y: 91%" aria-hidden="true">4</span>
+              </div>
+              <figcaption>PROJECT mode shows the current save state and project management buttons.</figcaption>
+            </figure>
+            <ol class="callout-list">
+              <li><span>1</span><div><strong>Project information</strong><p>Shows sample count, missing files, and data size.</p></div></li>
+              <li><span>2</span><div><strong>Management buttons</strong><p>Use NEW, COPY, RENAME, DELETE, and EXPORT WAV.</p></div></li>
+              <li><span>3</span><div><strong>Pads</strong><p>Pressing a pad in PROJECT moves to SAMPLE and plays that sound.</p></div></li>
+              <li><span>4</span><div><strong>TRANSPORT</strong><p>Play or stop the saved pattern.</p></div></li>
+            </ol>
+          </div>
+
+          <h3>Manage projects</h3>
+          <p>A project stores samples, pad settings, sequences, BPM, and related work data.</p>
+          <div class="action-list">
+            <div><span class="control-label">NEW</span><p>Create an empty project.</p></div>
+            <div><span class="control-label">COPY</span><p>Duplicate the current project. Use it as a backup before editing.</p></div>
+            <div><span class="control-label">RENAME</span><p>Rename the current project.</p></div>
+            <div><span class="control-label">DELETE</span><p>Delete the selected project.</p></div>
+            <div><span class="control-label">IMPORT</span><p>Import a supported project file.</p></div>
+            <div><span class="control-label">REPAIR</span><p>Restore recoverable data and clean up missing sample references.</p></div>
+          </div>
+          <div class="note note-warning">
+            <strong>DELETE cannot be undone</strong>
+            <p>Check the target project carefully before deleting from the list menu or swipe action.</p>
+          </div>
+
+          <h3>Export WAV</h3>
+          <ol class="compact-steps">
+            <li>Tap <span class="control-label">EXPORT</span> or <span class="control-label">EXPORT WAV</span>.</li>
+            <li>Choose whether to include effects.</li>
+            <li>Choose the loop count from 1 to 32.</li>
+            <li>Tap “Export WAV,” then choose a share or save destination.</li>
+          </ol>
+          <div class="note note-info">
+            <strong>Effect tail</strong>
+            <p>When effects are included, a 2-second tail is added to preserve reverb or delay decay. Without effects, the WAV is exported at the exact sequence length.</p>
+          </div>
+          <p class="small-note">WAV export is a Premium feature.</p>
+        </section>
+
+        <section id="settings" class="manual-section">
+          <div class="section-heading">
+            <p class="section-number">06</p>
+            <div>
+              <p class="eyebrow">Settings</p>
+              <h2>Settings</h2>
+            </div>
+          </div>
+
+          <div class="screenshot-guide">
+            <figure class="manual-shot manual-shot-phone">
+              <div class="shot-frame">
+                <img src="../assets/iphone-settings.png" alt="Display Settings tab" width="645" height="1400" loading="lazy" />
+                <span class="shot-marker" style="--x: 50%; --y: 19%" aria-hidden="true">1</span>
+                <span class="shot-marker" style="--x: 50%; --y: 44%" aria-hidden="true">2</span>
+                <span class="shot-marker" style="--x: 50%; --y: 68%" aria-hidden="true">3</span>
+              </div>
+              <figcaption>Settings are divided into four tabs.</figcaption>
+            </figure>
+            <ol class="callout-list">
+              <li><span>1</span><div><strong>Settings tabs</strong><p>Switch between Display Settings, Pad Settings, Performance Settings, and About.</p></div></li>
+              <li><span>2</span><div><strong>Appearance mode</strong><p>Choose Light, Dark, or System appearance.</p></div></li>
+              <li><span>3</span><div><strong>iPhone layout</strong><p>Switch between scaled iPad layout and iPhone dedicated layout.</p></div></li>
+            </ol>
+          </div>
+
+          <div class="settings-list">
+            <article><h3>Display Settings</h3><ul><li>Status bar visibility</li><li>Light, Dark, or System appearance</li><li>iPhone display mode</li><li>Japanese or English settings and help</li></ul></article>
+            <article><h3>Pad Settings</h3><ul><li>Waveform display on pads</li><li>Waveform opacity</li><li>Pad names and colors</li></ul></article>
+            <article><h3>Performance Settings</h3><ul><li>Low latency mode</li><li>Keep screen awake</li><li>Haptic feedback</li><li>Rear panel opening behavior</li></ul></article>
+            <article><h3>About</h3><ul><li>Premium plan and restore purchases</li><li>App version and build</li><li>Terms, EULA, and privacy policy</li></ul></article>
+          </div>
+        </section>
+
+        <section id="plans" class="manual-section">
+          <div class="section-heading">
+            <p class="section-number">07</p>
+            <div>
+              <p class="eyebrow">Plan comparison</p>
+              <h2>Free plan and<br />Premium plan</h2>
+            </div>
+          </div>
+
+          <div class="comparison-table" role="region" aria-label="Free and Premium plan comparison" tabindex="0">
+            <table>
+              <thead><tr><th>Feature</th><th>Free plan</th><th>Premium plan</th></tr></thead>
+              <tbody>
+                <tr><th>Pads</th><td>Upper 8 pads in Bank A</td><td>All 64 pads across 4 banks</td></tr>
+                <tr><th>Projects</th><td>1 project</td><td>No project count limit</td></tr>
+                <tr><th>Sequence</th><td>1 Bar</td><td>Up to 4 Bars</td></tr>
+                <tr><th>File import</th><td>Up to 10 seconds</td><td>Up to 60 seconds</td></tr>
+                <tr><th>Microphone recording</th><td>Up to 10 seconds</td><td>Up to 30 seconds</td></tr>
+                <tr><th>Pad color</th><td>Not editable</td><td>Editable</td></tr>
+                <tr><th>WAV export</th><td>Not available</td><td>Available</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p>The Premium plan is a one-time purchase. Check the App Store purchase screen for the current price. After reinstalling or changing devices, use Settings &gt; About &gt; Restore Purchases.</p>
+          <div class="note note-info">
+            <strong>Your data is not deleted if purchase status cannot be confirmed</strong>
+            <p>Existing projects and samples are kept. Restoring purchases enables Premium features again.</p>
+          </div>
+        </section>
+
+        <section id="faq" class="manual-section">
+          <div class="section-heading">
+            <p class="section-number">08</p>
+            <div>
+              <p class="eyebrow">FAQ</p>
+              <h2>FAQ</h2>
+            </div>
+          </div>
+
+          <div class="faq-list">
+            <details open>
+              <summary>No sound plays</summary>
+              <ol>
+                <li>Check that a waveform is visible on the pad.</li>
+                <li>Confirm that <span class="control-label">MUTE</span> is off.</li>
+                <li>Raise <span class="control-label">AMP</span> and the device volume.</li>
+                <li>Check the output destination for Bluetooth or external audio devices.</li>
+              </ol>
+            </details>
+            <details><summary>I cannot import a sample</summary><p>Select the destination pad first, then tap <span class="control-label">LOAD SAMPLE</span>. Check that the file length is within the plan limit.</p></details>
+            <details><summary>I cannot record with the microphone</summary><p>Allow microphone access for TXT sampler in iOS Settings. Then choose the destination pad and tap <span class="control-label">REC</span>.</p></details>
+            <details><summary>A project waveform is missing</summary><p>Select the target pad and load the audio again from <span class="control-label">LOAD SAMPLE</span>. <span class="control-label">REPAIR</span> in the project list may also recover some data.</p></details>
+            <details><summary>Purchased features are unavailable</summary><p>Connect to the network and run Settings &gt; About &gt; Restore Purchases. Make sure you are using the same Apple Account used for purchase.</p></details>
+            <details><summary>The screen locks automatically</summary><p>Turn on “Keep screen awake” in Settings &gt; Performance Settings.</p></details>
+            <details><summary>I want to reset the app</summary><p>Use <span class="control-label">FACTORY RESET</span> on the rear panel. This deletes all projects, samples, sequences, and app settings, and cannot be undone.</p></details>
+          </div>
+        </section>
+
+        <section id="legal" class="manual-section">
+          <div class="section-heading">
+            <p class="section-number">09</p>
+            <div>
+              <p class="eyebrow">Terms and privacy</p>
+              <h2>Terms and<br />Privacy Policy</h2>
+            </div>
+          </div>
+
+          <div class="screenshot-guide">
+            <figure class="manual-shot manual-shot-phone">
+              <div class="shot-frame">
+                <img src="../assets/iphone-about.png" alt="Terms and Privacy Policy links in the About screen" width="645" height="1400" loading="lazy" />
+                <span class="shot-marker" style="--x: 50%; --y: 25%" aria-hidden="true">1</span>
+                <span class="shot-marker" style="--x: 50%; --y: 69%" aria-hidden="true">2</span>
+              </div>
+              <figcaption>In the app, open Terms and Privacy Policy from Settings &gt; About.</figcaption>
+            </figure>
+            <ol class="callout-list">
+              <li><span>1</span><div><strong>Premium plan</strong><p>Shows purchase information and Restore Purchases.</p></div></li>
+              <li><span>2</span><div><strong>Legal information</strong><p>Opens Terms of Use, EULA, and Privacy Policy.</p></div></li>
+            </ol>
+          </div>
+
+          <h3>Terms of Use</h3>
+          <p>The terms define app usage conditions, prohibited actions, disclaimers, and Premium plan information.</p>
+
+          <h3>Privacy Policy</h3>
+          <p>Recorded audio, imported samples, and project data are stored in the app’s local container and are not sent outside the device without user action. When sharing or exporting, the user chooses the destination.</p>
+
+          <div class="link-cards">
+            <a href="../../terms.html"><span>Terms of Use</span><strong>Open full text →</strong></a>
+            <a href="../../privacy.html"><span>Privacy Policy</span><strong>Open full text →</strong></a>
+          </div>
+          <p class="small-note">The linked Terms of Use and Privacy Policy pages are currently provided in Japanese.</p>
+        </section>
+
+        <section id="specs" class="manual-section">
+          <div class="section-heading">
+            <p class="section-number">10</p>
+            <div>
+              <p class="eyebrow">Data specs</p>
+              <h2>Data specifications</h2>
+            </div>
+          </div>
+
+          <div class="note note-info">
+            <strong>About these values</strong>
+            <p>These values match the app’s import, recording, save, and export limits. A file may still fail to load if it is damaged, empty, protected, or unsupported by the device.</p>
+          </div>
+
+          <h3>Sample import</h3>
+          <div class="comparison-table" role="region" aria-label="Sample import specifications" tabindex="0">
+            <table>
+              <thead><tr><th>Item</th><th>Specification</th><th>Notes</th></tr></thead>
+              <tbody>
+                <tr><th>Supported formats</th><td>iOS-readable audio, WAV, AIFF, MP3, MPEG-4 Audio</td><td>Select one audio file from the file picker.</td></tr>
+                <tr><th>File size</th><td>Up to 20MB</td><td>Files larger than 20MB cannot be imported.</td></tr>
+                <tr><th>Channels</th><td>Up to 2ch</td><td>Mono and stereo files are supported.</td></tr>
+                <tr><th>Import duration</th><td>Free plan: up to 10 seconds<br />Premium plan: up to 60 seconds</td><td>Shorten longer files before importing.</td></tr>
+                <tr><th>Empty files</th><td>Not supported</td><td>Audio files with zero length cannot be imported.</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3>Microphone recording</h3>
+          <div class="comparison-table" role="region" aria-label="Microphone recording specifications" tabindex="0">
+            <table>
+              <thead><tr><th>Item</th><th>Specification</th><th>Notes</th></tr></thead>
+              <tbody>
+                <tr><th>Recording duration</th><td>Free plan: up to 10 seconds<br />Premium plan: up to 30 seconds</td><td>After recording, choose “Use this recording” to assign it to the current pad.</td></tr>
+                <tr><th>Temporary recording format</th><td>CAF</td><td>This is used internally while recording.</td></tr>
+                <tr><th>Sample rate</th><td>44.1kHz</td><td>Used when saving microphone recordings.</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3>Pads and sequence</h3>
+          <div class="comparison-table" role="region" aria-label="Pad and sequence specifications" tabindex="0">
+            <table>
+              <thead><tr><th>Item</th><th>Specification</th><th>Notes</th></tr></thead>
+              <tbody>
+                <tr><th>Pads</th><td>16 pads per bank / up to 4 banks and 64 pads</td><td>The free plan can use the upper 8 pads in Bank A.</td></tr>
+                <tr><th>Sequence length</th><td>1 Bar = 16 steps<br />Free plan: 1 Bar<br />Premium plan: up to 4 Bars</td><td>Up to 64 steps are available.</td></tr>
+                <tr><th>BPM</th><td>40 to 300</td><td>Change it with TAP or BPM controls.</td></tr>
+                <tr><th>Swing</th><td>0% / 25% / 50% / 75%</td><td><span class="control-label">SWING</span> cycles in 25% increments.</td></tr>
+                <tr><th>Pad name</th><td>Up to 32 characters</td><td>Long names are limited when saved.</td></tr>
+                <tr><th>Project name</th><td>Up to 48 characters</td><td>Names may be sanitized for file compatibility.</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3>Save and export</h3>
+          <div class="comparison-table" role="region" aria-label="Save and export specifications" tabindex="0">
+            <table>
+              <thead><tr><th>Item</th><th>Specification</th><th>Notes</th></tr></thead>
+              <tbody>
+                <tr><th>Project archive</th><td>Up to 512MB</td><td>Limit for imported project files.</td></tr>
+                <tr><th>WAV export</th><td>Premium feature</td><td>Run it from <span class="control-label">EXPORT WAV</span> in PROJECT mode.</td></tr>
+                <tr><th>Export loop count</th><td>1 to 32 loops</td><td>Choose how many times the sequence repeats in the exported audio.</td></tr>
+                <tr><th>Export format</th><td>WAV / 44.1kHz / 2ch</td><td>Creates the full sequence as a stereo WAV file.</td></tr>
+                <tr><th>Effects ON</th><td>Adds a 2-second tail</td><td>Preserves delay, reverb, and other effect decay.</td></tr>
+                <tr><th>Effects OFF</th><td>Exact sequence length</td><td>Exports without extra silence.</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="manual-end" aria-label="End of manual">
+          <p class="eyebrow">Make the next beat</p>
+          <h2>Start with one sound.</h2>
+          <p>SAMPLE prepares the sound, SEQUENCE places it in time, and PROJECT keeps the work. These are the basics of TXT sampler.</p>
+          <a class="button button-primary" href="#start">Back to start</a>
+        </section>
+      </main>
+    </div>
+
+    <footer class="site-footer">
+      <div>
+        <strong>TXT sampler</strong>
+        <span>Online Manual</span>
+      </div>
+      <nav aria-label="Related links">
+        <a href="../../LP/">Product page</a>
+        <a href="../../privacy.html">Privacy</a>
+        <a href="../../terms.html">Terms</a>
+        <a href="../index.html">日本語版</a>
+      </nav>
+      <p>&copy; 2026 TXT sampler</p>
+    </footer>
+  </body>
+</html>
