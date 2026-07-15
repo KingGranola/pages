@@ -749,6 +749,17 @@
             <span class="control-label">CLEAR</span
             >は選択中のパッドのシーケンスを消去します。
           </p>
+
+          <h3>シーケンスJSONを読み書きする</h3>
+          <p>
+            <span class="control-label">IMP EXP</span
+            >をタップすると、<span class="control-label">IMPORT JSON</span
+            >と<span class="control-label">EXPORT JSON</span
+            >を選べます。シーケンスのBPM、Swing、ステップ情報をJSONとして読み込み・書き出しできます。
+          </p>
+          <p class="small-note">
+            IMPORT JSONは現在のプロジェクトのシーケンスを上書きします。
+          </p>
         </section>
 
 
@@ -815,7 +826,7 @@
                 <span>2</span>
                 <div>
                   <strong>管理ボタン</strong>
-                  <p>NEW、COPY、RENAME、DELETE、EXPORT WAVを使用します。</p>
+                  <p>NEW、COPY、DELETE、EXPORT WAVを使用します。</p>
                 </div>
               </li>
               <li>
@@ -851,20 +862,12 @@
               <p>現在のプロジェクトを複製します。編集前の控えにも使えます。</p>
             </div>
             <div>
-              <span class="control-label">RENAME</span>
-              <p>現在のプロジェクト名を変更します。</p>
-            </div>
-            <div>
               <span class="control-label">DELETE</span>
               <p>選択したプロジェクトを削除します。</p>
             </div>
             <div>
-              <span class="control-label">IMPORT</span>
-              <p>対応するプロジェクトファイルを読み込みます。</p>
-            </div>
-            <div>
-              <span class="control-label">REPAIR</span>
-              <p>復元可能なデータを戻し、欠落サンプルへの参照を整理します。</p>
+              <span class="control-label">EXPORT WAV</span>
+              <p>現在のシーケンスをWAVファイルとして書き出します。</p>
             </div>
           </div>
           <div class="note note-warning">
@@ -877,10 +880,7 @@
           <h3>WAVを書き出す</h3>
           <ol class="compact-steps">
             <li>
-              <span class="control-label">EXPORT</span>または<span
-                class="control-label"
-                >EXPORT WAV</span
-              >をタップします。
+              <span class="control-label">EXPORT WAV</span>をタップします。
             </li>
             <li>エフェクトを反映するか選びます。</li>
             <li>書き出すループ回数を1〜32回から選びます。</li>
@@ -1127,10 +1127,7 @@
               <summary>プロジェクトの波形が見つかりません</summary>
               <p>
                 対象パッドを選び、<span class="control-label">LOAD SAMPLE</span
-                >から音声を読み込み直します。プロジェクト一覧の<span
-                  class="control-label"
-                  >REPAIR</span
-                >で修復できる場合もあります。
+                >から音声を読み込み直します。
               </p>
             </details>
             <details>

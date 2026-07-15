@@ -373,6 +373,10 @@
           <h3>SEQUENCE effects</h3>
           <p>In SEQUENCE mode, the four knobs work as <span class="control-label">DIST.</span>, <span class="control-label">DL. TIME</span>, <span class="control-label">DL. FBK.</span>, and <span class="control-label">DL. LV</span>.</p>
           <p class="small-note"><span class="control-label">CLEAR</span> clears the sequence for the selected pad.</p>
+
+          <h3>Import and export sequence JSON</h3>
+          <p>Tap <span class="control-label">IMP EXP</span> to choose <span class="control-label">IMPORT JSON</span> or <span class="control-label">EXPORT JSON</span>. You can import or export the sequence BPM, Swing, and step data as JSON.</p>
+          <p class="small-note">IMPORT JSON overwrites the current project sequence.</p>
         </section>
 
         <section id="project" class="manual-section">
@@ -397,7 +401,7 @@
             </figure>
             <ol class="callout-list">
               <li><span>1</span><div><strong>Project information</strong><p>Shows sample count, missing files, and data size.</p></div></li>
-              <li><span>2</span><div><strong>Management buttons</strong><p>Use NEW, COPY, RENAME, DELETE, and EXPORT WAV.</p></div></li>
+              <li><span>2</span><div><strong>Management buttons</strong><p>Use NEW, COPY, DELETE, and EXPORT WAV.</p></div></li>
               <li><span>3</span><div><strong>Pads</strong><p>Pressing a pad in PROJECT moves to SAMPLE and plays that sound.</p></div></li>
               <li><span>4</span><div><strong>TRANSPORT</strong><p>Play or stop the saved pattern.</p></div></li>
             </ol>
@@ -408,10 +412,8 @@
           <div class="action-list">
             <div><span class="control-label">NEW</span><p>Create an empty project.</p></div>
             <div><span class="control-label">COPY</span><p>Duplicate the current project. Use it as a backup before editing.</p></div>
-            <div><span class="control-label">RENAME</span><p>Rename the current project.</p></div>
             <div><span class="control-label">DELETE</span><p>Delete the selected project.</p></div>
-            <div><span class="control-label">IMPORT</span><p>Import a supported project file.</p></div>
-            <div><span class="control-label">REPAIR</span><p>Restore recoverable data and clean up missing sample references.</p></div>
+            <div><span class="control-label">EXPORT WAV</span><p>Export the current sequence as a WAV file.</p></div>
           </div>
           <div class="note note-warning">
             <strong>DELETE cannot be undone</strong>
@@ -420,7 +422,7 @@
 
           <h3>Export WAV</h3>
           <ol class="compact-steps">
-            <li>Tap <span class="control-label">EXPORT</span> or <span class="control-label">EXPORT WAV</span>.</li>
+            <li>Tap <span class="control-label">EXPORT WAV</span>.</li>
             <li>Choose whether to include effects.</li>
             <li>Choose the loop count from 1 to 32.</li>
             <li>Tap “Export WAV,” then choose a share or save destination.</li>
@@ -517,7 +519,7 @@
             </details>
             <details><summary>I cannot import a sample</summary><p>Select the destination pad first, then tap <span class="control-label">LOAD SAMPLE</span>. Check that the file length is within the plan limit.</p></details>
             <details><summary>I cannot record with the microphone</summary><p>Allow microphone access for TXT sampler in iOS Settings. Then choose the destination pad and tap <span class="control-label">REC</span>.</p></details>
-            <details><summary>A project waveform is missing</summary><p>Select the target pad and load the audio again from <span class="control-label">LOAD SAMPLE</span>. <span class="control-label">REPAIR</span> in the project list may also recover some data.</p></details>
+            <details><summary>A project waveform is missing</summary><p>Select the target pad and load the audio again from <span class="control-label">LOAD SAMPLE</span>.</p></details>
             <details><summary>Purchased features are unavailable</summary><p>Connect to the network and run Settings &gt; About &gt; Restore Purchases. Make sure you are using the same Apple Account used for purchase.</p></details>
             <details><summary>The screen locks automatically</summary><p>Turn on “Keep screen awake” in Settings &gt; Performance Settings.</p></details>
             <details><summary>I want to reset the app</summary><p>Use <span class="control-label">FACTORY RESET</span> on the rear panel. This deletes all projects, samples, sequences, and app settings, and cannot be undone.</p></details>
