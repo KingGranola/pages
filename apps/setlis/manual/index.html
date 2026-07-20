@@ -1,0 +1,521 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Setlis オンラインマニュアル</title>
+    <meta
+      name="description"
+      content="Setlisのライブ管理、セトリ、予約、共有、レポート、バックアップを実際の画面で説明する公式オンラインマニュアルです。"
+    />
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="icon" href="../LP/app_icon.png" />
+    <link rel="stylesheet" href="./styles.css?v=1.7" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">本文へ移動</a>
+
+    <header class="manual-topbar" aria-label="マニュアル操作">
+      <a class="brand-link" href="#top" aria-label="Setlis オンラインマニュアルの先頭へ">
+        <img src="../LP/app_icon.png" alt="" width="40" height="40" />
+        <span><strong>Setlis</strong><small>オンラインマニュアル</small></span>
+      </a>
+      <div class="manual-topbar-actions">
+        <a class="topbar-link" href="../LP/index.html">公式ページ</a>
+        <button class="nav-toggle-button" id="manual-nav-button" type="button" aria-controls="manual-navigation" aria-expanded="false">
+          <span class="nav-toggle-icon" aria-hidden="true"></span>
+          <span>目次</span>
+        </button>
+      </div>
+    </header>
+    <button class="nav-backdrop" type="button" aria-label="目次を閉じる" tabindex="-1"></button>
+
+    <div class="page-shell" id="top">
+      <nav class="side-nav" id="manual-navigation" aria-label="マニュアル目次">
+        <div class="nav-header">
+          <p class="nav-title">目次</p>
+          <button class="nav-close" type="button">閉じる</button>
+        </div>
+        <ol>
+          <li><a href="#overview"><span>01</span>はじめに</a></li>
+          <li><a href="#manage"><span>02</span>管理メニュー</a></li>
+          <li><a href="#live"><span>03</span>ライブ管理</a></li>
+          <li><a href="#setlist"><span>04</span>セトリ</a></li>
+          <li><a href="#reservation"><span>05</span>予約管理</a></li>
+          <li><a href="#share"><span>06</span>共有・書き出し</a></li>
+          <li><a href="#report"><span>07</span>レポート</a></li>
+          <li><a href="#backup"><span>08</span>バックアップ</a></li>
+          <li><a href="#plans"><span>09</span>無料・プレミアム</a></li>
+          <li><a href="#faq"><span>10</span>FAQ</a></li>
+          <li><a href="#updates"><span>11</span>更新履歴</a></li>
+        </ol>
+      </nav>
+
+      <main id="main-content" class="manual">
+        <section class="manual-cover" aria-labelledby="manual-title">
+          <div class="cover-copy">
+            <p class="eyebrow">OFFICIAL USER GUIDE</p>
+            <h1 id="manual-title">Setlis<br />オンラインマニュアル</h1>
+            <p class="cover-lead">
+              ライブの予定作成から当日のセトリ・予約管理、活動の振り返り、機種変更に備えたバックアップまでを説明します。
+            </p>
+            <div class="cover-actions">
+              <a class="button button-primary" href="#overview">使い方を見る</a>
+              <a class="button button-secondary" href="#backup">バックアップを見る</a>
+            </div>
+            <p class="cover-version">対応バージョン 1.3.1</p>
+          </div>
+          <figure class="cover-screen">
+            <img src="./images/live-list.png" alt="Setlisの今後のライブ一覧画面" width="1179" height="2556" />
+            <figcaption>今後のライブを一覧で確認</figcaption>
+          </figure>
+        </section>
+
+        <section id="overview" class="manual-section">
+          <header class="section-heading">
+            <span class="section-number">01</span>
+            <div><p class="eyebrow">OVERVIEW</p><h2>はじめに</h2></div>
+          </header>
+
+          <p class="section-lead">
+            Setlisは、バンド活動に必要な情報をライブ単位でまとめるアプリです。画面下部の4つのメニューから操作します。
+          </p>
+
+          <div class="menu-grid" aria-label="メインメニューの説明">
+            <article><strong>ライブ</strong><p>今後・過去のライブ、カレンダー、ライブ詳細を管理します。</p></article>
+            <article><strong>管理</strong><p>繰り返し使うバンド、楽曲、会場を登録します。</p></article>
+            <article><strong>レポート</strong><p>ライブ件数、演奏曲、予約、音楽傾向を振り返ります。</p></article>
+            <article><strong>設定</strong><p>表示、通知、バックアップ、プラン、規約を確認します。</p></article>
+          </div>
+
+          <div class="note note-info">
+            <strong>最初は「管理」から</strong>
+            <p>バンドと楽曲を先に登録すると、ライブやセトリを作るたびに同じ内容を入力せずに呼び出せます。会場は手入力でも利用できます。</p>
+          </div>
+
+          <ol class="step-list">
+            <li><span>1</span><div><h3>バンドと楽曲を登録</h3><p>画面下部の「管理」を開き、出演バンドと演奏曲を登録します。</p></div></li>
+            <li><span>2</span><div><h3>ライブを作成</h3><p>「ライブ」の追加ボタンから、日程、会場、開場・開演時間などを入力します。</p></div></li>
+            <li><span>3</span><div><h3>セトリと予約を準備</h3><p>作成したライブを開き、「セトリ」「メンバー」「予約」を順に整えます。</p></div></li>
+          </ol>
+        </section>
+
+        <section id="manage" class="manual-section">
+          <header class="section-heading">
+            <span class="section-number">02</span>
+            <div><p class="eyebrow">MANAGE</p><h2>管理メニュー</h2></div>
+          </header>
+
+          <div class="screen-layout">
+            <figure class="app-screen">
+              <img src="./images/manage-songs.png" alt="管理メニューの楽曲一覧画面" width="1179" height="2556" loading="lazy" />
+              <figcaption>「管理」ではバンド・楽曲・会場を切り替えます。</figcaption>
+            </figure>
+            <div class="screen-copy">
+              <h3>よく使う情報を登録する</h3>
+              <dl class="feature-list">
+                <div><dt>バンド</dt><dd>バンド名、メンバー名、担当パート、表示色などを登録します。</dd></div>
+                <div><dt>楽曲</dt><dd>曲名、アーティスト、Key、BPM、演奏時間、ジャンル、譜面・音源リンクを登録します。</dd></div>
+                <div><dt>会場</dt><dd>会場名や住所を登録し、地図や経路を開けます。会場マスターへの登録はプレミアム機能です。</dd></div>
+              </dl>
+            </div>
+          </div>
+
+          <h3>楽曲登録のポイント</h3>
+          <ul class="plain-list">
+            <li>曲名やアーティスト名を入力すると、Apple Music検索による候補が表示されることがあります。候補を使わない場合は候補欄の閉じるボタンで非表示にできます。</li>
+            <li>BPMを登録すると、セトリからメトロノームを開けます。</li>
+            <li>譜面URLやYouTube・Spotify・Apple Musicなどの再生リンクを登録すると、楽曲一覧やセトリから直接開けます。</li>
+            <li>マスター曲を修正する場合と、特定のライブだけKeyや演奏時間を変える場合を使い分けられます。</li>
+          </ul>
+        </section>
+
+        <section id="live" class="manual-section">
+          <header class="section-heading">
+            <span class="section-number">03</span>
+            <div><p class="eyebrow">LIVE</p><h2>ライブ管理</h2></div>
+          </header>
+
+          <div class="screen-pair">
+            <figure class="app-screen">
+              <img src="./images/live-list.png" alt="今後のライブ一覧" width="1179" height="2556" loading="lazy" />
+              <figcaption>「今後」「過去」でライブを切り替えます。</figcaption>
+            </figure>
+            <figure class="app-screen">
+              <img src="./images/calendar.png" alt="ライブとリハーサルのカレンダー表示" width="1179" height="2556" loading="lazy" />
+              <figcaption>カレンダーではライブとリハーサルを月単位で確認できます。</figcaption>
+            </figure>
+          </div>
+
+          <h3>ライブを作成する</h3>
+          <ol class="step-list">
+            <li><span>1</span><div><h3>追加ボタンを押す</h3><p>ライブ一覧右下の「＋」を押します。</p></div></li>
+            <li><span>2</span><div><h3>基本情報を入力</h3><p>ライブ名、日付、出演バンド、会場、OPEN・START、チャージを入力します。</p></div></li>
+            <li><span>3</span><div><h3>詳細を整える</h3><p>ライブ詳細の「Info」でリハーサル、フライヤー、告知文などを追加します。</p></div></li>
+          </ol>
+
+          <h3>ライブ詳細の4つのタブ</h3>
+          <div class="menu-grid">
+            <article><strong>Info</strong><p>日時、会場、料金、出演バンド、リハーサル、地図、告知、共有を確認します。</p></article>
+            <article><strong>セトリ</strong><p>曲、MC、休憩を並べ、演奏時間を確認します。</p></article>
+            <article><strong>メンバー</strong><p>出演メンバーと担当パートをライブごとに調整します。</p></article>
+            <article><strong>予約</strong><p>予約者、人数、受付状況を管理します。プレミアム機能です。</p></article>
+          </div>
+
+          <div class="note note-info">
+            <strong>ライブ終了後も修正できます</strong>
+            <p>過去のライブを開き、Info、セトリ、メンバー、予約、ライブメモをあとから修正できます。実際の演奏内容や予約結果に合わせて記録を整えると、レポートの集計も正確になります。</p>
+          </div>
+        </section>
+
+        <section id="setlist" class="manual-section">
+          <header class="section-heading">
+            <span class="section-number">04</span>
+            <div><p class="eyebrow">SETLIST</p><h2>セトリ</h2></div>
+          </header>
+
+          <div class="screen-layout">
+            <figure class="app-screen">
+              <img src="./images/setlist.png" alt="曲と音源リンクが並ぶセトリ画面" width="1179" height="2556" loading="lazy" />
+              <figcaption>合計時間と曲数を確認しながら曲順を組みます。</figcaption>
+            </figure>
+            <div class="screen-copy">
+              <h3>曲順を組み立てる</h3>
+              <ol class="compact-steps">
+                <li><strong>追加</strong><span>「＋」から登録済み楽曲、手入力の曲、MC、休憩を追加します。</span></li>
+                <li><strong>並び替え</strong><span>並び固定を解除し、ドラッグして順番を変更します。並び替え中も左スワイプで削除できます。</span></li>
+                <li><strong>曲を調整</strong><span>各行のメニューから、そのライブだけのKeyや演奏時間を変更できます。</span></li>
+                <li><strong>本番で表示</strong><span>プレミアム版では黒背景の全画面セトリを開き、演奏中の曲を追えます。</span></li>
+              </ol>
+            </div>
+          </div>
+
+          <h3>セトリ内のアイコン</h3>
+          <dl class="feature-list horizontal-list">
+            <div><dt>メトロノーム</dt><dd>登録したBPMと拍子でテンポを確認します。プレミアム機能です。</dd></div>
+            <div><dt>音源</dt><dd>登録済みのYouTube、Spotify、Apple Musicなどを開きます。</dd></div>
+            <div><dt>譜面</dt><dd>登録した譜面URLやPDFを開きます。</dd></div>
+            <div><dt>共有</dt><dd>コピー、Excel、PDF、JPGから用途に合う形式を選びます。</dd></div>
+          </dl>
+        </section>
+
+        <section id="reservation" class="manual-section">
+          <header class="section-heading">
+            <span class="section-number">05</span>
+            <div><p class="eyebrow">RESERVATION</p><h2>予約管理</h2></div>
+          </header>
+
+          <div class="screen-layout reverse">
+            <figure class="app-screen">
+              <img src="./images/reservations.png" alt="予約人数と受付状態を管理する画面" width="1179" height="2556" loading="lazy" />
+              <figcaption>予約者名、人数、受付状況を一覧で確認します。</figcaption>
+            </figure>
+            <div class="screen-copy">
+              <div class="premium-label">プレミアム機能</div>
+              <h3>予約受付から当日の確認まで</h3>
+              <ol class="compact-steps">
+                <li><strong>予約を追加</strong><span>予約者名、ふりがな、人数、連絡先、メモ、種別などを登録します。</span></li>
+                <li><strong>検索・絞り込み</strong><span>名前やメモで検索し、「受付：未」「受付：済」を切り替えます。</span></li>
+                <li><strong>受付を記録</strong><span>当日は予約行を操作して受付済みにします。画面上部で総予約人数と受付済み人数を確認できます。</span></li>
+                <li><strong>一覧を共有</strong><span>受付担当者向けに予約一覧をコピー、Excel、PDF、JPGで書き出せます。</span></li>
+              </ol>
+            </div>
+          </div>
+
+          <div class="note note-warning">
+            <strong>個人情報の取り扱い</strong>
+            <p>予約者名、連絡先、メモを含む一覧やバックアップは、信頼できる保存先・共有先だけで扱ってください。</p>
+          </div>
+        </section>
+
+        <section id="share" class="manual-section">
+          <header class="section-heading">
+            <span class="section-number">06</span>
+            <div><p class="eyebrow">SHARE &amp; EXPORT</p><h2>共有・書き出し</h2></div>
+          </header>
+
+          <div class="screen-layout">
+            <figure class="app-screen">
+              <img src="./images/share-export.png" alt="ライブ情報のコピー、Excel、PDF、JPG書き出し画面" width="1179" height="2556" loading="lazy" />
+              <figcaption>共有欄を開き、目的に合う形式を選びます。</figcaption>
+            </figure>
+            <div class="screen-copy">
+              <h3>形式の選び方</h3>
+              <dl class="feature-list">
+                <div><dt>コピー</dt><dd>メッセージやメモへすぐ貼り付けたいときに使います。</dd></div>
+                <div><dt>Excel</dt><dd>Excelや表計算アプリで編集・集計したいときに使います。</dd></div>
+                <div><dt>PDF</dt><dd>レイアウトを保ったまま印刷・保管したいときに使います。</dd></div>
+                <div><dt>JPG</dt><dd>画像としてSNSやメッセージで共有したいときに使います。内容に合わせて縦長の画像が作成されます。</dd></div>
+              </dl>
+            </div>
+          </div>
+
+          <h3>書き出せる内容</h3>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>対象</th><th>主な内容</th><th>利用例</th></tr></thead>
+              <tbody>
+                <tr><td>ライブ情報</td><td>日時、会場、料金、出演バンド、リハーサルなど</td><td>メンバーへの共有、当日資料</td></tr>
+                <tr><td>セトリ</td><td>曲順、Key、BPM、演奏時間、MC、休憩など</td><td>本番用、スタッフ共有</td></tr>
+                <tr><td>予約一覧</td><td>予約者名、人数、受付状態、メモなど</td><td>受付用、動員確認</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="note note-info">
+            <strong>書き出し後の操作</strong>
+            <p>Excel、PDF、JPGの作成が完了すると、その場でファイルを開くか、ほかのアプリへ共有するかを選べます。</p>
+          </div>
+        </section>
+
+        <section id="report" class="manual-section">
+          <header class="section-heading">
+            <span class="section-number">07</span>
+            <div><p class="eyebrow">REPORT</p><h2>レポート</h2></div>
+          </header>
+
+          <p class="section-lead">
+            レポートは、ライブの準備状況を確認する画面であり、活動履歴を振り返る画面でもあります。ライブ、セトリ、予約に入力した内容が自動で集計されます。
+          </p>
+
+          <div class="screen-pair">
+            <figure class="app-screen">
+              <img src="./images/report-overview.png" alt="準備状況とライブ件数を表示するレポート上部" width="1179" height="2556" loading="lazy" />
+              <figcaption>上部では準備状況とライブ件数を確認します。</figcaption>
+            </figure>
+            <figure class="app-screen">
+              <img src="./images/report-analysis.png" alt="KeyとBPM分布、バンド別ライブ件数、演奏曲ランキング" width="1179" height="2556" loading="lazy" />
+              <figcaption>下へスクロールすると演奏傾向やランキングを確認できます。</figcaption>
+            </figure>
+          </div>
+
+          <div class="report-grid">
+            <article><h3>準備チェック</h3><p>直近の今後ライブに未設定項目がある場合、要確認として表示します。タップして対象ライブを確認できます。</p></article>
+            <article><h3>概要</h3><p>今後のライブ、完了したライブ、今月のライブ、集計対象の本番ライブ件数を表示します。</p></article>
+            <article><h3>月別ライブ件数</h3><p>直近12か月の本番ライブ件数をグラフで確認します。</p></article>
+            <article><h3>Key / BPM分布</h3><p>セトリからKeyの使用回数と、Slow・Mid・FastのBPM帯を集計します。</p></article>
+            <article><h3>バンド別ライブ件数</h3><p>出演バンドごとに今後・完了・合計のライブ件数をランキング表示します。</p></article>
+            <article><h3>多く演奏した曲</h3><p>過去ライブのセトリから演奏回数と前回の演奏日を表示します。</p></article>
+            <article><h3>最近演奏した曲</h3><p>直近の演奏日が新しい曲を確認できます。</p></article>
+            <article><h3>予約の多かったライブ</h3><p>完了済みライブの予約人数をランキング表示します。</p></article>
+            <article><h3>フライヤーギャラリー</h3><p>登録したライブ画像を新しい順またはランダムで閲覧できます。自動再生は3秒ごとに切り替わります。プレミアム機能です。</p></article>
+          </div>
+
+          <div class="note note-info">
+            <strong>集計を正確にするには</strong>
+            <p>終了後のライブも実際のセトリや予約人数に合わせて修正してください。リハーサルは本番ライブ件数の集計対象には含まれません。</p>
+          </div>
+        </section>
+
+        <section id="backup" class="manual-section">
+          <header class="section-heading">
+            <span class="section-number">08</span>
+            <div><p class="eyebrow">BACKUP &amp; RESTORE</p><h2>バックアップ</h2></div>
+          </header>
+
+          <p class="section-lead">
+            機種変更や端末トラブルに備えて、定期的にJSONバックアップを「ファイル」アプリへ保存してください。保存先は「このiPhone内」やiCloud Driveから選べます。
+          </p>
+
+          <div class="screen-layout">
+            <figure class="app-screen">
+              <img src="./images/settings-backup.png" alt="設定のバックアップと復旧画面" width="1179" height="2556" loading="lazy" />
+              <figcaption>「設定」→「データと安全」→「バックアップと復旧」</figcaption>
+            </figure>
+            <div class="screen-copy">
+              <h3>iPhone内へ保存する手順</h3>
+              <ol class="compact-steps numbered">
+                <li><strong>設定を開く</strong><span>画面下部の「設定」を開き、「データと安全」までスクロールします。</span></li>
+                <li><strong>バックアップを保存</strong><span>「バックアップを保存」を押し、個人情報に関する確認を読んで「保存」を押します。</span></li>
+                <li><strong>保存先を選ぶ</strong><span>「ファイル」の保存画面で「このiPhone内」を開き、保存するフォルダを選びます。</span></li>
+                <li><strong>ファイルを保存</strong><span><code>setly_simple_backup_日付.json</code>という名前を確認し、右上の「保存」を押します。</span></li>
+              </ol>
+            </div>
+          </div>
+
+          <div class="note note-warning">
+            <strong>「このiPhone内」だけでは端末故障に備えられません</strong>
+            <p>端末の紛失や故障にも備える場合は、保存したJSONをiCloud Drive、Mac、外部ストレージなど端末外にも保管してください。</p>
+          </div>
+
+          <h3>保存したバックアップを読み込む</h3>
+          <div class="screen-layout reverse">
+            <figure class="app-screen">
+              <img src="./images/import-strategy.png" alt="既存データを残すか消去するかを選ぶ取り込み方法ダイアログ" width="1179" height="2556" loading="lazy" />
+              <figcaption>読み込み前に、現在のデータをどう扱うか選びます。</figcaption>
+            </figure>
+            <div class="screen-copy">
+              <ol class="compact-steps numbered">
+                <li><strong>復旧を開始</strong><span>「設定」→「データと安全」→「バックアップデータから復旧」を押します。</span></li>
+                <li><strong>取り込み方法を選択</strong><span>現在のデータを残すか、バックアップの内容へ置き換えるかを選びます。</span></li>
+                <li><strong>JSONを選択</strong><span>「ファイル」で「このiPhone内」など保存先を開き、読み込むJSONファイルをタップします。</span></li>
+                <li><strong>完了まで待つ</strong><span>検証と取り込みが終わり、「インポート完了」と表示されるまでSetlisを閉じないでください。</span></li>
+              </ol>
+            </div>
+          </div>
+
+          <h3>2つの取り込み方法の違い</h3>
+          <div class="choice-grid">
+            <article>
+              <span class="choice-label add">追加</span>
+              <h3>既存データを残して追加</h3>
+              <p>現在のライブや楽曲を残したまま、バックアップ内のデータを追加します。複数端末・複数バックアップの内容をまとめたい場合に使います。同じ内部IDのデータは重複登録されません。</p>
+            </article>
+            <article>
+              <span class="choice-label replace">置き換え</span>
+              <h3>既存データをすべて消去して取り込む</h3>
+              <p>現在のデータをバックアップ時点の内容へ置き換えます。Setlisは先にJSONを検証し、現在のデータの安全バックアップを作成してから削除・取り込みを行います。</p>
+            </article>
+          </div>
+
+          <div class="note note-info">
+            <strong>事前に「全データを削除」する必要はありません</strong>
+            <p>バックアップの内容へ戻したい場合は「既存データをすべて消去して取り込む」を選んでください。設定内の「全データを削除」は、バックアップを使わず完全に初期化するときの操作です。</p>
+          </div>
+
+          <h3>バックアップに含まれるもの</h3>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>含まれる</th><th>含まれない</th></tr></thead>
+              <tbody>
+                <tr><td>ライブ、リハーサル、セトリ、MC・休憩</td><td>フライヤーなどの画像</td></tr>
+                <tr><td>楽曲、バンド、メンバー、会場</td><td>登録したPDFや添付ファイル</td></tr>
+                <tr><td>予約者名、連絡先、人数、メモ、受付状態</td><td>表示テーマや通知などのアプリ設定</td></tr>
+                <tr><td>各データに登録したテキスト・URL</td><td>告知テンプレート</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="note note-warning">
+            <strong>バックアップファイルには個人情報が含まれます</strong>
+            <p>予約者名、連絡先、メモなどがJSONに保存されます。公開フォルダや不特定多数が閲覧できる場所には置かないでください。</p>
+          </div>
+        </section>
+
+        <section id="plans" class="manual-section">
+          <header class="section-heading">
+            <span class="section-number">09</span>
+            <div><p class="eyebrow">PLANS</p><h2>無料版とプレミアム</h2></div>
+          </header>
+
+          <div class="screen-layout">
+            <figure class="app-screen">
+              <img src="./images/premium-overview.png" alt="Setlisのプレミアム機能説明画面" width="1179" height="2556" loading="lazy" />
+              <figcaption>設定の「アップグレード」から機能内容を確認できます。</figcaption>
+            </figure>
+            <div class="screen-copy">
+              <h3>無料版について</h3>
+              <p>無料版でも、ライブ予定の作成、バンド・楽曲の登録、セトリ作成、告知、テキスト共有、レポートの基本表示を試せます。登録件数や一部機能には制限があります。</p>
+              <h3>プレミアムについて</h3>
+              <p>プレミアムはサブスクリプションではなく、1回限りの買い切りです。登録件数の上限を解除し、過去ライブ、予約管理、会場マスター、メトロノーム、Excel・PDF・JPG書き出し、フライヤー関連機能などを利用できます。</p>
+            </div>
+          </div>
+
+          <div class="table-wrap">
+            <table class="plan-table">
+              <thead><tr><th>項目</th><th>無料版</th><th>プレミアム</th></tr></thead>
+              <tbody>
+                <tr><td>ライブ登録</td><td>10件まで</td><td>無制限</td></tr>
+                <tr><td>バンド登録</td><td>2件まで</td><td>無制限</td></tr>
+                <tr><td>楽曲登録</td><td>10曲まで</td><td>無制限</td></tr>
+                <tr><td>会場登録</td><td>手動入力のみ</td><td>会場タブへ登録可能</td></tr>
+                <tr><td>過去ライブ</td><td>一部のみ閲覧</td><td>すべて閲覧</td></tr>
+                <tr><td>予約管理</td><td>利用不可</td><td>利用可能</td></tr>
+                <tr><td>共有出力</td><td>テキストのみ</td><td>Excel / PDF / JPG</td></tr>
+                <tr><td>メトロノーム</td><td>利用不可</td><td>利用可能</td></tr>
+                <tr><td>料金方式</td><td>無料</td><td>1回限りの買い切り</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3>購入と復元</h3>
+          <ul class="plain-list">
+            <li>設定の「アップグレード」からプレミアム画面を開き、App Storeに表示される価格と内容を確認して購入します。</li>
+            <li>機種変更後や再インストール後は、購入時と同じApple Accountで「購入済みの場合は復元」を押します。</li>
+            <li>購入できない場合は通信状態とApp Storeへのサインインを確認し、「商品情報を再読み込み」を試してください。</li>
+          </ul>
+        </section>
+
+        <section id="faq" class="manual-section">
+          <header class="section-heading">
+            <span class="section-number">10</span>
+            <div><p class="eyebrow">FAQ</p><h2>よくある質問</h2></div>
+          </header>
+
+          <div class="faq-list">
+            <details open><summary>最初に何を登録すればよいですか？</summary><p>「管理」でバンドと楽曲を登録し、その後「ライブ」で予定を作成するのがおすすめです。登録した内容をライブやセトリで繰り返し使えます。</p></details>
+            <details><summary>ライブとリハーサルはどう使い分けますか？</summary><p>本番はライブとして作成します。ライブに紐づくリハーサルはライブ詳細へ追加でき、リハーサルだけの予定もカレンダーへ登録できます。</p></details>
+            <details><summary>過去のライブを修正できますか？</summary><p>はい。過去のライブを開き、ライブ情報、セトリ、メンバー、予約、メモを修正できます。</p></details>
+            <details><summary>同じ曲でもライブごとにKeyを変えられますか？</summary><p>はい。セトリの曲メニューから「このライブ用に編集」を選ぶと、マスター曲を変えずにそのライブだけ調整できます。</p></details>
+            <details><summary>曲順を変更するにはどうしますか？</summary><p>セトリ上部の並び固定を解除し、行をドラッグします。並び替え中も左スワイプで曲を削除できます。</p></details>
+            <details><summary>予約の受付済み・未受付を確認できますか？</summary><p>予約タブ上部で絞り込み、各予約行の受付状態を切り替えられます。予約管理はプレミアム機能です。</p></details>
+            <details><summary>レポートの数字はどこから集計されますか？</summary><p>登録したライブ、セトリ、出演バンド、予約から集計されます。過去ライブの記録を実際の内容へ修正すると、集計も更新されます。</p></details>
+            <details><summary>データは外部サーバーへ自動送信されますか？</summary><p>Setlisのデータは端末内に保存されます。ユーザー自身が共有やバックアップを実行したときだけ、選択した保存先・共有先へ渡ります。</p></details>
+            <details><summary>機種変更では何をすればよいですか？</summary><p>旧端末でJSONバックアップを作成し、iCloud Driveなど新端末でも開ける場所へ保存します。新端末のSetlisで「バックアップデータから復旧」を選び、そのJSONを読み込みます。</p></details>
+            <details><summary>復旧前に現在のデータを削除する必要がありますか？</summary><p>ありません。「既存データをすべて消去して取り込む」を選ぶと、Setlisが安全バックアップを作成してから置き換えます。</p></details>
+            <details><summary>フライヤー画像もバックアップされますか？</summary><p>いいえ。JSONバックアップには画像、PDF、アプリ設定、告知テンプレートは含まれません。必要な画像やPDFは別途保管してください。</p></details>
+            <details><summary>プレミアム購入を新しい端末で使えますか？</summary><p>購入時と同じApple AccountでApp Storeへサインインし、プレミアム画面の「購入済みの場合は復元」を押してください。</p></details>
+          </div>
+        </section>
+
+        <section id="updates" class="manual-section">
+          <header class="section-heading">
+            <span class="section-number">11</span>
+            <div><p class="eyebrow">UPDATE HISTORY</p><h2>更新履歴</h2></div>
+          </header>
+
+          <div class="update-list">
+            <article><div><strong>v1.3.1</strong></div><ul><li>過去ライブの情報、セトリ、予約、メンバー、メモをあとから編集できるようにしました。</li><li>その他バグフィックス、安定性の向上を行いました。</li></ul></article>
+            <article><div><strong>v1.3</strong></div><ul><li>プレミアム版の全画面セトリを高密度化しました。</li><li>アプリ内表示へスペイン語を追加しました。</li><li>アップデート後の初回起動時に更新内容を案内するモーダルを追加しました。</li></ul></article>
+            <article><div><strong>v1.2</strong></div><ul><li>プレミアム版のレポート画面にフライヤーギャラリーを追加しました。</li><li>フライヤーを新しい順またはランダムで閲覧できます。</li><li>スワイプで切り替え、タップでライブ情報へ移動できます。</li><li>自動再生ボタンを押すと3秒ごとのスライドショーに切り替えられます。</li><li>その他バグフィックス、安定性の向上を行いました。</li></ul></article>
+            <article><div><strong>v1.0.6</strong></div><ul><li>公式ランディングページ、利用規約、プライバシーポリシーの公開URLを更新しました。</li><li>アプリ内のサポート・規約リンクを最新の公開ページに合わせました。</li></ul></article>
+            <article><div><strong>v1.0.5</strong></div><ul><li>Excel互換CSVの書式を見直し、ライブ名・日程・会場を表の上に分けて表示するようにしました。</li><li>セトリCSVで譜面リンクと音源リンクをまとめて含められるようにしました。</li><li>共有出力の無料版・プレミアム版の違いを比較表に追記しました。</li></ul></article>
+            <article><div><strong>v1.0.4</strong></div><ul><li>楽曲の並び替え表示をテキスト中心にし、狭い画面でも見切れにくくしました。</li></ul></article>
+            <article><div><strong>v1.0.3</strong></div><ul><li>楽曲やセトリに、YouTube・Spotify・Apple Musicなどの再生リンクを登録できるようになりました。</li><li>楽曲情報を更新したとき、今後のライブのセトリにも反映されやすくなりました。</li><li>告知テンプレートとセトリ編集の使いやすさを改善しました。</li></ul></article>
+            <article><div><strong>v1.0.2</strong></div><ul><li>ライブやリハーサル作成時の日付・時刻入力を見直しました。</li><li>ライブに紐づくリハーサルや、リハのみの予定をカレンダーで見分けやすくしました。</li></ul></article>
+            <article><div><strong>v1.0.1</strong></div><ul><li>無料プランとプレミアム機能の表示をわかりやすく整理しました。</li><li>利用規約とプライバシーポリシーを公開用に更新しました。</li></ul></article>
+            <article><div><strong>v1.0</strong></div><ul><li>ライブ予定、リハーサル、セトリ、予約、メンバー管理をまとめて扱える基本機能を公開しました。</li><li>告知文の作成、Xへの投稿導線、ライブメモ、バンドメンバーのパート入力に対応しました。</li><li>ライブ、楽曲、バンド、会場などのテキストデータをJSON形式でバックアップできるようにしました。</li></ul></article>
+          </div>
+        </section>
+
+        <footer class="manual-footer">
+          <img src="../LP/app_icon.png" alt="" width="48" height="48" />
+          <div>
+            <strong>Setlis オンラインマニュアル</strong>
+            <p>バージョン 1.3.1 / 最終更新 2026-07-20</p>
+          </div>
+          <nav aria-label="関連リンク">
+            <a href="../LP/index.html">公式ページ</a>
+            <a href="../terms.html">利用規約</a>
+            <a href="../privacy.html">プライバシーポリシー</a>
+          </nav>
+        </footer>
+      </main>
+    </div>
+    <script>
+      (() => {
+        const root = document.documentElement;
+        const openButton = document.getElementById("manual-nav-button");
+        const closeButton = document.querySelector(".nav-close");
+        const backdrop = document.querySelector(".nav-backdrop");
+        const navLinks = document.querySelectorAll(".side-nav a");
+        const setOpen = (isOpen) => {
+          root.classList.toggle("nav-open", isOpen);
+          openButton.setAttribute("aria-expanded", String(isOpen));
+          if (isOpen) closeButton.focus();
+        };
+
+        openButton.addEventListener("click", () => setOpen(!root.classList.contains("nav-open")));
+        closeButton.addEventListener("click", () => setOpen(false));
+        backdrop.addEventListener("click", () => setOpen(false));
+        navLinks.forEach((link) => link.addEventListener("click", () => setOpen(false)));
+        document.addEventListener("keydown", (event) => {
+          if (event.key === "Escape" && root.classList.contains("nav-open")) {
+            setOpen(false);
+            openButton.focus();
+          }
+        });
+      })();
+    </script>
+  </body>
+</html>
