@@ -10,7 +10,7 @@
     />
     <meta name="theme-color" content="#ffffff" />
     <link rel="icon" href="../LP/assets/tetra_logo.png" />
-    <link rel="stylesheet" href="./styles.css?v=1.0" />
+    <link rel="stylesheet" href="./styles.css?v=20260728" />
   </head>
   <body>
     <a class="skip-link" href="#main-content">本文へ移動</a>
@@ -60,13 +60,16 @@
           <li><a href="#start">はじめに</a></li>
           <li><a href="#parts">画面と各パーツの説明</a></li>
           <li><a href="#sample">「SAMPLE」モード</a></li>
+          <li><a href="#slice">SLICE</a></li>
           <li><a href="#sequence">「SEQUENCE」モード</a></li>
           <li><a href="#project">「PROJECT」モード</a></li>
           <li><a href="#settings">設定モード</a></li>
+          <li><a href="#midi-settings">MIDI設定</a></li>
           <li><a href="#plans">無料・プレミアム比較</a></li>
           <li><a href="#faq">FAQ</a></li>
           <li><a href="#legal">利用規約・プライバシー</a></li>
           <li><a href="#specs">データ仕様一覧</a></li>
+          <li><a href="#errors">エラーメッセージ一覧</a></li>
         </ol>
       </nav>
 
@@ -79,15 +82,15 @@
               <p class="cover-model">TXT sampler / TT-404</p>
               <h1 id="manual-title">取扱説明書</h1>
             </div>
-            <p class="cover-version">バージョン 1.0</p>
+            <p class="cover-version">バージョン 1.5.1 / 更新 2026-08-11</p>
           </div>
 
           <figure class="cover-art">
             <img
-              src="./assets/cover-device.png"
-              alt="TXT sampler の本体イメージ"
-              width="898"
-              height="1112"
+              src="./assets/manual-overview-line-art-from-current-ui.png"
+              alt="TXT sampler の現行iPad画面構成を示す線画"
+              width="1096"
+              height="1435"
               decoding="async"
             />
           </figure>
@@ -134,7 +137,7 @@
             <article class="feature-card">
               <span class="card-kicker">SEQUENCE</span>
               <h4>リズムを組み立てる</h4>
-              <p>16ステップのグリッドへ音を配置し、繰り返し再生します。</p>
+              <p>シーケンスへ音を配置し、繰り返し再生します。</p>
             </article>
             <article class="feature-card">
               <span class="card-kicker">PROJECT</span>
@@ -198,8 +201,8 @@
                 <img
                   src="./assets/ipad-sample.png"
                   alt="TXT samplerのiPad版SAMPLE画面"
-                  width="1042"
-                  height="1500"
+                  width="1668"
+                  height="2420"
                   loading="lazy"
                 />
                 <span
@@ -248,7 +251,7 @@
                 <span>1</span>
                 <div>
                   <strong>プロジェクト表示</strong>
-                  <p>現在のプロジェクト名、ヘルプ、設定を表示します。</p>
+                  <p>現在のプロジェクト名、ヘルプ、設定を表示します。ヘルプからオンラインマニュアルまたはサポートフォームを選んで開けます。</p>
                 </div>
               </li>
               <li>
@@ -287,7 +290,7 @@
                 <span>6</span>
                 <div>
                   <strong>コントロール</strong>
-                  <p>BPM、TAP、再生・停止を操作します。</p>
+                  <p>BPM、TAP、SEQ REC、PLAY／STOP、METROを操作します。</p>
                 </div>
               </li>
             </ol>
@@ -296,8 +299,8 @@
           <h3>iPhone専用表示</h3>
           <h4>iPhoneでの表示に最適化されたUIでサンプラーを操作できます</h4>
 
-          <div class="screenshot-guide">
-            <figure class="manual-shot manual-shot-phone">
+          <div class="screenshot-guide screenshot-guide-wide">
+            <figure class="manual-shot manual-shot-ipad">
               <div class="shot-frame">
                 <img
                   src="./assets/iphone-sample.png"
@@ -442,15 +445,15 @@
             </div>
           </div>
 
-          <div class="screenshot-guide">
-            <figure class="manual-shot manual-shot-phone">
+          <div class="screenshot-guide screenshot-guide-wide">
+            <figure class="manual-shot manual-shot-ipad">
               <div class="shot-frame">
 
                 <img
-                  src="./assets/iphone-sample.png"
-                  alt="iPhone専用表示のSAMPLEモード"
-                  width="645"
-                  height="1400"
+                  src="./assets/ipad-sample.png"
+                  alt="iPad版のSAMPLEモード"
+                  width="1668"
+                  height="2420"
                   loading="lazy"
                 />
                 <span
@@ -461,19 +464,19 @@
                 >
                 <span
                   class="shot-marker"
-                  style="--x: 50%; --y: 39%"
+                  style="--x: 50%; --y: 33%"
                   aria-hidden="true"
                   >2</span
                 >
                 <span
                   class="shot-marker"
-                  style="--x: 50%; --y: 64%"
+                  style="--x: 35%; --y: 68%"
                   aria-hidden="true"
                   >3</span
                 >
                 <span
                   class="shot-marker"
-                  style="--x: 7%; --y: 49%"
+                  style="--x: 43%; --y: 47%"
                   aria-hidden="true"
                   >4</span
                 >
@@ -496,7 +499,7 @@
                 <span>2</span>
                 <div>
                   <strong>サンプル操作</strong>
-                  <p>REC、ADSR、LOAD SAMPLE、DEL SAMPLE、RESETを使用します。</p>
+                  <p>REC、ADSR、SLICE、LOAD SAMPLE、DEL SAMPLE、RESETを使用します。</p>
                 </div>
               </li>
               <li>
@@ -537,11 +540,12 @@
               録音先のパッドを選び、<span class="control-label">REC</span
               >をタップします。
             </li>
+            <li>すでに音があるパッドでは、「既存のサンプルがあります。録音を開始しますか？」と表示されます。この時点では元のサンプルは変わりません。</li>
             <li>初回はマイク使用を許可します。</li>
             <li>録音を止め、確認画面で「この録音を使う」を選びます。</li>
           </ol>
           <p class="small-note">
-            すでに音があるパッドを録音先にすると、確定時に既存サンプルが置き換わります。
+            「録音する」を選んで録音した後、確認画面で「この録音を使う」を選んだ時点で、元のサンプルが新しい録音に置き換わります。
           </p>
 
           <h3>波形をトリムする</h3>
@@ -603,52 +607,132 @@
           </dl>
         </section>
 
+        <section id="slice" class="manual-section">
+          <div class="section-heading">
+            <p class="section-number">04</p>
+            <div>
+              <p class="eyebrow">SLICE</p>
+              <h2>SLICE<br />再生しながらサンプルを分割する</h2>
+            </div>
+          </div>
+
+          <div class="screenshot-guide screenshot-guide-wide">
+            <figure class="manual-shot manual-shot-ipad">
+              <div class="shot-frame">
+                <img
+                  src="./assets/ipad-slice.png"
+                  alt="iPad版のSLICE操作画面"
+                  width="1668"
+                  height="2420"
+                  loading="lazy"
+                />
+                <span class="shot-marker" style="--x: 61%; --y: 25%" aria-hidden="true">1</span>
+                <span class="shot-marker" style="--x: 68%; --y: 33%" aria-hidden="true">2</span>
+                <span class="shot-marker" style="--x: 19%; --y: 57%" aria-hidden="true">3</span>
+                <span class="shot-marker" style="--x: 20%; --y: 73%" aria-hidden="true">4</span>
+              </div>
+              <figcaption>SLICE中は、分割ポイント、保存ボタン、分割先パッドの状態を同じ画面で確認します。</figcaption>
+            </figure>
+            <ol class="callout-list">
+              <li><span>1</span><div><strong>分割ポイント</strong><p>再生位置に縦バーが置かれ、波形の左から右へ番号が付きます。</p></div></li>
+              <li><span>2</span><div><strong>CANCEL／SLICE IT</strong><p>CANCELは破棄、SLICE ITは仮スライスを実際のパッドへ保存します。</p></div></li>
+              <li><span>3</span><div><strong>元サンプル</strong><p>選択中の元パッドです。このパッド自身は分割先にできません。</p></div></li>
+              <li><span>4</span><div><strong>分割先パッド</strong><p>「＋」は追加可能、SLICE番号付きの赤いパッドは割り当て済みです。</p></div></li>
+            </ol>
+          </div>
+
+          <div class="note note-info">
+            <strong>SLICEの基本</strong>
+            <p>
+              SLICEは、元サンプルを再生しながら分割点を打ち、別のパッドへ短い素材として切り出す機能です。保存を確定するまでは既存のパッド内容は変更されません。
+            </p>
+          </div>
+          <ol class="compact-steps">
+            <li>元サンプルが入ったパッドを選び、<span class="control-label">SLICE</span>をタップします。元サンプルが先頭から再生されます。</li>
+            <li>再生中に分割先のパッドを押します。押した再生位置にLCD上で縦バーが表示されます。</li>
+            <li>同じ分割先パッドをもう一度押すと、そのポイントが新しい再生位置へ移動します。</li>
+            <li>ポイントが1件以上ある状態で元サンプルの再生が終わると、自動で仮スライスが生成されます。</li>
+            <li>仮スライス中は、番号付きの縦バーを左右へドラッグしてポイントを調整できます。隣のポイントを越えることはできません。</li>
+            <li>割り当てパッドを押して試聴し、問題なければ<span class="control-label">SLICE IT</span>で保存を確定します。</li>
+          </ol>
+          <div class="card-grid card-grid-two">
+            <article class="feature-card">
+              <span class="card-kicker">POINT</span>
+              <h4>番号は波形位置で決まる</h4>
+              <p>分割点は登録した順番ではなく、波形の左から右への位置順で番号が決まります。位置を動かすと番号も並び直します。</p>
+            </article>
+            <article class="feature-card">
+              <span class="card-kicker">PREVIEW</span>
+              <h4>保存前に試聴する</h4>
+              <p>仮スライス中に分割先パッドを押すと、その範囲だけを確認できます。納得してからSLICE ITで保存します。</p>
+            </article>
+          </div>
+          <p class="small-note">
+            ポイントを登録しないまま元サンプルが終端へ達した場合は、自動で先頭から再再生されます。
+          </p>
+          <p class="small-note">
+            SLICE ITするまでは保存データを変更しません。<span class="control-label">CANCEL</span>で中止すると仮スライスを破棄し、元の状態を維持します。元サンプルのパッドも変更されません。
+          </p>
+          <div class="note note-warning">
+            <strong>既存サンプルへの上書き</strong>
+            <p>
+              設定 ＞ パッド設定の「SLICEで既存サンプルを上書き」は初期状態でOFFです。OFFでは使用中パッドを分割先にできません。ONではSLICE IT時に対象パッドを確認してから上書きします。
+            </p>
+          </div>
+          <div class="note note-warning">
+            <strong>確定後の元サンプル</strong>
+            <p>
+              SLICE IT後に元サンプルを残すか消去するかを確認します。残す場合は元のパッドを素材保管用として使えます。消去する場合でも、保存済みの分割先パッドは維持されます。
+            </p>
+          </div>
+        </section>
+
         <!--
-          04 SEQUENCEモード:
-          パターン作成、Bar、Swing、リアルタイム録音、SEQUENCEエフェクトの説明です。
+          05 SEQUENCEモード:
+          パターン作成、Bar、Swing、SEQUENCEエフェクトの説明です。
           無料/プレミアムのBar上限は plans 章の比較表と整合させてください。
         -->
         <section id="sequence" class="manual-section">
           <div class="section-heading">
-            <p class="section-number">04</p>
+            <p class="section-number">05</p>
             <div>
               <p class="eyebrow">SEQUENCEモード</p>
               <h2>「SEQUENCE」モード<br />パターンを作る</h2>
             </div>
           </div>
 
-          <div class="screenshot-guide">
-            <figure class="manual-shot manual-shot-phone">
+          <div class="screenshot-guide screenshot-guide-wide">
+            <figure class="manual-shot manual-shot-ipad">
               <div class="shot-frame">
                 <!-- SEQUENCEモードのスクショ。番号1〜4は下の説明リストと対応します。 -->
                 <img
-                  src="./assets/iphone-sequence.png"
-                  alt="iPhone専用表示のSEQUENCEモード"
-                  width="645"
-                  height="1400"
+                  src="./assets/ipad-sequence.png"
+                  alt="iPad版のSEQUENCEモード"
+                  width="1668"
+                  height="2420"
                   loading="lazy"
                 />
                 <span
                   class="shot-marker"
-                  style="--x: 50%; --y: 30%"
+                  style="--x: 50%; --y: 28%"
                   aria-hidden="true"
                   >1</span
                 >
                 <span
                   class="shot-marker"
-                  style="--x: 50%; --y: 41%"
+                  style="--x: 50%; --y: 33%"
                   aria-hidden="true"
                   >2</span
                 >
                 <span
                   class="shot-marker"
-                  style="--x: 50%; --y: 64%"
+                  style="--x: 35%; --y: 68%"
                   aria-hidden="true"
                   >3</span
                 >
                 <span
                   class="shot-marker"
-                  style="--x: 50%; --y: 91%"
+                  style="--x: 82%; --y: 84%"
                   aria-hidden="true"
                   >4</span
                 >
@@ -661,15 +745,15 @@
               <li>
                 <span>1</span>
                 <div>
-                  <strong>16ステップグリッド</strong>
-                  <p>タップして音を鳴らす位置をオン・オフします。</p>
+                  <strong>シーケンスグリッド</strong>
+                  <p>各パッドの16分ステップをタップして、音を鳴らす位置をオン・オフします。</p>
                 </div>
               </li>
               <li>
                 <span>2</span>
                 <div>
                   <strong>Bar／Swing操作</strong>
-                  <p>小節数、Swing、選択中パッドのパターンを調整します。グリッド左右の矢印で表示するBarを移動します。</p>
+                  <p>小節数、Swing、選択中BANKのパターンを調整します。大画面SEQUENCEでは再生・停止、小節追加・減少、前後小節移動、Swing変更も操作できます。</p>
                 </div>
               </li>
               <li>
@@ -677,7 +761,7 @@
                 <div>
                   <strong>パッド選択</strong>
                   <p>
-                    パッドを変えると、そのパッドのステップ表示へ切り替わります。
+                    パッドやBANKを変えると、選択中BANKのシーケンスへ切り替わります。
                   </p>
                 </div>
               </li>
@@ -686,7 +770,7 @@
                 <div>
                   <strong>TRANSPORT</strong>
                   <p>
-                    再生・停止、リアルタイム録音、クオンタイズを操作します。
+                    再生・停止を操作します。
                   </p>
                 </div>
               </li>
@@ -694,16 +778,118 @@
           </div>
 
           <h3>ステップ入力</h3>
+          <p>
+            BANK A〜Dは、それぞれ別のシーケンスステップと小節数を持ちます。BPMとSwingはプロジェクト全体で共有します。
+          </p>
           <ol class="compact-steps">
             <li>編集するパッドを選びます。</li>
-            <li>16個のグリッドをタップして、鳴らす位置をオンにします。</li>
+            <li>シーケンスグリッドをタップして、鳴らす位置をオンにします。</li>
             <li>再生ボタンを押してループを確認します。</li>
             <li>
               別の音を追加するときは、別のパッドを選んで同じ操作を繰り返します。
             </li>
           </ol>
 
+          <h3>SEQ RECとシーケンス</h3>
+          <p>
+            <span class="control-label">SEQ REC</span
+            >をオンにするとSEQUENCEモードへ移動します。そのまま再生を始めると、1小節のカウントイン後に、パッド演奏を16分グリッドへリアルタイム録音します。画面入力のVelocityは最大で記録します。
+          </p>
+          <p>
+            SEQUENCE LCDは常にシーケンス表示です。1つの動的な<span class="control-label">&lt;PREV</span
+            >／<span class="control-label">NEXT&gt;</span
+            >ボタンで表示中のBarを移動します。シーケンス左上の<span class="control-label">SEQ</span
+            >を押すと、同じシーケンスを大画面SEQUENCEで編集できます。iPadの大画面SEQUENCEは全16パッドを縦スクロールなしで表示します。
+          </p>
+          <p class="small-note">
+            現行版のSEQ RECは16分ステップへ記録します。Quantize OFFのズレ保存、シーケンス上でのVelocity編集、ノート長編集は未対応です。
+          </p>
+
+          <h3>ポップアップウインドウで編集する</h3>
+          <p>
+            SEQUENCEモードのシーケンス左上にある<span class="control-label">SEQ</span
+            >を押すと、大画面SEQUENCEのポップアップウインドウが開きます。背景の本体画面と同じ選択中BANKを編集するため、ここでオン・オフしたステップは通常画面のシーケンスにもそのまま反映されます。
+          </p>
+          <div class="screenshot-guide screenshot-guide-wide">
+            <figure class="manual-shot manual-shot-ipad">
+              <div class="shot-frame">
+                <!-- 大画面SEQUENCEポップアップのスクショ。番号1〜4は下の説明リストと対応します。 -->
+                <img
+                  src="./assets/ipad-sequence-popup.png"
+                  alt="iPad版の大画面SEQUENCEポップアップウインドウ"
+                  width="1668"
+                  height="2420"
+                  loading="lazy"
+                />
+                <span
+                  class="shot-marker"
+                  style="--x: 39%; --y: 30%"
+                  aria-hidden="true"
+                  >1</span
+                >
+                <span
+                  class="shot-marker"
+                  style="--x: 46%; --y: 33%"
+                  aria-hidden="true"
+                  >2</span
+                >
+                <span
+                  class="shot-marker"
+                  style="--x: 56%; --y: 67%"
+                  aria-hidden="true"
+                  >3</span
+                >
+                <span
+                  class="shot-marker"
+                  style="--x: 82%; --y: 29%"
+                  aria-hidden="true"
+                  >4</span
+                >
+              </div>
+              <figcaption>
+                ポップアップウインドウでは、16パッド分のシーケンスを一画面で確認できます。
+              </figcaption>
+            </figure>
+            <ol class="callout-list">
+              <li>
+                <span>1</span>
+                <div>
+                  <strong>BANK表示</strong>
+                  <p>編集中のBANKを確認します。BANKを切り替えると、そのBANK専用のシーケンスステップと小節数を編集します。</p>
+                </div>
+              </li>
+              <li>
+                <span>2</span>
+                <div>
+                  <strong>再生と小節操作</strong>
+                  <p>再生・停止、Swing、小節追加・減少、前後小節移動をポップアップ内で操作します。無料プランの上限は2小節です。</p>
+                </div>
+              </li>
+              <li>
+                <span>3</span>
+                <div>
+                  <strong>全パッドのシーケンス</strong>
+                  <p>行がパッド、列が16分ステップです。明るいセルをタップして、そのパッドを鳴らす位置をオン・オフします。</p>
+                </div>
+              </li>
+              <li>
+                <span>4</span>
+                <div>
+                  <strong>閉じる</strong>
+                  <p>閉じても編集内容は残ります。通常画面に戻って、同じBANKのシーケンスを続けて確認できます。</p>
+                </div>
+              </li>
+            </ol>
+          </div>
+
           <h3>タイミングを調整する</h3>
+          <div class="note note-info">
+            <strong>ノブの操作</strong>
+            <p>
+              ノブは上下ドラッグで調整します。中央値、ゼロ、代表的な時間など、その項目で重要な値の近くではスナップします。
+              ノブ下の数値表示をタップすると、対応している項目はキーボードから直接入力できます。
+            </p>
+          </div>
           <div class="card-grid card-grid-two">
             <article class="feature-card">
               <span class="card-kicker">BPM</span>
@@ -715,16 +901,6 @@
               <h4>跳ね方</h4>
               <p>偶数ステップを遅らせて、跳ねたリズムにします。</p>
             </article>
-            <article class="feature-card">
-              <span class="card-kicker">REC</span>
-              <h4>リアルタイム録音</h4>
-              <p>再生中に叩いたパッドをシーケンスへ記録します。</p>
-            </article>
-            <article class="feature-card">
-              <span class="card-kicker">QTZ</span>
-              <h4>クオンタイズ</h4>
-              <p>リアルタイム録音したタイミングをステップへそろえます。</p>
-            </article>
           </div>
 
           <h3>Barを増やす</h3>
@@ -732,8 +908,9 @@
             <span class="control-label">BAR+</span>で小節を追加し、<span
               class="control-label"
               >BAR-</span
-            >で末尾の小節を減らします。
-            無料プランは2Bar、プレミアムプランは最大8Barです。
+            >で末尾の小節を減らします。動的な<span class="control-label">&lt;PREV</span
+            >／<span class="control-label">NEXT&gt;</span>ボタンでBarを移動します。
+            無料プランは2小節、プレミアムプランは最大8小節です。
           </p>
 
           <h3>SEQUENCEエフェクト</h3>
@@ -747,7 +924,7 @@
           </p>
           <p class="small-note">
             <span class="control-label">CLEAR</span
-            >は選択中のパッドのシーケンスを消去します。
+            >は現在のBANKのシーケンス全体を消去します。
           </p>
 
           <h3>シーケンスJSONを読み書きする</h3>
@@ -758,14 +935,14 @@
             >を選べます。シーケンスのBPM、Swing、ステップ情報とSAMPLEのパラメータをJSONとして読み込み・書き出しできます。
           </p>
           <p class="small-note">
-            IMPORT JSONは現在のプロジェクトのシーケンスとSAMPLEパラメータを上書きします。音声ファイル本体は含まれません。
+            IMPORT JSONは現在選択中BANKのシーケンスとSAMPLEパラメータを上書きします。音声ファイル本体と他BANKのシーケンスは含まれません。
           </p>
         </section>
 
 
         <section id="project" class="manual-section">
           <div class="section-heading">
-            <p class="section-number">05</p>
+            <p class="section-number">06</p>
             <div>
               <p class="eyebrow">PROJECTモード</p>
               <h2>
@@ -774,38 +951,38 @@
             </div>
           </div>
 
-          <div class="screenshot-guide">
-            <figure class="manual-shot manual-shot-phone">
+          <div class="screenshot-guide screenshot-guide-wide">
+            <figure class="manual-shot manual-shot-ipad">
               <div class="shot-frame">
 
                 <img
-                  src="./assets/iphone-project.png"
-                  alt="iPhone専用表示のPROJECTモード"
-                  width="645"
-                  height="1400"
+                  src="./assets/ipad-project.png"
+                  alt="iPad版のPROJECTモード"
+                  width="1668"
+                  height="2420"
                   loading="lazy"
                 />
                 <span
                   class="shot-marker"
-                  style="--x: 50%; --y: 28%"
+                  style="--x: 50%; --y: 24%"
                   aria-hidden="true"
                   >1</span
                 >
                 <span
                   class="shot-marker"
-                  style="--x: 50%; --y: 41%"
+                  style="--x: 50%; --y: 32%"
                   aria-hidden="true"
                   >2</span
                 >
                 <span
                   class="shot-marker"
-                  style="--x: 50%; --y: 64%"
+                  style="--x: 35%; --y: 68%"
                   aria-hidden="true"
                   >3</span
                 >
                 <span
                   class="shot-marker"
-                  style="--x: 50%; --y: 91%"
+                  style="--x: 82%; --y: 84%"
                   aria-hidden="true"
                   >4</span
                 >
@@ -826,7 +1003,7 @@
                 <span>2</span>
                 <div>
                   <strong>管理ボタン</strong>
-                  <p>NEW、COPY、DELETE、EXPORT WAVを使用します。</p>
+                  <p>NEW、EXP SEQ、EXP WAVを使用します。COPYとDELETEはプロジェクト行の「…」から開きます。</p>
                 </div>
               </li>
               <li>
@@ -898,51 +1075,51 @@
 
         <section id="settings" class="manual-section">
           <div class="section-heading">
-            <p class="section-number">06</p>
+            <p class="section-number">07</p>
             <div>
               <p class="eyebrow">設定</p>
               <h2>設定モード</h2>
             </div>
           </div>
 
-          <div class="screenshot-guide">
-            <figure class="manual-shot manual-shot-phone">
+          <div class="screenshot-guide screenshot-guide-wide">
+            <figure class="manual-shot manual-shot-ipad">
               <div class="shot-frame">
 
                 <img
-                  src="./assets/iphone-settings.png"
-                  alt="設定画面の表示設定タブ"
-                  width="645"
-                  height="1400"
+                  src="./assets/ipad-settings.png"
+                  alt="iPad版設定画面の表示設定タブ"
+                  width="1668"
+                  height="2420"
                   loading="lazy"
                 />
                 <span
                   class="shot-marker"
-                  style="--x: 50%; --y: 19%"
+                  style="--x: 50%; --y: 32%"
                   aria-hidden="true"
                   >1</span
                 >
                 <span
                   class="shot-marker"
-                  style="--x: 50%; --y: 44%"
+                  style="--x: 50%; --y: 47%"
                   aria-hidden="true"
                   >2</span
                 >
                 <span
                   class="shot-marker"
-                  style="--x: 50%; --y: 68%"
+                  style="--x: 50%; --y: 56%"
                   aria-hidden="true"
                   >3</span
                 >
               </div>
-              <figcaption>設定は4つのタブに分かれています。</figcaption>
+              <figcaption>設定は5つのタブに分かれています。</figcaption>
             </figure>
             <ol class="callout-list">
               <li>
                 <span>1</span>
                 <div>
                   <strong>設定タブ</strong>
-                  <p>表示設定／パッド設定／演奏時設定／Aboutを切り替えます。</p>
+                  <p>表示設定／パッド設定／演奏時設定／MIDI／Aboutを切り替えます。</p>
                 </div>
               </li>
               <li>
@@ -955,8 +1132,8 @@
               <li>
                 <span>3</span>
                 <div>
-                  <strong>iPhoneレイアウト</strong>
-                  <p>iPad縮小表示とiPhone専用表示を切り替えます。</p>
+                  <strong>iPad背景スキン</strong>
+                  <p>本体の背景スキンを選びます。追加スキンはプレミアム機能です。</p>
                 </div>
               </li>
             </ol>
@@ -977,18 +1154,33 @@
               <ul>
                 <li>パッド上の波形表示</li>
                 <li>波形の透明度</li>
-                <li>パッド名とカラー</li>
+                <li>パッド名とカラー（名前入力は半角英数キーボード）</li>
+                <li>「複数選択」で同じバンク内のパッドを選び、カラーをまとめて変更</li>
+                <li>プレミアムプランでの長押しドラッグによるパッド入れ替え</li>
+                <li>SLICEで既存サンプルを上書き（初期状態はOFF、SLICE IT時に確認）</li>
               </ul>
             </article>
             <article>
               <h3>演奏時設定</h3>
               <ul>
-                <li>低レイテンシモード</li>
+                <li>演奏モード（発音を優先）</li>
                 <li>画面をスリープさせない</li>
+                <li>バックグラウンド再生</li>
                 <li>触覚フィードバック</li>
                 <li>SEQUENCEモードでパッドを鳴らさない</li>
+                <li>SEQ RECカウントイン</li>
+                <li>メトロノーム音色（クリック、ビープ、リム）と音量（0〜200%）</li>
                 <li>裏面の開き方</li>
               </ul>
+              <p>
+                演奏モードは、パッドを押した時の発音処理を優先し、演奏中のパッド押下ハプティクス、通常の再生バー更新、パッド波形サムネイル、録音・編集状態更新を抑え、iPhone・iPadともLCDには静的なLIVE MODEだけを表示します。録音、SLICE、読み込み、トリム、書き出しなどの処理中は演奏モードへ切り替えられません。音声出力は常に低レイテンシ設定で動作します。
+              </p>
+              <p>
+                バックグラウンド再生をオンにすると、画面ロック中、ホーム画面表示中、他アプリ表示中も再生を続けます。App Switcherでアプリを上へスワイプして終了した場合は再生を停止します。初期状態はオフです。
+              </p>
+              <p>
+                Bluetoothイヤホンや外部ワイヤレス機器では機器側の遅延が大きくなることがあります。演奏時は内蔵スピーカーまたは有線出力を推奨します。
+              </p>
             </article>
             <article>
               <h3>About</h3>
@@ -1001,10 +1193,92 @@
           </div>
         </section>
 
+        <section id="midi-settings" class="manual-section">
+          <div class="section-heading">
+            <p class="section-number">08</p>
+            <div>
+              <p class="eyebrow">MIDI設定</p>
+              <h2>MIDI設定<br />外部コントローラーを割り当てる</h2>
+            </div>
+          </div>
+
+          <div class="screenshot-guide screenshot-guide-wide">
+            <figure class="manual-shot manual-shot-ipad">
+              <div class="shot-frame">
+                <img
+                  src="./assets/ipad-midi-settings.png"
+                  alt="iPad版設定画面のMIDIタブ"
+                  width="1668"
+                  height="2420"
+                  loading="lazy"
+                />
+                <span class="shot-marker" style="--x: 57%; --y: 31%" aria-hidden="true">1</span>
+                <span class="shot-marker" style="--x: 49%; --y: 45%" aria-hidden="true">2</span>
+                <span class="shot-marker" style="--x: 78%; --y: 59%" aria-hidden="true">3</span>
+                <span class="shot-marker" style="--x: 39%; --y: 71%" aria-hidden="true">4</span>
+              </div>
+              <figcaption>MIDIタブでは、接続、Velocity、MIDI Learnの割り当てをまとめて管理します。</figcaption>
+            </figure>
+            <ol class="callout-list">
+              <li><span>1</span><div><strong>MIDIタブ</strong><p>設定シート上部のMIDIを選ぶと、MIDI Learn画面へ切り替わります。</p></div></li>
+              <li><span>2</span><div><strong>MIDI接続</strong><p>USB、Bluetooth MIDI、仮想MIDIソースの接続状態を確認します。</p></div></li>
+              <li><span>3</span><div><strong>Velocity設定</strong><p>外部パッドのVelocityを音量へ反映するかを切り替えます。</p></div></li>
+              <li><span>4</span><div><strong>割り当て対象</strong><p>4×4パッド、ノブ、本体操作、演奏・編集ボタンを選んでLearnします。</p></div></li>
+            </ol>
+          </div>
+
+          <p>
+            外部MIDIコントローラーから、パッド演奏、ノブ操作、モード・BANK切り替えなどを操作できます。MIDIの接続、Learn、受信による操作はプレミアム機能です。
+          </p>
+          <h3>接続する</h3>
+          <ul>
+            <li>USB MIDIは対応するアダプタまたはUSBハブを使って接続します。</li>
+            <li>Bluetooth MIDIは「Bluetooth MIDIを接続」から機器を選びます。通常のBluetoothオーディオ設定とは別です。</li>
+            <li>同じ端末内の仮想MIDIソースにも対応します。接続後は「MIDI接続」に機器名が表示されます。</li>
+          </ul>
+          <h3>MIDI Learnで割り当てる</h3>
+          <ol class="compact-steps">
+            <li>設定の「MIDI」タブで、4×4グリッドのパッドまたは一覧の操作対象を選びます。</li>
+            <li>画面上部に「{対象名}にMIDIを割り当てます」と表示されたら、案内に従って外部機器のパッド、キー、ノブ、ボタンを1回操作します。このMIDI Learn表示はスクロールしても画面上部に固定されます。</li>
+            <li>「MIDI信号を受信しました」ダイアログでNOTE／CC番号、MIDIチャンネル、割り当て先を確認し、「割り当て」を選びます。</li>
+            <li>同じ信号が別の操作へ割り当て済みの場合は、確認後に古い割り当てを置き換えます。</li>
+          </ol>
+          <h3>割り当てられる操作</h3>
+          <ul>
+            <li><strong>PAD 1〜16：</strong>Note On／Offを割り当てます。同じ物理位置の割り当てはBANK A〜Dで共通で、現在選択中のBANKの音を鳴らします。</li>
+            <li><strong>KNOB 1〜4：</strong>CCを割り当てます。SAMPLEではPITCH／CUTOFF／RESONANCE／AMP、SEQUENCEではDIST.／DL. TIME／DL. FBK.／DL. LVとして動作します。</li>
+            <li><strong>本体操作：</strong>SAMPLE／SEQUENCE／PROJECT、BANK A〜D、TAP、SEQ REC、PLAY／STOP、METROをNoteまたはCCで操作できます。</li>
+            <li><strong>演奏・編集：</strong>REVERSE、NORMALIZE、MUTE、GATE、LOOP、ROLL、CHOKEをNoteまたはCCで操作できます。</li>
+          </ul>
+          <p>
+            「Velocityを音量へ反映」をオンにすると、パッドのVelocity 1〜127を連続した音量として反映します。オフでは常に最大Velocityで発音します。ノブのCC値は0〜127を画面上の設定範囲へ変換します。
+            MIDI 1.0のRunning Statusを使用する機器から送られる、複数のパケットに分かれたNote／CCにも対応します。
+          </p>
+          <h3>保存・解除・対応範囲</h3>
+          <p>
+            割り当ては全プロジェクトで共通です。パッド以外は各行から個別解除できます。割り当て済みパッドを選択すると、画面上部の「キャンセル」左に「割り当て解除」が表示されます。押すと対象パッドの割り当てを解除してLearnを終了します。全解除ではMIDI設定だけを削除し、プロジェクト、サンプル、購入状態は変更しません。プレミアム権利を確認できない場合も保存済み割り当ては残り、MIDI入力だけが無効になります。
+          </p>
+          <p>
+            マスター音量は現行UIにないためMIDI Learn対象外です。BPM−／＋、SAMPLE REC、ADSR、シーケンスQTZ／SWING／BAR／STEP、CLEAR、削除、初期化、購入、ファイル選択、プロジェクト管理、確認ダイアログも割り当て対象外です。MIDI Clock、MIDI出力、Program Change、Pitch Bend、NRPN、相対エンコーダーには対応していません。
+          </p>
+          <div class="note note-info">
+            <strong>反応しないとき</strong>
+            <p>
+              「MIDI接続」に機器名があるか、Learn中に機器を操作すると「MIDI信号を受信しました」ダイアログが開くか、ダイアログの送信チャンネルと番号が割り当て表示に一致するか、プレミアム権利が有効かを確認してください。機器を抜き差しした場合は再接続を待つか、Bluetooth MIDI画面を開き直します。
+            </p>
+          </div>
+          <div class="note note-warning">
+            <strong>外部MIDI機器について</strong>
+            <p>
+              すべての機器との互換性や継続動作は保証していません。機器自体の仕様、設定方法、接続方法、個別の互換性に関するお問い合わせには対応していません。本アプリに起因すると考えられる不具合は、機器名、接続方法、iOSバージョン、再現手順を添えてサポートフォームから報告してください。
+            </p>
+          </div>
+        </section>
+
 
         <section id="plans" class="manual-section">
           <div class="section-heading">
-            <p class="section-number">07</p>
+            <p class="section-number">09</p>
             <div>
               <p class="eyebrow">プラン比較</p>
               <h2>無料プランと<br />プレミアムプランの比較</h2>
@@ -1038,8 +1312,8 @@
                 </tr>
                 <tr>
                   <th>シーケンス</th>
-                  <td>2Bar</td>
-                  <td>最大8Bar</td>
+                  <td>2小節</td>
+                  <td>最大8小節</td>
                 </tr>
                 <tr>
                   <th>ファイル読み込み</th>
@@ -1052,14 +1326,24 @@
                   <td>最大30秒</td>
                 </tr>
                 <tr>
-                  <th>パッドカラー</th>
+                  <th>パッド外観</th>
                   <td>変更不可</td>
-                  <td>変更可能</td>
+                  <td>個別／一括カラー変更、長押しドラッグ交換</td>
+                </tr>
+                <tr>
+                  <th>iPad背景スキン</th>
+                  <td>標準のみ</td>
+                  <td>追加スキンを選択可能</td>
                 </tr>
                 <tr>
                   <th>WAV書き出し</th>
                   <td>利用不可</td>
                   <td>利用可能</td>
+                </tr>
+                <tr>
+                  <th>MIDIコントロール</th>
+                  <td>利用不可</td>
+                  <td>MIDI Learn・外部操作</td>
                 </tr>
               </tbody>
             </table>
@@ -1084,7 +1368,7 @@
         -->
         <section id="faq" class="manual-section">
           <div class="section-heading">
-            <p class="section-number">08</p>
+            <p class="section-number">10</p>
             <div>
               <p class="eyebrow">よくある質問</p>
               <h2>FAQ</h2>
@@ -1120,7 +1404,7 @@
                 samplerのマイク使用を許可します。その後、録音先パッドを選んで<span
                   class="control-label"
                   >REC</span
-                >をタップしてください。
+                >をタップしてください。すでに音があるパッドでは、確認で「録音する」を選ぶと録音を開始します。
               </p>
             </details>
             <details>
@@ -1142,14 +1426,14 @@
               <summary>画面が自動ロックされます</summary>
               <p>
                 「設定 ＞
-                演奏時設定」で「画面をスリープさせない」をオンにします。
+                演奏時設定」で「画面をスリープさせない」をオンにします。画面ロック中も再生を続けたい場合は「バックグラウンド再生」もオンにします。
               </p>
             </details>
             <details>
               <summary>アプリを初期状態へ戻したいです</summary>
               <p>
                 裏面パネルの<span class="control-label">FACTORY RESET</span
-                >を使用します。すべてのプロジェクト、サンプル、シーケンス、アプリ設定が削除され、元に戻せません。
+                >を使用します。すべてのプロジェクト、サンプル、シーケンス、アプリ設定を削除し、DEMO PROJECT 001を作成し直します。この操作は取り消せません。
               </p>
             </details>
           </div>
@@ -1162,7 +1446,7 @@
         -->
         <section id="legal" class="manual-section">
           <div class="section-heading">
-            <p class="section-number">09</p>
+            <p class="section-number">11</p>
             <div>
               <p class="eyebrow">規約とプライバシー</p>
               <h2>利用規約・<br />プライバシー<wbr />ポリシー</h2>
@@ -1219,6 +1503,9 @@
           <p>
             本アプリの利用条件、禁止事項、免責、プレミアムプランなどについて定めています。
           </p>
+          <p>
+            外部MIDI機器との互換性、接続、遅延、信号欠落、誤入力、サポート対象、および本アプリの配信・アップデート・サポート終了に関する条件も利用規約に記載しています。
+          </p>
 
           <h3>プライバシーポリシー</h3>
           <p>
@@ -1244,7 +1531,7 @@
         -->
         <section id="specs" class="manual-section">
           <div class="section-heading">
-            <p class="section-number">10</p>
+            <p class="section-number">12</p>
             <div>
               <p class="eyebrow">データ仕様</p>
               <h2>データ仕様一覧</h2>
@@ -1282,7 +1569,7 @@
                 <tr><th>項目</th><th>仕様</th><th>補足</th></tr>
               </thead>
               <tbody>
-                <tr><th>録音時間</th><td>無料プラン: 最大10秒<br />プレミアムプラン: 最大30秒</td><td>録音後に「この録音を使う」を選ぶと、現在のパッドへ割り当てます。</td></tr>
+                <tr><th>録音時間</th><td>無料プラン: 最大10秒<br />プレミアムプラン: 最大30秒</td><td>既存サンプルがあるパッドではREC時に確認が表示されます。この時点では置き換えず、録音後に「この録音を使う」を選んだ時点で現在のパッドへ割り当てます。</td></tr>
                 <tr><th>録音一時形式</th><td>CAF</td><td>録音中の一時ファイル形式です。ユーザーが直接選ぶ項目ではありません。</td></tr>
                 <tr><th>サンプルレート</th><td>44.1kHz</td><td>マイク録音の保存時に使用します。</td></tr>
               </tbody>
@@ -1297,7 +1584,7 @@
               </thead>
               <tbody>
                 <tr><th>パッド数</th><td>1バンク16パッド / 最大4バンク・64パッド</td><td>無料プランで使えるのはバンクAの上部8パッドです。</td></tr>
-                <tr><th>シーケンス長</th><td>1Bar = 16ステップ<br />無料プラン: 2Bar<br />プレミアムプラン: 最大8Bar</td><td>最大128ステップまで使用できます。</td></tr>
+                <tr><th>シーケンス長</th><td>1小節 = 16ステップ<br />無料プラン: 2小節<br />プレミアムプラン: 最大8小節</td><td>最大128ステップまで使用できます。</td></tr>
                 <tr><th>BPM</th><td>40〜300</td><td>TAPまたはBPMコントロールで変更します。</td></tr>
                 <tr><th>Swing</th><td>0% / 25% / 50% / 75%</td><td><span class="control-label">SWING</span>を押すたびに25%刻みで切り替わります。</td></tr>
                 <tr><th>パッド名</th><td>最大32文字</td><td>長すぎる名前は保存時に制限されます。</td></tr>
@@ -1324,17 +1611,120 @@
           </div>
         </section>
 
+        <!--
+          11 エラーメッセージ一覧:
+          画面の表示先まで追跡できた、アプリ実装由来の固定文とテンプレートだけを掲載します。
+          iOSやフレームワークが返す可変部分は {詳細} として扱います。
+        -->
+        <section id="errors" class="manual-section">
+          <div class="section-heading">
+            <p class="section-number">13</p>
+            <div>
+              <p class="eyebrow">エラー</p>
+              <h2>エラーメッセージ一覧</h2>
+            </div>
+          </div>
+
+          <div class="note note-info">
+            <strong>掲載基準と可変部分について</strong>
+            <p>
+              この一覧には、プログラム内の代入元から画面のアラートまたはエラー表示欄まで到達することを確認できた、固定文とメッセージテンプレートだけを掲載しています。
+              「{詳細}」はiOSやフレームワークが返す説明、「{PAD番号}」「{PAD一覧}」「{数値}」は実行時に変わる部分です。
+              サンプル読み込みの一部ではiOSが返したエラー文を加工せず表示するため、固定できない本文は一覧に含めていません。
+              確認ダイアログ、操作案内、成功メッセージも対象外です。
+            </p>
+          </div>
+
+          <div class="comparison-table" role="region" aria-label="エラーメッセージ一覧" tabindex="0">
+            <table>
+              <thead>
+                <tr><th>表示されるメッセージ</th><th>意味</th><th>対応</th></tr>
+              </thead>
+              <tbody>
+                <tr><th colspan="3">表示場所：<span class="control-label">AUDIO ERROR</span> アラート</th></tr>
+                <tr><th>音声ファイルを読み込めません。別のファイルを選択してください。</th><td>選んだファイルを音声として開けません。</td><td>別の音声ファイルを選ぶか、WAV、AIFF、MP3、MPEG-4 Audioなどへ変換してから読み込んでください。</td></tr>
+                <tr><th>空の音声ファイルは読み込めません。</th><td>ファイルに再生できる音声データがありません。</td><td>長さのある音声ファイルを選んでください。</td></tr>
+                <tr><th>ファイルサイズは {数値}MB 以下にしてください。</th><td>音声ファイルが上限を超えています。</td><td>ファイルサイズを小さくして再度読み込んでください。</td></tr>
+                <tr><th>サンプル長は {数値} 秒以下にしてください。</th><td>読み込み可能な秒数を超えています。</td><td>無料プランは10秒、プレミアムプランは60秒以内に編集してから読み込んでください。</td></tr>
+                <tr><th>無料プランでは10秒まで読み込めます。60秒まで読み込むにはプレミアムプランが必要です。</th><td>無料プランの読み込み時間上限を超えています。</td><td>10秒以内のファイルを選ぶか、プレミアムプランを有効にしてください。</td></tr>
+                <tr><th>チャンネル数は {数値}ch までに制限してください。</th><td>音声ファイルのチャンネル数が多すぎます。</td><td>モノラルまたはステレオに変換してから読み込んでください。</td></tr>
+                <tr><th>サンプルを保存できませんでした。{詳細}</th><td>読み込んだ音声をパッドへ保存できません。</td><td>空き容量、ファイルの読み取り権限、ファイル形式を確認し、別のファイルでも試してください。</td></tr>
+                <tr><th>{PAD一覧} のサンプルを音声再生用に準備できませんでした。サンプルを読み込み直してください。</th><td>表示されたパッドの保存済みサンプルを再生用に準備できません。</td><td>対象パッドを選び、LOAD SAMPLEから音声を読み込み直してください。</td></tr>
+                <tr><th>録音を開始できませんでした。録音用オーディオ設定を開始できませんでした。接続中のBluetooth機器やオーディオ出力を外して、もう一度録音してください。</th><td>接続機器の影響で録音用設定を開始できません。</td><td>Bluetooth機器や外部オーディオ出力を外して再試行してください。</td></tr>
+                <tr><th>録音を開始できませんでした。録音用オーディオ設定を開始できませんでした。録音を開始できませんでした。マイク権限と入力機器を確認してください。</th><td>録音処理を開始できません。</td><td>マイク権限と入力機器を確認してください。</td></tr>
+                <tr><th>録音を開始できませんでした。録音用オーディオ設定を開始できませんでした。{詳細}</th><td>録音用設定の開始時に別のエラーが発生しました。</td><td>マイク権限と入出力機器を確認し、表示された詳細も確認してください。</td></tr>
+                <tr><th>録音を開始できませんでした。マイクの使用が許可されていません。iOS設定でTXT samplerのマイクを許可してください。</th><td>マイク権限が許可されていません。</td><td>iOS設定でTXT samplerのマイクを許可してください。</td></tr>
+                <tr><th>録音データを作成できませんでした。入力レベルとマイク権限を確認してください。</th><td>録音後に使用できる音声データを作成できません。</td><td>マイク権限、入力レベル、録音時間を確認して、もう一度録音してください。</td></tr>
+                <tr><th>音声エンジンを開始できませんでした。アプリを再起動してください。</th><td>再生に必要な音声エンジンを開始できません。</td><td>アプリを終了して再起動してください。外部オーディオ機器を使っている場合は接続も確認してください。</td></tr>
+                <tr><th>トリムするサンプルがありません。</th><td>現在のパッドにトリム対象のサンプルがありません。</td><td>先にサンプルを読み込むか録音してください。</td></tr>
+                <tr><th>トリム範囲を変更してからTRIMしてください。</th><td>トリム開始・終了位置が変更されていません。</td><td>波形上で範囲を調整してからTRIMを実行してください。</td></tr>
+                <tr><th>トリム保存に失敗しました。{詳細}</th><td>トリム後の音声を保存できません。</td><td>空き容量を確認し、範囲を短くするか、サンプルを読み込み直して再試行してください。</td></tr>
+                <tr><th>トリムしたサンプルを保存できませんでした。{詳細}</th><td>トリム後のサンプル参照を保存できません。</td><td>空き容量を確認して再試行してください。</td></tr>
+                <tr><th>パッド名を保存できませんでした。{詳細}</th><td>パッド名を保存できません。</td><td>名前を設定し直してください。</td></tr>
+                <tr><th>パッド表示設定を保存できませんでした。{詳細}</th><td>パッド名または表示設定を保存できません。</td><td>設定をやり直してください。</td></tr>
+                <tr><th>パッドカラーを保存できませんでした。{詳細}</th><td>複数パッドのカラーを保存できません。</td><td>カラー設定をやり直してください。</td></tr>
+                <tr><th>パッドをコピーできませんでした。{詳細}</th><td>パッドのコピー内容を保存できません。</td><td>コピー元とコピー先を確認して再試行してください。</td></tr>
+                <tr><th>パッドを入れ替えできませんでした。{詳細}</th><td>パッドの入れ替え内容を保存できません。</td><td>対象パッドを確認して再試行してください。</td></tr>
+                <tr><th>パッドを削除できませんでした。{詳細}</th><td>パッドの削除内容を保存できません。</td><td>対象パッドを確認して再試行してください。</td></tr>
+                <tr><th>パッド設定をリセットできませんでした。{詳細}</th><td>パッドの初期化に失敗しました。</td><td>同じ操作を再試行し、改善しない場合はアプリを再起動してください。</td></tr>
+                <tr><th>シーケンスを保存できませんでした。{詳細}</th><td>ステップやBPMなどのシーケンス情報を保存できません。</td><td>操作を少し待ってから再試行してください。プロジェクト切り替え前に再生を停止してください。</td></tr>
+                <tr><th>シーケンス設定を保存できませんでした。{詳細}</th><td>シーケンス関連の設定保存に失敗しました。</td><td>同じ設定を再度変更し、保存されるか確認してください。</td></tr>
+                <tr><th>パッド設定を保存できませんでした。{詳細}</th><td>パッドの音声パラメータを保存できません。</td><td>設定をやり直してください。</td></tr>
+                <tr><th>マスター設定を保存できませんでした。{詳細}</th><td>マスター設定を保存できません。</td><td>設定をやり直してください。</td></tr>
+                <tr><th>シーケンスJSONを読み込めませんでした。{詳細}</th><td>選んだJSONをシーケンスとして読み込めません。</td><td>TXT samplerから書き出したJSONか、対応形式のJSONか確認してください。</td></tr>
+                <tr><th>シーケンスJSONを書き出せませんでした。{詳細}</th><td>シーケンスJSONの作成または共有に失敗しました。</td><td>空き容量と共有先を確認してから再試行してください。</td></tr>
+                <tr><th>オーディオを書き出せませんでした。{詳細}</th><td>WAV書き出しに失敗しました。</td><td>空き容量、書き出しループ数、共有先を確認して再試行してください。</td></tr>
+                <tr><th>シーケンスを復旧用スナップショットから復元しました。</th><td>通常データを読めず、復旧用データを使用しました。</td><td>シーケンスを確認し、プロジェクトを保存し直してください。</td></tr>
+                <tr><th>シーケンスを復元できませんでした。空のパターンで表示しています。</th><td>シーケンスを復元できず、空の状態を表示しています。</td><td>シーケンスを作り直してください。</td></tr>
+                <tr><th>PAD {PAD番号}の設定を復旧用スナップショットから復元しました。</th><td>パッド設定に復旧用データを使用しました。</td><td>対象パッドを確認し、プロジェクトを保存し直してください。</td></tr>
+                <tr><th>PAD {PAD番号} の設定を復元できませんでした。既定値で表示しています。</th><td>パッド設定を復元できず、既定値を使用しています。</td><td>対象パッドを設定し直してください。</td></tr>
+                <tr><th>PAD {PAD番号} のサンプルファイルが見つかりません。</th><td>保存されていたサンプルファイルがありません。</td><td>対象パッドへサンプルを読み込み直してください。</td></tr>
+                <tr><th>マスター設定を復旧用スナップショットから復元しました。</th><td>マスター設定に復旧用データを使用しました。</td><td>設定を確認し、プロジェクトを保存し直してください。</td></tr>
+                <tr><th>マスター設定を復元できませんでした。既定値で表示しています。</th><td>マスター設定を復元できず、既定値を使用しています。</td><td>マスター設定をやり直してください。</td></tr>
+                <tr><th colspan="3">表示場所：<span class="control-label">PROJECT</span> アラート</th></tr>
+                <tr><th>プロジェクトを初期化できませんでした。{詳細}</th><td>起動時のプロジェクト準備に失敗しました。</td><td>アプリを再起動してください。</td></tr>
+                <tr><th>プロジェクトを作成できませんでした。{詳細}</th><td>新しいプロジェクトを保存できません。</td><td>空き容量を確認して再試行してください。</td></tr>
+                <tr><th>プロジェクトを開けませんでした。{詳細}</th><td>選んだプロジェクトを開けません。</td><td>別のプロジェクトを開き、必要に応じて修復を試してください。</td></tr>
+                <tr><th>プロジェクトをコピーできませんでした。{詳細}</th><td>プロジェクトを複製できません。</td><td>空き容量を確認して再試行してください。</td></tr>
+                <tr><th>プロジェクトを削除できませんでした。{詳細}</th><td>プロジェクトを削除できません。</td><td>対象を確認して再試行してください。</td></tr>
+                <tr><th>プロジェクトを読み込めませんでした。{詳細}</th><td>プロジェクトアーカイブを読み込めません。</td><td>対応ファイルと空き容量を確認してください。</td></tr>
+                <tr><th>プロジェクトを修復できませんでした。{詳細}</th><td>プロジェクト修復に失敗しました。</td><td>アプリを再起動して再試行してください。</td></tr>
+                <tr><th>プロジェクト名を保存できませんでした。{詳細}</th><td>プロジェクト名の変更を保存できません。</td><td>短い名前に変更し、ファイル名に使いにくい記号を避けてください。</td></tr>
+                <tr><th>パッド情報を保存できませんでした。{詳細}</th><td>不足していたパッド情報を作成して保存できません。</td><td>アプリを再起動して再試行してください。</td></tr>
+                <tr><th>書き出すWAVファイルがありません。</th><td>書き出し後に共有できるWAVファイルが見つかりません。</td><td>もう一度EXP WAVを実行してください。</td></tr>
+                <tr><th>初期化できませんでした。{詳細}</th><td>FACTORY RESETを完了できません。</td><td>アプリを再起動してから再試行してください。</td></tr>
+                <tr><th colspan="3">表示場所：プレミアム画面の赤色テキスト</th></tr>
+                <tr><th>購入情報を取得できませんでした。通信状態を確認して、もう一度お試しください。</th><td>プレミアム情報を取得できません。</td><td>通信状態を確認し、時間を置いて再試行してください。</td></tr>
+                <tr><th>購入情報を取得できませんでした。{詳細}</th><td>商品情報の取得中にエラーが発生しました。</td><td>詳細と通信状態を確認して再読み込みしてください。</td></tr>
+                <tr><th>購入は承認待ちです。承認後に自動で反映されます。</th><td>購入が保護者承認などの待機状態です。</td><td>承認が完了するまで待ってください。</td></tr>
+                <tr><th>購入結果を確認できませんでした。</th><td>App Storeから未対応の購入結果が返されました。</td><td>通信状態と購入状態を確認してください。</td></tr>
+                <tr><th>購入を完了できませんでした。{詳細}</th><td>購入処理が完了しませんでした。</td><td>Apple Account、支払い方法、通信状態を確認して再試行してください。</td></tr>
+                <tr><th>復元できるプレミアムプランが見つかりませんでした。</th><td>現在のApple Accountで復元対象が見つかりません。</td><td>購入時と同じApple Accountでサインインしてから復元してください。</td></tr>
+                <tr><th>購入を復元できませんでした。{詳細}</th><td>購入復元に失敗しました。</td><td>通信状態を確認し、時間を置いて再試行してください。</td></tr>
+                <tr><th>検証できない購入情報がありました。通信状態を確認して、購入を復元してください。</th><td>現在の購入資格を検証できません。</td><td>通信状態を確認して購入を復元してください。</td></tr>
+                <tr><th>購入情報を検証できませんでした。購入を復元してください。</th><td>更新された購入情報を検証できません。</td><td>購入を復元してください。</td></tr>
+                <tr><th colspan="3">表示場所：MIDI設定のオレンジ色警告</th></tr>
+                <tr><th>MIDI機器へ接続できませんでした。（{詳細}）再接続を待っています。</th><td>MIDI入力機器への接続に失敗しました。</td><td>ケーブル、ハブ、電源、Bluetooth MIDI接続を確認してください。外部機器固有の設定や互換性はサポート対象外です。</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
         <!-- 末尾CTA: 戻り先 href="#start" は 01 はじめに の section id と対応しています。 -->
         <section class="manual-end" aria-label="マニュアル末尾">
-          <p class="eyebrow">次のビートを作ろう</p>
-          <h2>まずは1つの音から。</h2>
-          <p>
-            SAMPLEで音を用意し、SEQUENCEで並べ、PROJECTに残す。この3つがTXT
-            samplerの基本です。
-          </p>
           <p>
             デフォルトプロジェクトのサウンドには、<a href="https://freesound.org/">Freesound</a>で公開されているCC0ライセンスの素材を使用しています。
           </p>
+          <p>
+            不具合、操作方法、ご意見・ご要望はサポートフォームからお送りください。氏名やメールアドレスなどの個人情報は入力しないでください。外部MIDI機器自体の仕様、設定、接続方法、個別機器との互換性には回答していません。本アプリに起因すると考えられる不具合は受け付けます。個別回答、修正、要望の採用、対応期限は保証せず、FAQや今後のアップデート・品質改善の参考にします。
+          </p>
+          <a
+            class="button button-primary"
+            href="https://docs.google.com/forms/d/e/1FAIpQLSeWn8gLNVPTiGuGcsANbF5X1T1VyQ_L0vFktQCWHsutlGZswg/viewform?usp=publish-editor"
+            target="_blank"
+            rel="noopener noreferrer"
+            >サポートフォームを開く</a
+          >
           <a class="button button-primary" href="#start">はじめに戻る</a>
         </section>
       </main>
@@ -1348,6 +1738,8 @@
       </div>
       <nav aria-label="関連リンク">
         <a href="../LP/">製品ページ</a>
+        <a href="../ios/CHANGELOG.html">更新履歴</a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSeWn8gLNVPTiGuGcsANbF5X1T1VyQ_L0vFktQCWHsutlGZswg/viewform?usp=publish-editor">サポート</a>
         <a href="../privacy.html">プライバシー</a>
         <a href="../terms.html">利用規約</a>
       </nav>

@@ -10,7 +10,7 @@
     />
     <meta name="theme-color" content="#ffffff" />
     <link rel="icon" href="../../LP/assets/tetra_logo.png" />
-    <link rel="stylesheet" href="../styles.css?v=1.0" />
+    <link rel="stylesheet" href="../styles.css?v=20260728" />
   </head>
   <body>
     <a class="skip-link" href="#main-content">Skip to content</a>
@@ -59,18 +59,21 @@
           <li><a href="#start">Getting started</a></li>
           <li><a href="#parts">Screen and controls</a></li>
           <li><a href="#sample">SAMPLE mode</a></li>
+          <li><a href="#slice">SLICE</a></li>
           <li><a href="#sequence">SEQUENCE mode</a></li>
           <li><a href="#project">PROJECT mode</a></li>
           <li><a href="#settings">Settings</a></li>
+          <li><a href="#midi-settings">MIDI Settings</a></li>
           <li><a href="#plans">Free and Premium</a></li>
           <li><a href="#faq">FAQ</a></li>
           <li><a href="#legal">Terms and privacy</a></li>
           <li><a href="#specs">Data specifications</a></li>
+          <li><a href="#errors">Error Message List</a></li>
         </ol>
       </nav>
 
       <main id="main-content" class="manual">
-        <!-- Cover: version text is intentionally fixed for the app 1.0 manual. -->
+        <!-- Cover: keep this version synchronized with the current app release. -->
         <section class="hero manual-cover" aria-labelledby="manual-title">
           <div class="cover-heading">
             <div>
@@ -78,15 +81,15 @@
               <p class="cover-model">TXT sampler / TT-404</p>
               <h1 id="manual-title">User Manual</h1>
             </div>
-            <p class="cover-version">Version 1.0</p>
+            <p class="cover-version">Version 1.5.1 / Updated 2026-08-11</p>
           </div>
 
           <figure class="cover-art">
             <img
-              src="../assets/cover-device.png"
-              alt="TXT sampler device illustration"
-              width="898"
-              height="1112"
+              src="../assets/manual-overview-line-art-from-current-ui.png"
+              alt="Line-art overview of the current TXT sampler iPad layout"
+              width="1096"
+              height="1435"
               decoding="async"
             />
           </figure>
@@ -129,7 +132,7 @@
             <article class="feature-card">
               <span class="card-kicker">SEQUENCE</span>
               <h4>Build rhythms</h4>
-              <p>Place sounds on a 16-step grid and play them back as a loop.</p>
+              <p>Place sounds in the sequence and play them back as a loop.</p>
             </article>
             <article class="feature-card">
               <span class="card-kicker">PROJECT</span>
@@ -181,7 +184,7 @@
                 <img
                   src="../assets/ipad-sample.png"
                   alt="TXT sampler SAMPLE screen on iPad"
-                  width="1042"
+                  width="1034"
                   height="1500"
                   loading="lazy"
                 />
@@ -195,19 +198,19 @@
               <figcaption>The iPad layout keeps the main production controls on one screen.</figcaption>
             </figure>
             <ol class="callout-list">
-              <li><span>1</span><div><strong>Project display</strong><p>Shows the current project name, help, and settings access.</p></div></li>
+              <li><span>1</span><div><strong>Project display</strong><p>Shows the current project name, help, and settings access. Help lets you choose the online manual or support form.</p></div></li>
               <li><span>2</span><div><strong>LCD and waveform area</strong><p>Shows waveform, sequence, project information, and mode-specific buttons.</p></div></li>
               <li><span>3</span><div><strong>Tone and playback controls</strong><p>Use knobs and switches to shape the selected pad.</p></div></li>
               <li><span>4</span><div><strong>16 pads</strong><p>Select and play samples. The free plan can use the upper 8 pads in Bank A.</p></div></li>
               <li><span>5</span><div><strong>Mode buttons</strong><p>Switch between SAMPLE, SEQUENCE, and PROJECT.</p></div></li>
-              <li><span>6</span><div><strong>Transport controls</strong><p>Control BPM, TAP, playback, and stop.</p></div></li>
+              <li><span>6</span><div><strong>Transport controls</strong><p>Control BPM, TAP, SEQ REC, PLAY/STOP, and METRO.</p></div></li>
             </ol>
           </div>
 
           <h3>iPhone dedicated layout</h3>
           <h4>A portrait-first UI optimized for iPhone operation.</h4>
-          <div class="screenshot-guide">
-            <figure class="manual-shot manual-shot-phone">
+          <div class="screenshot-guide screenshot-guide-wide">
+            <figure class="manual-shot manual-shot-ipad">
               <div class="shot-frame">
                 <img
                   src="../assets/iphone-sample.png"
@@ -257,20 +260,20 @@
             </div>
           </div>
 
-          <div class="screenshot-guide">
-            <figure class="manual-shot manual-shot-phone">
+          <div class="screenshot-guide screenshot-guide-wide">
+            <figure class="manual-shot manual-shot-ipad">
               <div class="shot-frame">
-                <img src="../assets/iphone-sample.png" alt="SAMPLE mode on iPhone" width="645" height="1400" loading="lazy" />
+                <img src="../assets/ipad-sample.png" alt="SAMPLE mode on iPad" width="1668" height="2420" loading="lazy" />
                 <span class="shot-marker" style="--x: 50%; --y: 26%" aria-hidden="true">1</span>
-                <span class="shot-marker" style="--x: 50%; --y: 39%" aria-hidden="true">2</span>
-                <span class="shot-marker" style="--x: 50%; --y: 64%" aria-hidden="true">3</span>
-                <span class="shot-marker" style="--x: 7%; --y: 49%" aria-hidden="true">4</span>
+                <span class="shot-marker" style="--x: 50%; --y: 33%" aria-hidden="true">2</span>
+                <span class="shot-marker" style="--x: 35%; --y: 68%" aria-hidden="true">3</span>
+                <span class="shot-marker" style="--x: 43%; --y: 47%" aria-hidden="true">4</span>
               </div>
               <figcaption>SAMPLE mode shows the waveform and edit buttons for the selected pad.</figcaption>
             </figure>
             <ol class="callout-list">
               <li><span>1</span><div><strong>Waveform display</strong><p>Check the sample name and waveform, then set the playback range with START and END.</p></div></li>
-              <li><span>2</span><div><strong>Sample actions</strong><p>Use REC, ADSR, LOAD SAMPLE, DEL SAMPLE, and RESET.</p></div></li>
+              <li><span>2</span><div><strong>Sample actions</strong><p>Use REC, ADSR, SLICE, LOAD SAMPLE, DEL SAMPLE, and RESET.</p></div></li>
               <li><span>3</span><div><strong>Pad selection</strong><p>Select the pad you want to edit first.</p></div></li>
               <li><span>4</span><div><strong>CTRL tab</strong><p>Adjust pitch, filter, volume, and playback behavior.</p></div></li>
             </ol>
@@ -290,10 +293,11 @@
           <h3>Record with the microphone</h3>
           <ol class="compact-steps">
             <li>Select the destination pad and tap <span class="control-label">REC</span>.</li>
+            <li>If the pad already has a sound, the app asks whether to start recording. The original sample is unchanged at this point.</li>
             <li>Allow microphone access the first time you record.</li>
             <li>Stop recording, then choose “Use this recording” on the confirmation screen.</li>
           </ol>
-          <p class="small-note">If the destination pad already has a sound, confirming the recording replaces the existing sample.</p>
+          <p class="small-note">After you choose “Record,” the original sample is replaced only when you later choose “Use this recording.”</p>
 
           <h3>Trim the waveform</h3>
           <p>Move <span class="control-label">START</span> and <span class="control-label">END</span> on the waveform to show <span class="control-label">TRIM</span>. Running TRIM overwrites the sample with the current range.</p>
@@ -323,85 +327,178 @@
           </dl>
         </section>
 
-        <section id="sequence" class="manual-section">
+        <section id="slice" class="manual-section">
           <div class="section-heading">
             <p class="section-number">04</p>
+            <div>
+              <p class="eyebrow">SLICE</p>
+              <h2>SLICE<br />Split a sample while it plays</h2>
+            </div>
+          </div>
+
+          <div class="screenshot-guide screenshot-guide-wide">
+            <figure class="manual-shot manual-shot-ipad">
+              <div class="shot-frame">
+                <img src="../assets/ipad-slice.png" alt="SLICE workflow on iPad" width="1668" height="2420" loading="lazy" />
+                <span class="shot-marker" style="--x: 61%; --y: 25%" aria-hidden="true">1</span>
+                <span class="shot-marker" style="--x: 68%; --y: 33%" aria-hidden="true">2</span>
+                <span class="shot-marker" style="--x: 19%; --y: 57%" aria-hidden="true">3</span>
+                <span class="shot-marker" style="--x: 20%; --y: 73%" aria-hidden="true">4</span>
+              </div>
+              <figcaption>During SLICE, split points, save controls, and destination pad states stay visible together.</figcaption>
+            </figure>
+            <ol class="callout-list">
+              <li><span>1</span><div><strong>Split point</strong><p>A vertical marker is placed at the playback position and numbered from left to right.</p></div></li>
+              <li><span>2</span><div><strong>CANCEL / SLICE IT</strong><p>CANCEL discards the temporary slices. SLICE IT saves them to pads.</p></div></li>
+              <li><span>3</span><div><strong>Source sample</strong><p>This is the selected source pad. The source pad itself cannot be a destination.</p></div></li>
+              <li><span>4</span><div><strong>Destination pads</strong><p>“+” means available. A red pad with a SLICE number is already assigned.</p></div></li>
+            </ol>
+          </div>
+
+          <div class="note note-info">
+            <strong>SLICE basics</strong>
+            <p>SLICE lets you place split points while the source sample plays, then save the resulting pieces to other pads. Existing pad contents are not changed until you confirm the save.</p>
+          </div>
+          <ol class="compact-steps">
+            <li>Select the pad containing the source sample, then tap <span class="control-label">SLICE</span>. The source sample starts from the beginning.</li>
+            <li>While it plays, tap a destination pad. A vertical marker appears on the LCD at the current playback position.</li>
+            <li>Tap the same destination pad again to move its point to the new playback position.</li>
+            <li>When source playback ends with at least one point assigned, temporary slices are created automatically.</li>
+            <li>During preview, drag a numbered vertical marker left or right to adjust it. A marker cannot cross its neighbors.</li>
+            <li>Tap an assigned pad to audition it, then tap <span class="control-label">SLICE IT</span> to save when it sounds right.</li>
+          </ol>
+          <div class="card-grid card-grid-two">
+            <article class="feature-card">
+              <span class="card-kicker">POINT</span>
+              <h4>Numbers follow waveform position</h4>
+              <p>Slice numbers are based on the left-to-right position on the waveform, not on the order you tapped pads. Moving a point renumbers the markers.</p>
+            </article>
+            <article class="feature-card">
+              <span class="card-kicker">PREVIEW</span>
+              <h4>Audition before saving</h4>
+              <p>During temporary preview, tap a destination pad to hear only that slice range. Save with SLICE IT after checking the result.</p>
+            </article>
+          </div>
+          <p class="small-note">If the source reaches the end before you add a point, playback automatically restarts from the beginning.</p>
+          <p class="small-note">Saved pad contents do not change until you tap SLICE IT. Tap <span class="control-label">CANCEL</span> to discard the temporary slices and leave all pads unchanged. The source pad is also preserved.</p>
+          <div class="note note-warning">
+            <strong>Overwriting existing samples</strong>
+            <p>“Overwrite existing samples with SLICE” in Settings &gt; Pad Settings is off by default. When it is off, occupied pads cannot be selected as destinations. When it is on, the app asks you to confirm the destination pads before SLICE IT overwrites them.</p>
+          </div>
+          <div class="note note-warning">
+            <strong>Source sample after saving</strong>
+            <p>After SLICE IT, the app asks whether to keep or clear the source sample. Keeping it leaves the original pad available as source material. Clearing it does not remove the slices already saved to destination pads.</p>
+          </div>
+        </section>
+
+        <section id="sequence" class="manual-section">
+          <div class="section-heading">
+            <p class="section-number">05</p>
             <div>
               <p class="eyebrow">SEQUENCE mode</p>
               <h2>SEQUENCE mode<br />Build patterns</h2>
             </div>
           </div>
 
-          <div class="screenshot-guide">
-            <figure class="manual-shot manual-shot-phone">
+          <div class="screenshot-guide screenshot-guide-wide">
+            <figure class="manual-shot manual-shot-ipad">
               <div class="shot-frame">
-                <img src="../assets/iphone-sequence.png" alt="SEQUENCE mode on iPhone" width="645" height="1400" loading="lazy" />
-                <span class="shot-marker" style="--x: 50%; --y: 30%" aria-hidden="true">1</span>
-                <span class="shot-marker" style="--x: 50%; --y: 41%" aria-hidden="true">2</span>
-                <span class="shot-marker" style="--x: 50%; --y: 64%" aria-hidden="true">3</span>
-                <span class="shot-marker" style="--x: 50%; --y: 91%" aria-hidden="true">4</span>
+                <img src="../assets/ipad-sequence.png" alt="SEQUENCE mode on iPad" width="1668" height="2420" loading="lazy" />
+                <span class="shot-marker" style="--x: 50%; --y: 28%" aria-hidden="true">1</span>
+                <span class="shot-marker" style="--x: 50%; --y: 33%" aria-hidden="true">2</span>
+                <span class="shot-marker" style="--x: 35%; --y: 68%" aria-hidden="true">3</span>
+                <span class="shot-marker" style="--x: 82%; --y: 84%" aria-hidden="true">4</span>
               </div>
               <figcaption>Lit steps are positions where the selected pad will play.</figcaption>
             </figure>
             <ol class="callout-list">
-              <li><span>1</span><div><strong>16-step grid</strong><p>Tap cells to turn steps on or off.</p></div></li>
-              <li><span>2</span><div><strong>Bar and Swing controls</strong><p>Adjust bar count, Swing, and the selected pad pattern. Use the arrows on the left and right of the grid to move between bars.</p></div></li>
-              <li><span>3</span><div><strong>Pad selection</strong><p>Changing pads switches the grid to that pad’s sequence.</p></div></li>
-              <li><span>4</span><div><strong>TRANSPORT</strong><p>Control playback, stop, realtime recording, and quantize.</p></div></li>
+              <li><span>1</span><div><strong>Sequence grid</strong><p>Tap cells to turn 16th-note steps on or off for each pad.</p></div></li>
+              <li><span>2</span><div><strong>Bar and Swing controls</strong><p>Adjust bar count, Swing, and the selected BANK pattern. The large SEQUENCE window also provides play/stop, bar add/remove, previous/next bar, and Swing controls.</p></div></li>
+              <li><span>3</span><div><strong>Pad selection</strong><p>Changing pads or BANK switches to the sequence for the selected BANK.</p></div></li>
+              <li><span>4</span><div><strong>TRANSPORT</strong><p>Control playback and stop.</p></div></li>
             </ol>
           </div>
 
           <h3>Step input</h3>
+          <p>BANK A-D each keep their own sequence steps and bar count. BPM and Swing are shared across the project.</p>
           <ol class="compact-steps">
             <li>Select the pad you want to edit.</li>
-            <li>Tap the 16-step grid to turn on positions where the sound should play.</li>
+            <li>Tap the sequence grid to turn on positions where the sound should play.</li>
             <li>Press play to check the loop.</li>
             <li>Select another pad and repeat the same process to add more sounds.</li>
           </ol>
 
+          <h3>SEQ REC and Sequence</h3>
+          <p>Turn on <span class="control-label">SEQ REC</span> to move to SEQUENCE mode, then start playback to record pad performance into the 16th-note grid after a 1-bar count-in. On-screen pad input records at the highest Velocity level.</p>
+          <p>The SEQUENCE LCD always uses the sequence view. One dynamic <span class="control-label">&lt;PREV</span>/<span class="control-label">NEXT&gt;</span> button moves the visible bar. The <span class="control-label">SEQ</span> button in the sequence's upper-left PAD header opens a large SEQUENCE window for editing the same note on/off states. On iPad, the large SEQUENCE view shows all 16 pads without vertical scrolling.</p>
+          <p class="small-note">The current SEQ REC records to 16th-note steps. Quantize-off timing offsets, Velocity editing in the sequence, and note-length editing are not supported yet.</p>
+
+          <h3>Edit in the popup window</h3>
+          <p>Press <span class="control-label">SEQ</span> in the upper-left of the SEQUENCE mode grid to open the large SEQUENCE popup window. It edits the same selected BANK as the main screen, so any steps you turn on or off here are reflected in the normal SEQUENCE view.</p>
+          <div class="screenshot-guide screenshot-guide-wide">
+            <figure class="manual-shot manual-shot-ipad">
+              <div class="shot-frame">
+                <img src="../assets/ipad-sequence-popup.png" alt="Large SEQUENCE popup window on iPad" width="1668" height="2420" loading="lazy" />
+                <span class="shot-marker" style="--x: 39%; --y: 30%" aria-hidden="true">1</span>
+                <span class="shot-marker" style="--x: 46%; --y: 33%" aria-hidden="true">2</span>
+                <span class="shot-marker" style="--x: 56%; --y: 67%" aria-hidden="true">3</span>
+                <span class="shot-marker" style="--x: 82%; --y: 29%" aria-hidden="true">4</span>
+              </div>
+              <figcaption>The popup window lets you check the sequence for all 16 pads on one screen.</figcaption>
+            </figure>
+            <ol class="callout-list">
+              <li><span>1</span><div><strong>BANK display</strong><p>Shows the BANK being edited. Switching BANK changes to that BANK's own sequence steps and bar count.</p></div></li>
+              <li><span>2</span><div><strong>Playback and bars</strong><p>Control play/stop, Swing, bar add/remove, and previous/next bar from inside the popup. The free plan is limited to 2 Bars.</p></div></li>
+              <li><span>3</span><div><strong>All-pad sequence</strong><p>Rows are pads and columns are 16th-note steps. Tap lit cells to turn each pad's playback positions on or off.</p></div></li>
+              <li><span>4</span><div><strong>Close</strong><p>Closing the popup keeps your edits. Return to the normal screen to keep checking the same BANK sequence.</p></div></li>
+            </ol>
+          </div>
+
           <h3>Adjust timing</h3>
+          <div class="note note-info">
+            <strong>Using knobs</strong>
+            <p>Drag a knob up or down to adjust it. The value snaps near important positions such as center, zero, or a representative time for that control. Tap the numeric LCD below a supported knob to enter an exact value with the keyboard.</p>
+          </div>
           <div class="card-grid card-grid-two">
             <article class="feature-card"><span class="card-kicker">BPM</span><h4>Tempo</h4><p>Changes the overall speed.</p></article>
             <article class="feature-card"><span class="card-kicker">SWING</span><h4>Groove</h4><p>Delays even-feel offbeat steps for a swung rhythm.</p></article>
-            <article class="feature-card"><span class="card-kicker">REC</span><h4>Realtime recording</h4><p>Records pads you hit while the sequence is playing.</p></article>
-            <article class="feature-card"><span class="card-kicker">QTZ</span><h4>Quantize</h4><p>Aligns realtime-recorded hits to the step grid.</p></article>
           </div>
 
           <h3>Add bars</h3>
-          <p><span class="control-label">BAR+</span> adds a bar, and <span class="control-label">BAR-</span> removes the last bar. The free plan is limited to 2 Bars. The Premium plan supports up to 8 Bars.</p>
+          <p><span class="control-label">BAR+</span> adds a bar, <span class="control-label">BAR-</span> removes the last bar, and the dynamic <span class="control-label">&lt;PREV</span>/<span class="control-label">NEXT&gt;</span> button moves between bars. The free plan is limited to 2 Bars. The Premium plan supports up to 8 Bars.</p>
 
           <h3>SEQUENCE effects</h3>
           <p>In SEQUENCE mode, the four knobs work as <span class="control-label">DIST.</span>, <span class="control-label">DL. TIME</span>, <span class="control-label">DL. FBK.</span>, and <span class="control-label">DL. LV</span>.</p>
-          <p class="small-note"><span class="control-label">CLEAR</span> clears the sequence for the selected pad.</p>
+          <p class="small-note"><span class="control-label">CLEAR</span> clears the current BANK sequence.</p>
 
           <h3>Import and export sequence JSON</h3>
           <p>Tap <span class="control-label">IMP EXP</span> to choose <span class="control-label">IMPORT JSON</span> or <span class="control-label">EXPORT JSON</span>. You can import or export the sequence BPM, Swing, step data, and SAMPLE parameters as JSON.</p>
-          <p class="small-note">IMPORT JSON overwrites the current project sequence and SAMPLE parameters. Audio files are not included.</p>
+          <p class="small-note">IMPORT JSON overwrites the sequence for the currently selected BANK and SAMPLE parameters. Audio files and other BANK sequences are not included.</p>
         </section>
 
         <section id="project" class="manual-section">
           <div class="section-heading">
-            <p class="section-number">05</p>
+            <p class="section-number">06</p>
             <div>
               <p class="eyebrow">PROJECT mode</p>
               <h2>PROJECT mode<br />Save and export audio</h2>
             </div>
           </div>
 
-          <div class="screenshot-guide">
-            <figure class="manual-shot manual-shot-phone">
+          <div class="screenshot-guide screenshot-guide-wide">
+            <figure class="manual-shot manual-shot-ipad">
               <div class="shot-frame">
-                <img src="../assets/iphone-project.png" alt="PROJECT mode on iPhone" width="645" height="1400" loading="lazy" />
-                <span class="shot-marker" style="--x: 50%; --y: 28%" aria-hidden="true">1</span>
-                <span class="shot-marker" style="--x: 50%; --y: 41%" aria-hidden="true">2</span>
-                <span class="shot-marker" style="--x: 50%; --y: 64%" aria-hidden="true">3</span>
-                <span class="shot-marker" style="--x: 50%; --y: 91%" aria-hidden="true">4</span>
+                <img src="../assets/ipad-project.png" alt="PROJECT mode on iPad" width="1668" height="2420" loading="lazy" />
+                <span class="shot-marker" style="--x: 50%; --y: 24%" aria-hidden="true">1</span>
+                <span class="shot-marker" style="--x: 50%; --y: 32%" aria-hidden="true">2</span>
+                <span class="shot-marker" style="--x: 35%; --y: 68%" aria-hidden="true">3</span>
+                <span class="shot-marker" style="--x: 82%; --y: 84%" aria-hidden="true">4</span>
               </div>
               <figcaption>PROJECT mode shows the current save state and project management buttons.</figcaption>
             </figure>
             <ol class="callout-list">
               <li><span>1</span><div><strong>Project information</strong><p>Shows sample count, missing files, and data size.</p></div></li>
-              <li><span>2</span><div><strong>Management buttons</strong><p>Use NEW, COPY, DELETE, and EXPORT WAV.</p></div></li>
+              <li><span>2</span><div><strong>Management buttons</strong><p>Use NEW, EXP SEQ, and EXP WAV. Open COPY and DELETE from the project row’s “…” menu.</p></div></li>
               <li><span>3</span><div><strong>Pads</strong><p>Pressing a pad in PROJECT moves to SAMPLE and plays that sound.</p></div></li>
               <li><span>4</span><div><strong>TRANSPORT</strong><p>Play or stop the saved pattern.</p></div></li>
             </ol>
@@ -436,41 +533,98 @@
 
         <section id="settings" class="manual-section">
           <div class="section-heading">
-            <p class="section-number">06</p>
+            <p class="section-number">07</p>
             <div>
               <p class="eyebrow">Settings</p>
               <h2>Settings</h2>
             </div>
           </div>
 
-          <div class="screenshot-guide">
-            <figure class="manual-shot manual-shot-phone">
+          <div class="screenshot-guide screenshot-guide-wide">
+            <figure class="manual-shot manual-shot-ipad">
               <div class="shot-frame">
-                <img src="../assets/iphone-settings.png" alt="Display Settings tab" width="645" height="1400" loading="lazy" />
-                <span class="shot-marker" style="--x: 50%; --y: 19%" aria-hidden="true">1</span>
-                <span class="shot-marker" style="--x: 50%; --y: 44%" aria-hidden="true">2</span>
-                <span class="shot-marker" style="--x: 50%; --y: 68%" aria-hidden="true">3</span>
+                <img src="../assets/ipad-settings.png" alt="Display Settings tab on iPad" width="1668" height="2420" loading="lazy" />
+                <span class="shot-marker" style="--x: 50%; --y: 32%" aria-hidden="true">1</span>
+                <span class="shot-marker" style="--x: 50%; --y: 47%" aria-hidden="true">2</span>
+                <span class="shot-marker" style="--x: 50%; --y: 56%" aria-hidden="true">3</span>
               </div>
-              <figcaption>Settings are divided into four tabs.</figcaption>
+              <figcaption>Settings are divided into five tabs.</figcaption>
             </figure>
             <ol class="callout-list">
-              <li><span>1</span><div><strong>Settings tabs</strong><p>Switch between Display Settings, Pad Settings, Performance Settings, and About.</p></div></li>
+              <li><span>1</span><div><strong>Settings tabs</strong><p>Switch between Display Settings, Pad Settings, Performance Settings, MIDI, and About.</p></div></li>
               <li><span>2</span><div><strong>Appearance mode</strong><p>Choose Light, Dark, or System appearance.</p></div></li>
-              <li><span>3</span><div><strong>iPhone layout</strong><p>Switch between scaled iPad layout and iPhone dedicated layout.</p></div></li>
+              <li><span>3</span><div><strong>iPad background skins</strong><p>Choose the device background skin. Additional skins are a Premium feature.</p></div></li>
             </ol>
           </div>
 
           <div class="settings-list">
             <article><h3>Display Settings</h3><ul><li>Status bar visibility</li><li>Light, Dark, or System appearance</li><li>iPhone display mode</li><li>Japanese or English settings and help</li></ul></article>
-            <article><h3>Pad Settings</h3><ul><li>Waveform display on pads</li><li>Waveform opacity</li><li>Pad names and colors</li></ul></article>
-            <article><h3>Performance Settings</h3><ul><li>Low latency mode</li><li>Keep screen awake</li><li>Haptic feedback</li><li>Silence pads in SEQUENCE mode</li><li>Rear panel opening behavior</li></ul></article>
+            <article><h3>Pad Settings</h3><ul><li>Waveform display on pads</li><li>Waveform opacity</li><li>Pad names and colors; name fields use the ASCII keyboard</li><li>Select multiple pads in the same bank and change their color together</li><li>Long-press drag pad swapping with Premium</li><li>Overwrite existing samples with SLICE (off by default, with confirmation on SLICE IT)</li></ul></article>
+            <article><h3>Performance Settings</h3><ul><li>Performance Mode (prioritize triggering)</li><li>Keep screen awake</li><li>Background Playback</li><li>Haptic feedback</li><li>Silence pads in SEQUENCE mode</li><li>SEQ REC count-in</li><li>Metronome tone (Click, Beep, Rim) and volume (0-200%)</li><li>Rear panel opening behavior</li></ul><p>Performance Mode prioritizes pad triggering, suppresses pad-tap haptics, normal playhead updates, pad waveform thumbnails, recording updates, and editing-state updates, and shows only the static LIVE MODE label on the LCD on both iPhone and iPad while performing. Performance Mode cannot be turned on while recording, SLICE, loading, trimming, or export processing is in progress. Audio output always uses the low-latency configuration.</p><p>Turn on Background Playback to keep playback running while the screen is locked, the Home Screen is visible, or another app is visible. Playback stops if you explicitly quit the app from the App Switcher. It is off by default.</p><p>Bluetooth headphones and wireless audio devices can add hardware latency. Use the built-in speaker or wired output when performing.</p></article>
             <article><h3>About</h3><ul><li>Premium plan and restore purchases</li><li>App version and build</li><li>Terms, EULA, and privacy policy</li></ul></article>
           </div>
         </section>
 
+        <section id="midi-settings" class="manual-section">
+          <div class="section-heading">
+            <p class="section-number">08</p>
+            <div>
+              <p class="eyebrow">MIDI Settings</p>
+              <h2>MIDI Settings<br />Assign external controls</h2>
+            </div>
+          </div>
+
+          <div class="screenshot-guide screenshot-guide-wide">
+            <figure class="manual-shot manual-shot-ipad">
+              <div class="shot-frame">
+                <img src="../assets/ipad-midi-settings.png" alt="MIDI Settings tab on iPad" width="1668" height="2420" loading="lazy" />
+                <span class="shot-marker" style="--x: 57%; --y: 31%" aria-hidden="true">1</span>
+                <span class="shot-marker" style="--x: 49%; --y: 45%" aria-hidden="true">2</span>
+                <span class="shot-marker" style="--x: 78%; --y: 59%" aria-hidden="true">3</span>
+                <span class="shot-marker" style="--x: 39%; --y: 71%" aria-hidden="true">4</span>
+              </div>
+              <figcaption>The MIDI tab manages connections, Velocity behavior, and MIDI Learn assignments.</figcaption>
+            </figure>
+            <ol class="callout-list">
+              <li><span>1</span><div><strong>MIDI tab</strong><p>Choose MIDI at the top of Settings to open MIDI Learn.</p></div></li>
+              <li><span>2</span><div><strong>MIDI Connections</strong><p>Check USB, Bluetooth MIDI, and virtual MIDI source status.</p></div></li>
+              <li><span>3</span><div><strong>Velocity setting</strong><p>Choose whether external pad Velocity controls playback volume.</p></div></li>
+              <li><span>4</span><div><strong>Assignment targets</strong><p>Select a 4×4 pad, knob, panel control, or performance/edit control to learn.</p></div></li>
+            </ol>
+          </div>
+
+          <p>Use an external MIDI controller to play pads, move knobs, and switch modes or banks. MIDI connection, Learn, and incoming control require Premium.</p>
+          <h3>Connect a device</h3>
+          <ul>
+            <li>Connect USB MIDI through a compatible adapter or USB hub.</li>
+            <li>For Bluetooth MIDI, choose the device from “Connect Bluetooth MIDI.” This is separate from Bluetooth audio settings.</li>
+            <li>Virtual MIDI sources on the same device are also supported. The source name appears under MIDI Connections after connection.</li>
+          </ul>
+          <h3>Assign with MIDI Learn</h3>
+          <ol class="compact-steps">
+            <li>In Settings &gt; MIDI, select a pad in the 4×4 grid or choose another target from the lists.</li>
+            <li>When “Assign MIDI to {target}” appears at the top, follow the instruction and operate the desired key, pad, knob, or button once. The MIDI Learn status remains fixed at the top while you scroll.</li>
+            <li>In the “MIDI signal received” dialog, check the NOTE or CC number, MIDI channel, and target, then choose Assign.</li>
+            <li>If the same signal is already assigned elsewhere, confirm the replacement to remove the older assignment.</li>
+          </ol>
+          <h3>Assignable controls</h3>
+          <ul>
+            <li><strong>PAD 1–16:</strong> Assign Note On/Off. Physical pad positions share one assignment across BANK A–D and play the sound in the currently selected bank.</li>
+            <li><strong>KNOB 1–4:</strong> Assign CC. They control PITCH/CUTOFF/RESONANCE/AMP in SAMPLE and DIST./DL. TIME/DL. FBK./DL. LV in SEQUENCE.</li>
+            <li><strong>Panel:</strong> Assign Note or CC to SAMPLE/SEQUENCE/PROJECT, BANK A–D, TAP, SEQ REC, PLAY/STOP, and METRO.</li>
+            <li><strong>Performance/editing:</strong> Assign Note or CC to REVERSE, NORMALIZE, MUTE, GATE, LOOP, ROLL, and CHOKE.</li>
+          </ul>
+          <p>When “Use Velocity for volume” is on, pad Velocity 1–127 maps continuously to volume. When off, pads always play at maximum velocity. Knob CC values 0–127 map to each on-screen parameter range. MIDI 1.0 Running Status is supported when Note or CC data spans multiple CoreMIDI packets.</p>
+          <h3>Storage, removal, and limits</h3>
+          <p>Assignments are shared by all projects. Non-pad assignments can be removed from their rows. When you select an assigned pad, “Unassign” appears to the left of “Cancel” in the header. It removes that pad assignment and ends Learn. Removing all clears MIDI settings only; projects, samples, and purchase state are not changed. Saved assignments remain if Premium entitlement cannot be confirmed, but incoming MIDI control is disabled.</p>
+          <p>Master volume is not available in the current UI and cannot be assigned with MIDI Learn. BPM−/+, SAMPLE REC, ADSR, sequence QTZ/SWING/BAR/STEP, CLEAR, deletion, reset, purchases, file selection, project management, and confirmation dialogs also cannot be assigned. MIDI Clock, MIDI output, Program Change, Pitch Bend, NRPN, and relative encoders are not supported.</p>
+          <div class="note note-info"><strong>If nothing responds</strong><p>Confirm that the source name appears under MIDI Connections, operating the device during Learn opens the “MIDI signal received” dialog, the channel and number shown there match the assignment, and Premium is active. After disconnecting hardware, wait for reconnection or reopen the Bluetooth MIDI screen.</p></div>
+          <div class="note note-warning"><strong>External MIDI devices</strong><p>Compatibility and continued operation with every device are not guaranteed. The developer does not provide support for device specifications, configuration methods, connection methods, or individual compatibility. If you believe an issue is caused by the App, report it through the support form with the device name, connection method, iOS version, and reproduction steps.</p></div>
+        </section>
+
         <section id="plans" class="manual-section">
           <div class="section-heading">
-            <p class="section-number">07</p>
+            <p class="section-number">09</p>
             <div>
               <p class="eyebrow">Plan comparison</p>
               <h2>Free plan and<br />Premium plan</h2>
@@ -483,11 +637,13 @@
               <tbody>
                 <tr><th>Pads</th><td>Upper 8 pads in Bank A</td><td>All 64 pads across 4 banks</td></tr>
                 <tr><th>Projects</th><td>1 project</td><td>No project count limit</td></tr>
-                <tr><th>Sequence</th><td>1 Bar</td><td>Up to 4 Bars</td></tr>
+                <tr><th>Sequence</th><td>2 Bars</td><td>Up to 8 Bars</td></tr>
                 <tr><th>File import</th><td>Up to 10 seconds</td><td>Up to 60 seconds</td></tr>
                 <tr><th>Microphone recording</th><td>Up to 10 seconds</td><td>Up to 30 seconds</td></tr>
-                <tr><th>Pad color</th><td>Not editable</td><td>Editable</td></tr>
+                <tr><th>Pad appearance</th><td>Not editable</td><td>Individual or batch color changes and long-press drag swapping</td></tr>
+                <tr><th>iPad background skins</th><td>Standard only</td><td>Additional skins selectable</td></tr>
                 <tr><th>WAV export</th><td>Not available</td><td>Available</td></tr>
+                <tr><th>MIDI control</th><td>Not available</td><td>MIDI Learn and external control</td></tr>
               </tbody>
             </table>
           </div>
@@ -500,7 +656,7 @@
 
         <section id="faq" class="manual-section">
           <div class="section-heading">
-            <p class="section-number">08</p>
+            <p class="section-number">10</p>
             <div>
               <p class="eyebrow">FAQ</p>
               <h2>FAQ</h2>
@@ -518,17 +674,17 @@
               </ol>
             </details>
             <details><summary>I cannot import a sample</summary><p>Select the destination pad first, then tap <span class="control-label">LOAD SAMPLE</span>. Check that the file length is within the plan limit.</p></details>
-            <details><summary>I cannot record with the microphone</summary><p>Allow microphone access for TXT sampler in iOS Settings. Then choose the destination pad and tap <span class="control-label">REC</span>.</p></details>
+            <details><summary>I cannot record with the microphone</summary><p>Allow microphone access for TXT sampler in iOS Settings. Then choose the destination pad and tap <span class="control-label">REC</span>. If the pad already has a sound, choose “Record” in the confirmation to start recording.</p></details>
             <details><summary>A project waveform is missing</summary><p>Select the target pad and load the audio again from <span class="control-label">LOAD SAMPLE</span>.</p></details>
             <details><summary>Purchased features are unavailable</summary><p>Connect to the network and run Settings &gt; About &gt; Restore Purchases. Make sure you are using the same Apple Account used for purchase.</p></details>
-            <details><summary>The screen locks automatically</summary><p>Turn on “Keep screen awake” in Settings &gt; Performance Settings.</p></details>
-            <details><summary>I want to reset the app</summary><p>Use <span class="control-label">FACTORY RESET</span> on the rear panel. This deletes all projects, samples, sequences, and app settings, and cannot be undone.</p></details>
+            <details><summary>The screen locks automatically</summary><p>Turn on “Keep screen awake” in Settings &gt; Performance Settings. To keep playback running while the screen is locked, also turn on “Background Playback.”</p></details>
+            <details><summary>I want to reset the app</summary><p>Use <span class="control-label">FACTORY RESET</span> on the rear panel. This deletes all projects, samples, sequences, and app settings, then recreates DEMO PROJECT 001. This action cannot be undone.</p></details>
           </div>
         </section>
 
         <section id="legal" class="manual-section">
           <div class="section-heading">
-            <p class="section-number">09</p>
+            <p class="section-number">11</p>
             <div>
               <p class="eyebrow">Terms and privacy</p>
               <h2>Terms and<br />Privacy Policy</h2>
@@ -552,6 +708,7 @@
 
           <h3>Terms of Use</h3>
           <p>The terms define app usage conditions, prohibited actions, disclaimers, and Premium plan information.</p>
+          <p>The Terms also cover external MIDI compatibility, connections, latency, dropped signals, unintended input, support scope, and discontinuation of the App's distribution, updates, or support.</p>
 
           <h3>Privacy Policy</h3>
           <p>Recorded audio, imported samples, and project data are stored in the app’s local container and are not sent outside the device without user action. When sharing or exporting, the user chooses the destination.</p>
@@ -565,7 +722,7 @@
 
         <section id="specs" class="manual-section">
           <div class="section-heading">
-            <p class="section-number">10</p>
+            <p class="section-number">12</p>
             <div>
               <p class="eyebrow">Data specs</p>
               <h2>Data specifications</h2>
@@ -596,7 +753,7 @@
             <table>
               <thead><tr><th>Item</th><th>Specification</th><th>Notes</th></tr></thead>
               <tbody>
-                <tr><th>Recording duration</th><td>Free plan: up to 10 seconds<br />Premium plan: up to 30 seconds</td><td>After recording, choose “Use this recording” to assign it to the current pad.</td></tr>
+                <tr><th>Recording duration</th><td>Free plan: up to 10 seconds<br />Premium plan: up to 30 seconds</td><td>If the current pad already has a sample, REC asks whether to start recording. The sample remains unchanged until you choose “Use this recording” after recording.</td></tr>
                 <tr><th>Temporary recording format</th><td>CAF</td><td>This is used internally while recording.</td></tr>
                 <tr><th>Sample rate</th><td>44.1kHz</td><td>Used when saving microphone recordings.</td></tr>
               </tbody>
@@ -634,11 +791,103 @@
           </div>
         </section>
 
+        <section id="errors" class="manual-section">
+          <div class="section-heading">
+            <p class="section-number">13</p>
+            <div>
+              <p class="eyebrow">Errors</p>
+              <h2>Error Message List</h2>
+            </div>
+          </div>
+
+          <div class="note note-info">
+            <strong>Inclusion criteria and variable text</strong>
+            <p>This list contains only app-defined fixed text and message templates whose path from the program to an on-screen alert or error field was confirmed. “{details}” is text supplied by iOS or a framework; “{PAD number},” “{PAD list},” and “{value}” change at runtime. Some sample-import failures display an iOS error description without modification, so those bodies cannot be listed as fixed messages. Confirmation dialogs, instructions, and success messages are excluded.</p>
+          </div>
+
+          <div class="comparison-table" role="region" aria-label="Error message list" tabindex="0">
+            <table>
+              <thead><tr><th>Displayed message</th><th>Meaning</th><th>What to do</th></tr></thead>
+              <tbody>
+                <tr><th colspan="3">Display location: <span class="control-label">AUDIO ERROR</span> alert</th></tr>
+                <tr><th>音声ファイルを読み込めません。別のファイルを選択してください。</th><td>The selected file could not be opened as audio.</td><td>Choose another audio file, or convert it to a supported format such as WAV, AIFF, MP3, or MPEG-4 Audio.</td></tr>
+                <tr><th>空の音声ファイルは読み込めません。</th><td>The file has no playable audio data.</td><td>Choose an audio file with audible length.</td></tr>
+                <tr><th>ファイルサイズは {value}MB 以下にしてください。</th><td>The audio file exceeds the size limit.</td><td>Reduce the file size and import it again.</td></tr>
+                <tr><th>サンプル長は {value} 秒以下にしてください。</th><td>The sample is longer than the import limit.</td><td>Edit the file to fit within the limit. The free plan supports up to 10 seconds; Premium supports up to 60 seconds for import.</td></tr>
+                <tr><th>無料プランでは10秒まで読み込めます。60秒まで読み込むにはプレミアムプランが必要です。</th><td>The file exceeds the free plan import duration.</td><td>Use a file up to 10 seconds, or enable Premium.</td></tr>
+                <tr><th>チャンネル数は {value}ch までに制限してください。</th><td>The audio file has too many channels.</td><td>Convert the file to mono or stereo.</td></tr>
+                <tr><th>サンプルを保存できませんでした。{details}</th><td>The imported audio could not be saved to the pad.</td><td>Check storage, file access, and file format, then try another file if needed.</td></tr>
+                <tr><th>{PAD list} のサンプルを音声再生用に準備できませんでした。サンプルを読み込み直してください。</th><td>The listed saved samples could not be prepared for playback.</td><td>Select those pads and load their audio again with LOAD SAMPLE.</td></tr>
+                <tr><th>録音を開始できませんでした。録音用オーディオ設定を開始できませんでした。接続中のBluetooth機器やオーディオ出力を外して、もう一度録音してください。</th><td>A connected device prevented the recording audio configuration from starting.</td><td>Disconnect Bluetooth and external audio output devices, then try again.</td></tr>
+                <tr><th>録音を開始できませんでした。録音用オーディオ設定を開始できませんでした。録音を開始できませんでした。マイク権限と入力機器を確認してください。</th><td>The recording process could not start.</td><td>Check microphone permission and the input device.</td></tr>
+                <tr><th>録音を開始できませんでした。録音用オーディオ設定を開始できませんでした。{details}</th><td>Another error occurred while starting the recording configuration.</td><td>Check microphone permission, audio devices, and the displayed details.</td></tr>
+                <tr><th>録音を開始できませんでした。マイクの使用が許可されていません。iOS設定でTXT samplerのマイクを許可してください。</th><td>Microphone access has not been granted.</td><td>Allow TXT sampler to use the microphone in iOS Settings.</td></tr>
+                <tr><th>録音データを作成できませんでした。入力レベルとマイク権限を確認してください。</th><td>The app could not create usable audio after recording.</td><td>Check microphone permission, input level, and recording time, then record again.</td></tr>
+                <tr><th>音声エンジンを開始できませんでした。アプリを再起動してください。</th><td>The audio engine required for playback could not start.</td><td>Quit and restart the app. If using external audio hardware, check that connection too.</td></tr>
+                <tr><th>トリムするサンプルがありません。</th><td>The current pad has no sample to trim.</td><td>Import or record a sample first.</td></tr>
+                <tr><th>トリム範囲を変更してからTRIMしてください。</th><td>The trim start and end points have not changed.</td><td>Adjust the range on the waveform, then run TRIM.</td></tr>
+                <tr><th>トリム保存に失敗しました。{details}</th><td>The trimmed audio could not be saved.</td><td>Check storage, shorten the range, or reload the sample and try again.</td></tr>
+                <tr><th>トリムしたサンプルを保存できませんでした。{details}</th><td>The trimmed sample reference could not be saved.</td><td>Check available storage and try again.</td></tr>
+                <tr><th>パッド名を保存できませんでした。{details}</th><td>The pad name could not be saved.</td><td>Set the name again.</td></tr>
+                <tr><th>パッド表示設定を保存できませんでした。{details}</th><td>The pad name or appearance settings could not be saved.</td><td>Apply the setting again.</td></tr>
+                <tr><th>パッドカラーを保存できませんでした。{details}</th><td>Pad color changes could not be saved.</td><td>Apply the colors again.</td></tr>
+                <tr><th>パッドをコピーできませんでした。{details}</th><td>The copied pad data could not be saved.</td><td>Check the source and destination pads, then try again.</td></tr>
+                <tr><th>パッドを入れ替えできませんでした。{details}</th><td>The swapped pad data could not be saved.</td><td>Check the selected pads and try again.</td></tr>
+                <tr><th>パッドを削除できませんでした。{details}</th><td>The cleared pad state could not be saved.</td><td>Check the selected pad and try again.</td></tr>
+                <tr><th>パッド設定をリセットできませんでした。{details}</th><td>The pad reset could not be completed.</td><td>Try again. If it does not improve, restart the app.</td></tr>
+                <tr><th>シーケンスを保存できませんでした。{details}</th><td>The sequence, BPM, or related state could not be saved.</td><td>Wait briefly and try again. Stop playback before switching projects.</td></tr>
+                <tr><th>シーケンス設定を保存できませんでした。{details}</th><td>A sequence setting could not be saved.</td><td>Change the setting again and confirm that it is saved.</td></tr>
+                <tr><th>パッド設定を保存できませんでした。{details}</th><td>Pad audio parameters could not be saved.</td><td>Apply the setting again.</td></tr>
+                <tr><th>マスター設定を保存できませんでした。{details}</th><td>Master settings could not be saved.</td><td>Apply the setting again.</td></tr>
+                <tr><th>シーケンスJSONを読み込めませんでした。{details}</th><td>The selected JSON could not be imported as a sequence.</td><td>Check that it is a JSON file exported from TXT sampler or a compatible file.</td></tr>
+                <tr><th>シーケンスJSONを書き出せませんでした。{details}</th><td>The sequence JSON could not be created or shared.</td><td>Check storage and the share destination, then try again.</td></tr>
+                <tr><th>オーディオを書き出せませんでした。{details}</th><td>Sequence WAV export failed.</td><td>Check storage and export settings, then try again.</td></tr>
+                <tr><th>シーケンスを復旧用スナップショットから復元しました。</th><td>The app used recovery data because the normal sequence data could not be read.</td><td>Check the sequence and save the project again.</td></tr>
+                <tr><th>シーケンスを復元できませんでした。空のパターンで表示しています。</th><td>The sequence could not be recovered and is shown empty.</td><td>Recreate the sequence.</td></tr>
+                <tr><th>PAD {PAD number}の設定を復旧用スナップショットから復元しました。</th><td>The app used recovery settings for this pad.</td><td>Check the pad and save the project again.</td></tr>
+                <tr><th>PAD {PAD number} の設定を復元できませんでした。既定値で表示しています。</th><td>The pad settings could not be recovered and defaults are shown.</td><td>Configure the pad again.</td></tr>
+                <tr><th>PAD {PAD number} のサンプルファイルが見つかりません。</th><td>The saved sample file is missing.</td><td>Load the sample into that pad again.</td></tr>
+                <tr><th>マスター設定を復旧用スナップショットから復元しました。</th><td>The app used recovery data for the master settings.</td><td>Check the settings and save the project again.</td></tr>
+                <tr><th>マスター設定を復元できませんでした。既定値で表示しています。</th><td>The master settings could not be recovered and defaults are shown.</td><td>Configure the master settings again.</td></tr>
+                <tr><th colspan="3">Display location: <span class="control-label">PROJECT</span> alert</th></tr>
+                <tr><th>プロジェクトを初期化できませんでした。{details}</th><td>Project setup failed during app launch.</td><td>Restart the app.</td></tr>
+                <tr><th>プロジェクトを作成できませんでした。{details}</th><td>A new project could not be saved.</td><td>Check available storage and try again.</td></tr>
+                <tr><th>プロジェクトを開けませんでした。{details}</th><td>The selected project could not be opened.</td><td>Open another project and try repair if needed.</td></tr>
+                <tr><th>プロジェクトをコピーできませんでした。{details}</th><td>The project could not be duplicated.</td><td>Check available storage and try again.</td></tr>
+                <tr><th>プロジェクトを削除できませんでした。{details}</th><td>The project could not be deleted.</td><td>Check the selected project and try again.</td></tr>
+                <tr><th>プロジェクトを読み込めませんでした。{details}</th><td>The project archive could not be imported.</td><td>Check the file and available storage.</td></tr>
+                <tr><th>プロジェクトを修復できませんでした。{details}</th><td>Project repair failed.</td><td>Restart the app and try again.</td></tr>
+                <tr><th>プロジェクト名を保存できませんでした。{details}</th><td>The project name could not be saved.</td><td>Use a shorter name and avoid symbols that are difficult to use in filenames.</td></tr>
+                <tr><th>パッド情報を保存できませんでした。{details}</th><td>Missing pad records could not be created and saved.</td><td>Restart the app and try again.</td></tr>
+                <tr><th>書き出すWAVファイルがありません。</th><td>No WAV file was available to share after export.</td><td>Run EXP WAV again.</td></tr>
+                <tr><th>初期化できませんでした。{details}</th><td>FACTORY RESET could not be completed.</td><td>Restart the app and try again.</td></tr>
+                <tr><th colspan="3">Display location: red text on the Premium screen</th></tr>
+                <tr><th>購入情報を取得できませんでした。通信状態を確認して、もう一度お試しください。</th><td>Premium purchase information could not be fetched.</td><td>Check the network connection and try again later.</td></tr>
+                <tr><th>購入情報を取得できませんでした。{details}</th><td>An error occurred while loading product information.</td><td>Check the details and network, then reload.</td></tr>
+                <tr><th>購入は承認待ちです。承認後に自動で反映されます。</th><td>The purchase is waiting for approval.</td><td>Wait until approval completes.</td></tr>
+                <tr><th>購入結果を確認できませんでした。</th><td>The App Store returned an unrecognized purchase result.</td><td>Check the network and purchase state.</td></tr>
+                <tr><th>購入を完了できませんでした。{details}</th><td>The purchase could not be completed.</td><td>Check the Apple Account, payment method, and network connection, then try again.</td></tr>
+                <tr><th>復元できるプレミアムプランが見つかりませんでした。</th><td>No restorable Premium purchase was found for the current Apple Account.</td><td>Sign in with the same Apple Account used for purchase, then restore again.</td></tr>
+                <tr><th>購入を復元できませんでした。{details}</th><td>Purchase restore failed.</td><td>Check the network connection and try again later.</td></tr>
+                <tr><th>検証できない購入情報がありました。通信状態を確認して、購入を復元してください。</th><td>The current entitlement could not be verified.</td><td>Check the network and restore purchases.</td></tr>
+                <tr><th>購入情報を検証できませんでした。購入を復元してください。</th><td>An updated transaction could not be verified.</td><td>Restore purchases.</td></tr>
+                <tr><th colspan="3">Display location: orange warning in MIDI settings</th></tr>
+                <tr><th>MIDI機器へ接続できませんでした。（{details}）再接続を待っています。</th><td>The app could not connect to a MIDI input device.</td><td>Check cables, hubs, power, and Bluetooth MIDI connection. Device-specific configuration and compatibility are outside support scope.</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
         <section class="manual-end" aria-label="End of manual">
-          <p class="eyebrow">Make the next beat</p>
-          <h2>Start with one sound.</h2>
-          <p>SAMPLE prepares the sound, SEQUENCE places it in time, and PROJECT keeps the work. These are the basics of TXT sampler.</p>
           <p>The default project sounds use CC0-licensed materials published on <a href="https://freesound.org/">Freesound</a>.</p>
+          <p>Use the support form for bugs, usage questions, feedback, and feature requests. Do not include personal information such as your name or email address. We do not answer questions about external MIDI device specifications, configuration, connection methods, or individual compatibility. Reports of issues believed to be caused by the App are accepted. Individual replies, fixes, adoption of requests, and response deadlines are not guaranteed; submissions may be used to improve the FAQ, future updates, and product quality.</p>
+          <a
+            class="button button-primary"
+            href="https://docs.google.com/forms/d/e/1FAIpQLSeWn8gLNVPTiGuGcsANbF5X1T1VyQ_L0vFktQCWHsutlGZswg/viewform?usp=publish-editor"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Open support form</a
+          >
           <a class="button button-primary" href="#start">Back to start</a>
         </section>
       </main>
@@ -651,6 +900,8 @@
       </div>
       <nav aria-label="Related links">
         <a href="../../LP/">Product page</a>
+        <a href="../../ios/CHANGELOG.html">Release history</a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSeWn8gLNVPTiGuGcsANbF5X1T1VyQ_L0vFktQCWHsutlGZswg/viewform?usp=publish-editor">Support</a>
         <a href="../../privacy.html">Privacy</a>
         <a href="../../terms.html">Terms</a>
       </nav>
